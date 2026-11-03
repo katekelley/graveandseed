@@ -53,6 +53,12 @@ layout: null
         {%- endfor %}
       </div>
       <p class="note">{{ c.pricing_note }}</p>
+      <h3 class="addons-h">{{ c.addons_heading }}</h3>
+      <div class="tiers">
+        {%- for a in c.addons %}
+        <div class="tier"><h3>{{ a.name }}<span class="from">From {% include money.html n=a.price_from %}</span></h3><p>{{ a.description }}</p></div>
+        {%- endfor %}
+      </div>
       {% include budget.html %}
       <p class="note"><a href="/prices/">See what Washtenaw County funeral homes charge</a></p>
     </section>

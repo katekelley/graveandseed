@@ -37,6 +37,15 @@ content:
       - { name: phone, label: Phone (leave blank to hide), type: string }
       - { name: phone_note, label: Phone note, type: string }
       - { name: reply_note, label: Reply note under the form, type: string }
+      - { name: addons_heading, label: "Add-ons: heading", type: string }
+      - name: addons
+        label: Add-ons
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: price_from, label: Starting price ($), type: number }
+          - { name: description, label: Description, type: text }
       - { name: about_heading, label: "About: opening line", type: string }
       - { name: about, label: "About: paragraphs", type: text, list: true }
   - name: prices

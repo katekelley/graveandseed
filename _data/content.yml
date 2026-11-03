@@ -50,3 +50,12 @@ about:
   - "I came to this from two directions. I worked at a wedding venue and saw how much care goes into a day people will remember. Then I watched families say goodbye in rooms that felt like no one had thought about them at all. Grief deserves care and beauty too."
   - "I'm direct. I'll tell you what things cost, what you actually need, and what you can skip. I'm also not in a hurry. If you want to sit and talk about the person before we talk about chairs, all the better."
   - "By day I'm a structural engineer, which mostly means I like a plan and I notice details. Chosen family, unconventional families, and people who want something that doesn't look like a funeral are all welcome here."
+
+addons_heading: "Add-ons"
+addons:
+  - name: "Story corner"
+    price_from: 350
+    description: "A quiet corner at the celebration where guests sit and tell a story about the person on camera, with someone there to help. Afterward I edit each story and deliver them on a USB drive and in a private online folder for the family."
+  - name: "Story phone"
+    price_from: 150
+    description: "A vintage-style phone guests pick up to leave a spoken message or memory. Gentler for people who don't want to be on camera. The family gets every message as an audio file."
