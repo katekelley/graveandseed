@@ -1,0 +1,206 @@
+---
+layout: null
+---
+{%- assign c = site.data.content -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grave and Seed</title>
+<meta name="description" content="{{ c.tagline_start }} {{ c.tagline_emphasis }}. Celebration of life planning in {{ c.location }}.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one plain column like a well-kept notebook; a soil band at the top, a seed-row of event styles, contact at the end. */
+:root {
+  color-scheme: light;
+  --paper: #EDEFE9;
+  --ink: #1D221E;
+  --muted: #59625A;
+  --soil: #2B2620;
+  --soil-ink: #ECE7DE;
+  --moss: #4E6B3A;
+  --line: #CBD1C6;
+  --field: #F7F8F4;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --label: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #171A17; --ink: #E4E7E1; --muted: #A2AA9F; --soil: #0F0E0C; --soil-ink: #E9E3D8;
+    --moss: #9DB97F; --line: #343A33; --field: #20241F; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #171A17; --ink: #E4E7E1; --muted: #A2AA9F; --soil: #0F0E0C; --soil-ink: #E9E3D8;
+  --moss: #9DB97F; --line: #343A33; --field: #20241F; color-scheme: dark;
+}
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.08rem/1.6 var(--body); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.1; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: var(--moss); }
+.label { font: 500 0.72rem/1 var(--label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+header.soil { background: var(--soil); color: var(--soil-ink); }
+header.soil .wrap { padding-block: 3.5rem 3rem; display: grid; gap: 1.25rem; }
+.mark { display: flex; align-items: center; gap: 0.6rem; font: 500 0.78rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
+.mark svg { width: 22px; height: 22px; }
+header h1 { font-size: clamp(2.6rem, 9vw, 4.4rem); font-weight: 700; letter-spacing: -0.02em; }
+header .lede { font-size: 1.25rem; max-width: 34rem; }
+header .lede em { font-style: italic; color: #B9CF9E; }
+
+main .wrap { display: grid; gap: 3.5rem; padding-block: 3rem 4rem; }
+section { display: grid; gap: 1rem; }
+section h2 { font-size: 1.9rem; font-weight: 700; }
+.plain { display: grid; gap: 0.9rem; max-width: 36rem; }
+
+.styles { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.style { padding-block: 1.1rem; border-bottom: 1px solid var(--line); display: grid; gap: 0.35rem; min-width: 0; }
+.styles .style:nth-child(odd) { padding-right: 1.25rem; }
+.style h3 { font-size: 1.3rem; font-weight: 500; }
+.style p { color: var(--muted); font-size: 1rem; }
+
+.tiers { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.tier { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.tier h3 { font-size: 1.1rem; font-weight: 500; }
+.tier .lead { display: block; margin-top: 0.35rem; }
+@media (max-width: 560px) { .tier { grid-template-columns: 1fr; gap: 0.3rem; } .styles .style:nth-child(odd) { padding-right: 0; } }
+
+.contact { background: var(--field); border: 1px solid var(--line); border-radius: 6px; padding: 1.5rem; display: grid; gap: 1.25rem; }
+.email { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+.email code { font: 500 1rem/1.4 var(--label); user-select: all; }
+.phone { font: 500 1rem/1.4 var(--label); }
+.err { color: #A33A2A; font-weight: 600; }
+button { font: 600 0.95rem/1 var(--body); border-radius: 4px; cursor: pointer; }
+.copy { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 0.5rem 0.8rem; }
+form { display: grid; gap: 0.9rem; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+@media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+label { display: grid; gap: 0.35rem; font-size: 0.95rem; min-width: 0; }
+input, textarea { font: 400 1rem/1.4 var(--body); color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 0.6rem 0.7rem; width: 100%; box-sizing: border-box; }
+textarea { min-height: 7rem; resize: vertical; }
+input:focus, textarea:focus, button:focus-visible { outline: 2px solid var(--moss); outline-offset: 2px; }
+.send { justify-self: start; background: var(--moss); color: var(--paper); border: 0; padding: 0.8rem 1.2rem; }
+.note { color: var(--muted); font-size: 0.95rem; }
+.sent { color: var(--moss); font-weight: 600; }
+
+footer .wrap { padding-block: 1.5rem 2.5rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
+</style>
+
+</head>
+<body>
+<header class="soil">
+  <div class="wrap">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 20v-8" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 13c0-3.5 2.5-5.5 6-5.5 0 3.5-2.5 5.5-6 5.5z" fill="currentColor"/><path d="M12 15c0-2.6-2-4.2-4.8-4.2 0 2.6 2 4.2 4.8 4.2z" fill="currentColor" opacity="0.7"/></svg>
+      {{ c.location }}
+    </div>
+    <h1>Grave and Seed</h1>
+    <p class="lede">{{ c.tagline_start }} <em>{{ c.tagline_emphasis }}</em>.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section>
+      <span class="label">How I work</span>
+      <h2>{{ c.intro_heading }}</h2>
+      <div class="plain">
+        {%- for p in c.intro %}
+        <p>{{ p }}</p>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <section>
+      <span class="label">Ways to remember</span>
+      <h2>{{ c.styles_heading }}</h2>
+      <div class="styles">
+        {%- for s in c.styles %}
+        <div class="style"><h3>{{ s.name }}</h3><p>{{ s.description }}</p></div>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <section>
+      <span class="label">What I offer</span>
+      <h2>{{ c.offer_heading }}</h2>
+      <div class="tiers">
+        {%- for t in c.tiers %}
+        <div class="tier"><h3>{{ t.name }}</h3><p>{{ t.description }} <span class="lead label">{{ t.timing }}</span></p></div>
+        {%- endfor %}
+      </div>
+      <p class="note">{{ c.pricing_note }}</p>
+    </section>
+
+    <section id="contact">
+      <span class="label">Get in touch</span>
+      <h2>{{ c.contact_heading }}</h2>
+      <div class="contact">
+        <div class="email">
+          <code id="addr">{{ c.email }}</code>
+          <button class="copy" id="copy" type="button">Copy email</button>
+          {%- if c.phone != "" %}
+          <span class="phone">{{ c.phone }} &middot; {{ c.phone_note }}</span>
+          {%- endif %}
+        </div>
+        <form id="inquiry" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="cb697c2f-c777-4bc3-983d-63697d17c386">
+          <input type="hidden" name="subject" value="New inquiry from graveandseed.com">
+          <input type="hidden" name="from_name" value="Grave and Seed website">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="row">
+            <label for="name">Your name<input id="name" name="name" autocomplete="name" required></label>
+            <label for="reply">Your email<input id="reply" name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <div class="row">
+            <label for="who">Who you're remembering<input id="who" name="remembering"></label>
+            <label for="when">Rough date, if you have one<input id="when" name="date"></label>
+          </div>
+          <label for="msg">What you're picturing, even if it's vague<textarea id="msg" name="message"></textarea></label>
+          <button class="send" type="submit">Send</button>
+          <p class="note" id="status" role="status">{{ c.reply_note }}</p>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label">Grave and Seed LLC</span>
+    <span class="label">{{ c.location }}</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var b = this, el = document.getElementById('addr');
+  function sel() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  try { navigator.clipboard.writeText(el.textContent).then(function () { b.textContent = 'Copied'; }, sel); } catch (e) { sel(); }
+});
+document.getElementById('inquiry').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var form = this, s = document.getElementById('status'), btn = form.querySelector('.send');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  try {
+    var res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
+    var data = await res.json();
+    if (res.ok && data.success) {
+      form.reset();
+      s.textContent = "Thank you. I got your message and will reply by email soon.";
+      s.className = 'note sent';
+    } else { throw new Error(data.message || 'Send failed'); }
+  } catch (err) {
+    s.textContent = "That didn't send. Please email me directly at {{ c.email }}.";
+    s.className = 'note err';
+  }
+  btn.disabled = false; btn.textContent = 'Send';
+});
+</script>
+</body>
+</html>

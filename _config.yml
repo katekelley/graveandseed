@@ -1,0 +1,4 @@
+title: Grave and Seed
+exclude:
+  - README.md
+  - .pages.yml
