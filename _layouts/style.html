@@ -16,7 +16,7 @@ here: home
 </section>
 
 <section class="prose">
-  <p>Every celebration is two hours, in a morning or evening slot, at a place that suits the person. Planning starts at {% include money.html n=site.data.content.tiers[1].price_from %} for partial planning. <a href="/#how">How I work</a> &middot; <a href="/prices/">What funerals cost here</a></p>
+  <p>Every celebration is two hours, in a morning or evening slot, at a place that suits the person. {%- assign partial = site.data.content.tiers[1].price_from -%}Planning starts at {% include money.html n=partial %} for partial planning. <a href="/#how">How I work</a> &middot; <a href="/prices/">What funerals cost here</a></p>
 </section>
 
 <section id="contact">
