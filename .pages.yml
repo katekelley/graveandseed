@@ -1,3 +1,6 @@
+media:
+  input: assets
+  output: /assets
 content:
   - name: site
     label: Website text
@@ -32,6 +35,8 @@ content:
       - { name: phone, label: Phone (leave blank to hide), type: string }
       - { name: phone_note, label: Phone note, type: string }
       - { name: reply_note, label: Reply note under the form, type: string }
+      - { name: about_heading, label: "About: opening line", type: string }
+      - { name: about, label: "About: paragraphs", type: text, list: true }
   - name: prices
     label: Funeral prices page
     type: file

@@ -1,0 +1,51 @@
+---
+layout: null
+permalink: /about/
+---
+{%- assign c = site.data.content -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About Kate | Grave and Seed</title>
+<meta name="description" content="Kate plans celebrations of life in Ann Arbor, Michigan. Direct about costs, unhurried with families.">
+{% include head.html %}
+<style>
+header.soil.slim .wrap { padding-block: 1.5rem 2.25rem; }
+header.soil.slim h1 { font-size: clamp(2rem, 7vw, 3.2rem); }
+.about { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.about img { width: 100%; height: auto; border-radius: 4px; display: block; }
+@media (max-width: 640px) { .about { grid-template-columns: 1fr; } .about img { max-width: 18rem; } }
+.about .plain h2 { font-size: 1.6rem; }
+</style>
+</head>
+<body>
+<header class="soil slim">
+  <div class="wrap">
+    {% include nav.html here="about" %}
+    <h1>About</h1>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <section class="about">
+      <img src="/assets/kate.jpg" alt="Kate, smiling, sitting by a bright window" width="800" height="1200">
+      <div class="plain">
+        <h2>{{ c.about_heading }}</h2>
+        {%- for p in c.about %}
+        <p>{{ p }}</p>
+        {%- endfor %}
+        <p><a href="/#contact">Get in touch</a></p>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span class="label"><a href="/" style="color: inherit">Grave and Seed LLC</a></span>
+    <span class="label">{{ c.location }}</span>
+  </div>
+</footer>
+</body>
+</html>
