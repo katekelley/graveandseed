@@ -16,11 +16,11 @@ homes:
     town: "Ypsilanti"
     phone: "(734) 434-6500"
     website: "https://generationsfuneralservice.com"
-    posted: "Direct cremation price posted"
+    posted: "Cremation and burial prices posted"
     checked: "Nov 3, 2026"
     direct_cremation: 895
     direct_cremation_note: "Includes local transport, paperwork, container and cremation. Ashes are returned to their facility. $400 more over 280 lbs."
-    immediate_burial: ""
+    immediate_burial: 4895
     basic_services: ""
     transfer: ""
     embalming: ""
@@ -28,7 +28,7 @@ homes:
     ceremony: ""
     memorial: ""
     hearse: ""
-    notes: ""
+    notes: "Simple burial ($4,895) includes local transport, paperwork, a minimal casket, transport to the cemetery and a concrete grave liner. It doesn't include a viewing, a service or cemetery charges."
   - name: "Nie Family Funeral Home"
     short: "Nie Family"
     starting: true
