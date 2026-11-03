@@ -1,7 +1,18 @@
 updated: "November 3, 2026"
 intro: "Funeral prices in Washtenaw County vary a lot, and most homes don't post them. These are the prices each funeral home publishes, with the date we checked. Always confirm with the funeral home before deciding."
+items:
+  - { key: direct_cremation, label: "Direct cremation" }
+  - { key: immediate_burial, label: "Immediate burial" }
+  - { key: basic_services, label: "Basic services fee" }
+  - { key: transfer, label: "Transfer of remains" }
+  - { key: embalming, label: "Embalming" }
+  - { key: visitation, label: "Visitation" }
+  - { key: ceremony, label: "Funeral ceremony at the home" }
+  - { key: memorial, label: "Memorial service at the home" }
+  - { key: hearse, label: "Hearse" }
 homes:
   - name: "Generations Funeral & Cremation Services"
+    short: "Generations"
     town: "Ypsilanti"
     phone: "(734) 434-6500"
     website: "https://generationsfuneralservice.com"
@@ -19,6 +30,8 @@ homes:
     hearse: ""
     notes: ""
   - name: "Nie Family Funeral Home"
+    short: "Nie Family"
+    starting: true
     town: "Ann Arbor and Ypsilanti (three chapels)"
     phone: "(734) 971-2345"
     website: "https://www.niefuneralhomes.com/resources/prices"
@@ -36,6 +49,7 @@ homes:
     hearse: ""
     notes: "Green burial starting at $3,750. Full price list available to download on their site."
   - name: "Hosmer-Muehlig Funeral Chapel"
+    short: "Hosmer-Muehlig"
     town: "Dexter"
     phone: "(734) 426-4661"
     website: "https://www.dignitymemorial.com/funeral-homes/michigan/dexter/hosmer-muehlig-funeral-chapel/4118/funeral-price-list"
@@ -53,6 +67,7 @@ homes:
     hearse: 570
     notes: "Second location of Muehlig Funeral Chapel. Part of the Dignity Memorial network."
   - name: "Muehlig Funeral Chapel"
+    short: "Muehlig"
     town: "Ann Arbor"
     phone: "(734) 663-3375"
     website: "https://www.dignitymemorial.com/funeral-homes/michigan/ann-arbor/muehlig-funeral-chapel/4117/funeral-price-list"

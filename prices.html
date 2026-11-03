@@ -29,6 +29,22 @@ header.soil.slim h1 { font-size: clamp(2rem, 7vw, 3.2rem); }
 dl.items dt { color: var(--ink); }
 ul.plain-list { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.5rem; }
 .box { background: var(--field); border: 1px solid var(--line); border-radius: 6px; padding: 1.25rem 1.5rem; display: grid; gap: 0.75rem; }
+.table-wrap { overflow-x: auto; margin-inline: -4px; }
+table.compare { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: 0.98rem; }
+table.compare th, table.compare td { padding: 0.45rem 0.6rem; text-align: right; vertical-align: bottom; }
+table.compare thead th { font: 600 0.9rem/1.25 var(--body); border-bottom: 1px solid var(--ink); }
+table.compare thead th .town { display: block; font: 500 0.68rem/1.4 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+table.compare tbody th { text-align: left; font-weight: 400; color: var(--ink); position: sticky; left: 0; background: var(--paper); }
+table.compare td { font-family: var(--label); font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.compare tbody tr:last-child th, table.compare tbody tr:last-child td { border-bottom: 1px solid var(--ink); }
+table.compare tbody tr:first-child th, table.compare tbody tr:first-child td { padding-top: 0.7rem; }
+table.compare td.low { color: var(--moss); font-weight: 600; }
+table.compare td.none { color: var(--line); }
+table.compare sup { font-size: 0.65em; color: var(--muted); margin-left: 1px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+ol.notes { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; font-size: 0.9rem; color: var(--muted); max-width: 44rem; }
+table.compare .from-sm { font: 400 0.75rem var(--body); color: var(--muted); }
+ol.notes strong { color: var(--ink); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -65,29 +81,42 @@ ul.plain-list { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.5rem; }
 
     <section>
       <span class="label">Funeral home by funeral home</span>
-      <h2>Posted prices</h2>
-      <div class="homes">
-        {%- for h in p.homes %}
-        <div class="home">
-          <h3>{{ h.name }}</h3>
-          <p class="meta">{{ h.town }} &middot; {{ h.phone }} &middot; {{ h.posted }} &middot; checked {{ h.checked }}</p>
-          <dl class="items">
-            {% if h.direct_cremation != "" %}<dt>Direct cremation</dt><dd>{% include money.html n=h.direct_cremation %}</dd>{% endif %}
-            {% if h.immediate_burial != "" %}<dt>Immediate burial</dt><dd>{% include money.html n=h.immediate_burial %}</dd>{% endif %}
-            {% if h.basic_services != "" %}<dt>Basic services fee</dt><dd>{% include money.html n=h.basic_services %}</dd>{% endif %}
-            {% if h.transfer != "" %}<dt>Transfer of remains</dt><dd>{% include money.html n=h.transfer %}</dd>{% endif %}
-            {% if h.embalming != "" %}<dt>Embalming</dt><dd>{% include money.html n=h.embalming %}</dd>{% endif %}
-            {% if h.visitation != "" %}<dt>Visitation</dt><dd>{% include money.html n=h.visitation %}</dd>{% endif %}
-            {% if h.ceremony != "" %}<dt>Funeral ceremony at the home</dt><dd>{% include money.html n=h.ceremony %}</dd>{% endif %}
-            {% if h.memorial != "" %}<dt>Memorial service at the home</dt><dd>{% include money.html n=h.memorial %}</dd>{% endif %}
-            {% if h.hearse != "" %}<dt>Hearse</dt><dd>{% include money.html n=h.hearse %}</dd>{% endif %}
-          </dl>
-          {% if h.direct_cremation_note != "" %}<p class="small">Direct cremation: {{ h.direct_cremation_note }}</p>{% endif %}
-          {% if h.notes != "" %}<p class="small">{{ h.notes }}</p>{% endif %}
-          <p class="small"><a href="{{ h.website }}" rel="noopener">Their published prices</a></p>
-        </div>
-        {%- endfor %}
+      <h2>Posted prices, side by side</h2>
+      <p class="small">The lowest posted price in each row is highlighted. A dash means the funeral home doesn't post that price online.</p>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr">Item</span></th>
+              {%- for h in p.homes %}
+              <th scope="col">{{ h.short }}<sup>{{ forloop.index }}</sup><span class="town">{{ h.town | split: " (" | first }}</span></th>
+              {%- endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {%- for it in p.items %}
+            {%- assign low = 0 -%}
+            {%- for h in p.homes -%}{%- assign v = h[it.key] -%}{%- if v != "" and v != nil -%}{%- assign vn = v | plus: 0 -%}{%- if low == 0 or vn < low -%}{%- assign low = vn -%}{%- endif -%}{%- endif -%}{%- endfor %}
+            <tr>
+              <th scope="row">{{ it.label }}</th>
+              {%- for h in p.homes %}
+              {%- assign v = h[it.key] -%}
+              {%- if v != "" and v != nil -%}{%- assign vn = v | plus: 0 -%}
+              <td{% if vn == low %} class="low"{% endif %}>{% if h.starting %}<span class="from-sm">from </span>{% endif %}{% include money.html n=vn %}</td>
+              {%- else %}
+              <td class="none">&mdash;</td>
+              {%- endif %}
+              {%- endfor %}
+            </tr>
+            {%- endfor %}
+          </tbody>
+        </table>
       </div>
+      <ol class="notes">
+        {%- for h in p.homes %}
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %} <a href="{{ h.website }}" rel="noopener">Their prices</a></li>
+        {%- endfor %}
+      </ol>
     </section>
 
     <section>

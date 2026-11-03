@@ -61,6 +61,8 @@ content:
         list: true
         fields:
           - { name: name, label: Name, type: string }
+          - { name: short, label: Short name for table, type: string }
+          - { name: starting, label: Prices are 'starting at' prices, type: boolean }
           - { name: town, label: Town, type: string }
           - { name: phone, label: Phone, type: string }
           - { name: website, label: Link to their prices, type: string }
