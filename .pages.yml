@@ -32,3 +32,41 @@ content:
       - { name: phone, label: Phone (leave blank to hide), type: string }
       - { name: phone_note, label: Phone note, type: string }
       - { name: reply_note, label: Reply note under the form, type: string }
+  - name: prices
+    label: Funeral prices page
+    type: file
+    path: _data/prices.yml
+    fields:
+      - { name: updated, label: Date prices were checked, type: string }
+      - { name: intro, label: Intro, type: text }
+      - name: homes
+        label: Funeral homes with posted prices (list from cheapest to most expensive direct cremation)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: town, label: Town, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: website, label: Link to their prices, type: string }
+          - { name: posted, label: What they post, type: string }
+          - { name: checked, label: Date checked, type: string }
+          - { name: direct_cremation, label: Direct cremation ($), type: string }
+          - { name: direct_cremation_note, label: Direct cremation note, type: text }
+          - { name: immediate_burial, label: Immediate burial ($), type: string }
+          - { name: basic_services, label: Basic services fee ($), type: string }
+          - { name: transfer, label: Transfer of remains ($), type: string }
+          - { name: embalming, label: Embalming ($), type: string }
+          - { name: visitation, label: Visitation ($), type: string }
+          - { name: ceremony, label: Funeral ceremony ($), type: string }
+          - { name: memorial, label: Memorial service ($), type: string }
+          - { name: hearse, label: Hearse ($), type: string }
+          - { name: notes, label: Notes, type: text }
+      - name: not_posted
+        label: Funeral homes without posted prices
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: town, label: Town, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: status, label: Status, type: string }

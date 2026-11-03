@@ -1,0 +1,96 @@
+updated: "November 3, 2026"
+intro: "Funeral prices in Washtenaw County vary a lot, and most homes don't post them. These are the prices each funeral home publishes, with the date we checked. Always confirm with the funeral home before deciding."
+homes:
+  - name: "Generations Funeral & Cremation Services"
+    town: "Ypsilanti"
+    phone: "(734) 434-6500"
+    website: "https://generationsfuneralservice.com"
+    posted: "Direct cremation price posted"
+    checked: "Nov 3, 2026"
+    direct_cremation: 895
+    direct_cremation_note: "Includes local transport, paperwork, container and cremation. Ashes are returned to their facility. $400 more over 280 lbs."
+    immediate_burial: ""
+    basic_services: ""
+    transfer: ""
+    embalming: ""
+    visitation: ""
+    ceremony: ""
+    memorial: ""
+    hearse: ""
+    notes: ""
+  - name: "Nie Family Funeral Home"
+    town: "Ann Arbor and Ypsilanti (three chapels)"
+    phone: "(734) 971-2345"
+    website: "https://www.niefuneralhomes.com/resources/prices"
+    posted: "Starting prices posted"
+    checked: "Nov 3, 2026"
+    direct_cremation: 2500
+    direct_cremation_note: "Starting price. Includes basic services, refrigeration up to 48 hours, transfers and return of ashes."
+    immediate_burial: 3700
+    basic_services: ""
+    transfer: ""
+    embalming: ""
+    visitation: ""
+    ceremony: ""
+    memorial: ""
+    hearse: ""
+    notes: "Green burial starting at $3,750. Full price list available to download on their site."
+  - name: "Hosmer-Muehlig Funeral Chapel"
+    town: "Dexter"
+    phone: "(734) 426-4661"
+    website: "https://www.dignitymemorial.com/funeral-homes/michigan/dexter/hosmer-muehlig-funeral-chapel/4118/funeral-price-list"
+    posted: "Full price list posted (effective Oct 1, 2026)"
+    checked: "Nov 3, 2026"
+    direct_cremation: 3690
+    direct_cremation_note: "With a container you provide. $4,085 with a cardboard container."
+    immediate_burial: 5295
+    basic_services: 4495
+    transfer: 620
+    embalming: 1295
+    visitation: 595
+    ceremony: 745
+    memorial: 1295
+    hearse: 570
+    notes: "Second location of Muehlig Funeral Chapel. Part of the Dignity Memorial network."
+  - name: "Muehlig Funeral Chapel"
+    town: "Ann Arbor"
+    phone: "(734) 663-3375"
+    website: "https://www.dignitymemorial.com/funeral-homes/michigan/ann-arbor/muehlig-funeral-chapel/4117/funeral-price-list"
+    posted: "Full price list posted (effective Oct 1, 2026)"
+    checked: "Nov 3, 2026"
+    direct_cremation: 3765
+    direct_cremation_note: "With a container you provide. $4,160 with a cardboard container."
+    immediate_burial: 5345
+    basic_services: 4495
+    transfer: 695
+    embalming: 1195
+    visitation: 595
+    ceremony: 945
+    memorial: 1295
+    hearse: 595
+    notes: "Part of the Dignity Memorial network. Packages run from $5,845 (cremation) to $21,027 (full funeral with vault)."
+not_posted:
+  - name: "Staffan-Mitchell Funeral Home"
+    town: "Chelsea"
+    phone: "(734) 475-1444"
+    status: "No prices online; call for their price list"
+  - name: "Stark Funeral Professionals"
+    town: "Ypsilanti"
+    phone: "(734) 482-4900"
+    status: "Not yet checked"
+  - name: "C & H Community for Funerals"
+    town: "Ypsilanti"
+    phone: "(734) 482-9889"
+    status: "Not yet checked"
+  - name: "Robison-Bahnmiller Funeral Home"
+    town: "Saline"
+    phone: "(734) 429-9760"
+    status: "Not yet checked"
+  - name: "Cole Funeral Chapel"
+    town: "Chelsea"
+    phone: "(734) 475-1551"
+    status: "Not yet checked"
+  - name: "Ochalek Funeral and Cremation Service"
+    town: "Milan"
+    phone: "(734) 439-1100"
+    status: "Not yet checked"
