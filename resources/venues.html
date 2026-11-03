@@ -1,0 +1,36 @@
+---
+layout: page
+title: Places to hold a celebration of life
+here: resources
+heading: Places to hold a celebration of life
+lede: Venues in and around Ann Arbor, with published prices where we could find them.
+description: Venues for a celebration of life or memorial gathering in Ann Arbor and Washtenaw County, with capacity and published prices.
+permalink: /resources/venues/
+---
+{%- assign v = site.data.venues -%}
+<section class="prose">
+  <p>A celebration of life doesn't have to happen at a funeral home, and it doesn't have to happen right away. If the body is cremated or buried first, you can gather three to six weeks later, which opens up far more places.</p>
+  <p>Questions worth asking any venue: Can we bring our own caterer? Are candles allowed? Do you need a certificate of insurance? How far ahead do you book, and can you hold a date for a day or two? Is it accessible?</p>
+  <p class="small">Prices are what each venue publishes, checked {{ v.updated }}. Always confirm directly. "Welcomes memorials" means the venue mentions memorials or celebrations of life.</p>
+</section>
+<section>
+  <div class="cards">
+    {%- for x in v.venues %}
+    <div class="card">
+      <h3>{{ x.name }}{% if x.memorials %}<span class="tag">Welcomes memorials</span>{% endif %}</h3>
+      <p class="meta">{{ x.town }} &middot; <a href="{{ x.link }}" rel="noopener">Website</a></p>
+      <p>{{ x.about }}.</p>
+      <dl class="facts">
+        <dt>Capacity</dt><dd>{{ x.capacity }}</dd>
+        <dt>Price</dt><dd>{{ x.price }}</dd>
+        {% if x.notes != "" %}<dt>Good to know</dt><dd>{{ x.notes }}</dd>{% endif %}
+      </dl>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+<section>
+  <div class="box">
+    <p>Finding a beautiful place on short notice is a big part of what I do. <a href="/#contact">Tell me what you're picturing</a>.</p>
+  </div>
+</section>

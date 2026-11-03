@@ -1,0 +1,52 @@
+---
+layout: page
+title: Green burial in Michigan
+here: resources
+heading: Green burial in Michigan
+lede: Where you can be buried simply, and what "green" actually means at each place.
+description: Green and natural burial options in Michigan, near Ann Arbor and statewide, with vault rules, allowed containers, markers and prices.
+permalink: /resources/green-burial/
+---
+{%- assign g = site.data.green_burial -%}
+<section class="prose">
+  <p>Green burial means the body goes into the ground in a way that lets it return to the soil: no embalming, a shroud or simple biodegradable container, and no concrete vault. Michigan law doesn't require embalming or a vault, but most cemeteries require a vault, and many places that say they "offer green burial" still do.</p>
+  <h2>What to ask any cemetery</h2>
+  <ul>
+    <li><strong>Is a vault or grave liner required?</strong> This is the big one. A shroud inside a concrete vault isn't a green burial.</li>
+    <li><strong>Is embalming allowed or required?</strong></li>
+    <li><strong>What containers are allowed?</strong> Shroud, wicker, plain pine, cardboard.</li>
+    <li><strong>What markers are allowed?</strong> Some allow flat stones, some allow nothing.</li>
+    <li><strong>Are there religious or residency rules,</strong> and do residents pay less?</li>
+  </ul>
+  <p>Hybrid cemeteries have a green section inside a regular cemetery. Natural burial grounds are fully green. Conservation burial grounds also protect the land; Michigan doesn't have one yet, though one is being planned near Jackson.</p>
+  <p class="small">There is currently no true green burial inside Ann Arbor. The closest options are in Chelsea, Milan and Dexter. Details checked {{ g.updated }}. Rules and prices change, so always confirm with the cemetery.</p>
+</section>
+
+{%- for grp in g.groups %}
+<section>
+  <h2>{{ grp.heading }}</h2>
+  <div class="cards">
+    {%- for s in grp.sites %}
+    <div class="card">
+      <h3>{{ s.name }}</h3>
+      <p class="meta">{{ s.town }}{% if s.phone != "" %} &middot; {{ s.phone }}{% endif %}{% if s.link != "" %} &middot; <a href="{{ s.link }}" rel="noopener">Website</a>{% endif %}</p>
+      <dl class="facts">
+        <dt>Type</dt><dd>{{ s.type }}</dd>
+        <dt>Vault</dt><dd>{{ s.vault }}</dd>
+        <dt>Containers</dt><dd>{{ s.containers }}</dd>
+        <dt>Markers</dt><dd>{{ s.markers }}</dd>
+        <dt>Price</dt><dd>{{ s.price }}</dd>
+      </dl>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+{%- endfor %}
+
+<section>
+  <p class="small">{{ g.also_listed }}</p>
+  <div class="box">
+    <p>Want help finding a green option, or planning a gathering to go with it? <a href="/#contact">Get in touch</a>. For caskets and shrouds, see <a href="/resources/caskets/">caskets, shrouds and lower-cost options</a>.</p>
+    <p class="small">Sources include each cemetery's website, the Michigan Deathcare Collaborative, The Dying Year and local news. Spot an error? Email {{ site.data.content.email }}.</p>
+  </div>
+</section>

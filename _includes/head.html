@@ -94,4 +94,24 @@ dl.items { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.5re
 dl.items dd { margin: 0; font-family: var(--label); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 dl.items .total { border-top: 1px solid var(--line); padding-top: 0.5rem; font-weight: 600; }
 .tier .from { font-family: var(--label); font-variant-numeric: tabular-nums; font-size: 1rem; color: var(--moss); display: block; margin-top: 0.35rem; }
+
+header.soil.slim .wrap { padding-block: 1.5rem 2.25rem; }
+header.soil.slim h1 { font-size: clamp(2rem, 7vw, 3.2rem); }
+.cards { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.card { display: grid; gap: 0.45rem; padding-block: 1.1rem; border-bottom: 1px solid var(--line); min-width: 0; }
+.card h3 { font-size: 1.25rem; font-weight: 500; }
+.card .meta { color: var(--muted); font-size: 0.95rem; }
+.facts { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0.3rem 1rem; margin: 0; font-size: 1rem; }
+.facts dt { color: var(--muted); font: 500 0.72rem/1.9 var(--label); letter-spacing: 0.1em; text-transform: uppercase; }
+.facts dd { margin: 0; }
+@media (max-width: 560px) { .facts { grid-template-columns: 1fr; gap: 0.1rem; } .facts dd { margin-bottom: 0.4rem; } }
+.tag { display: inline-block; font: 500 0.7rem/1 var(--label); letter-spacing: 0.1em; text-transform: uppercase; color: var(--moss); border: 1px solid var(--moss); border-radius: 3px; padding: 0.25rem 0.4rem; margin-left: 0.4rem; vertical-align: middle; }
+.box { background: var(--field); border: 1px solid var(--line); border-radius: 6px; padding: 1.25rem 1.5rem; display: grid; gap: 0.75rem; }
+.prose { display: grid; gap: 0.9rem; max-width: 38rem; }
+.prose h2 { margin-top: 0.5rem; }
+.prose ul, .prose ol { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.5rem; }
+.guides { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+.guide { display: grid; gap: 0.4rem; padding: 1.1rem 1.25rem; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; color: var(--ink); background: var(--field); }
+.guide:hover { border-color: var(--moss); }
+.guide h3 { font-size: 1.2rem; font-weight: 500; color: var(--moss); }
 </style>
