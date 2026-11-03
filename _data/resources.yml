@@ -1,12 +1,18 @@
-- title: "What funerals cost in Washtenaw County"
-  blurb: "Published funeral home prices, side by side, with a sample all-in budget."
-  url: "/prices/"
-- title: "Green burial in Michigan"
-  blurb: "Where you can be buried simply, and which places still require a vault."
-  url: "/resources/green-burial/"
-- title: "Places to hold a celebration of life"
-  blurb: "Venues around Ann Arbor with capacity and published prices."
-  url: "/resources/venues/"
-- title: "Caskets, shrouds and lower-cost options"
-  blurb: "Costco caskets, local makers, body donation, veterans and state burial help."
-  url: "/resources/caskets/"
+- title: 'Someone died: the first week'
+  blurb: Who to call, what has to happen soon, who decides, and what can wait.
+  url: /resources/first-week/
+- title: What funerals cost in Washtenaw County
+  blurb: Published funeral home prices, side by side, with a sample all-in budget.
+  url: /prices/
+- title: Green burial in Michigan
+  blurb: Where you can be buried simply, and which places still require a vault.
+  url: /resources/green-burial/
+- title: Places to hold a celebration of life
+  blurb: Venues around Ann Arbor with capacity and published prices.
+  url: /resources/venues/
+- title: Caskets, shrouds and lower-cost options
+  blurb: Costco caskets, local makers, body donation, veterans and state burial help.
+  url: /resources/caskets/
+- title: Planning ahead in Michigan
+  blurb: Name a funeral representative, prepaid contracts, and writing down your wishes.
+  url: /resources/planning-ahead/
