@@ -71,6 +71,7 @@ content:
           - { name: direct_cremation, label: Direct cremation ($), type: string }
           - { name: direct_cremation_note, label: Direct cremation note, type: text }
           - { name: immediate_burial, label: Immediate burial ($), type: string }
+          - { name: burial_casket, label: Burial with their cheapest casket ($), type: string }
           - { name: basic_services, label: Basic services fee ($), type: string }
           - { name: transfer, label: Transfer of remains ($), type: string }
           - { name: embalming, label: Embalming ($), type: string }

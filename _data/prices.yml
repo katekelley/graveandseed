@@ -3,6 +3,7 @@ intro: "Funeral prices in Washtenaw County vary a lot, and most homes don't post
 items:
   - { key: direct_cremation, label: "Direct cremation" }
   - { key: immediate_burial, label: "Immediate burial" }
+  - { key: burial_casket, label: "Burial with their cheapest casket" }
   - { key: basic_services, label: "Basic services fee" }
   - { key: transfer, label: "Transfer of remains" }
   - { key: embalming, label: "Embalming" }
@@ -21,6 +22,7 @@ homes:
     direct_cremation: 895
     direct_cremation_note: "Includes local transport, paperwork, container and cremation. Ashes are returned to their facility. $400 more over 280 lbs."
     immediate_burial: 4895
+    burial_casket: 4895
     basic_services: ""
     transfer: ""
     embalming: ""
@@ -28,7 +30,7 @@ homes:
     ceremony: ""
     memorial: ""
     hearse: ""
-    notes: "Simple burial ($4,895) includes local transport, paperwork, a minimal casket, transport to the cemetery and a concrete grave liner. It doesn't include a viewing, a service or cemetery charges."
+    notes: "Simple burial ($4,895) includes local transport, paperwork, a minimal casket, transport to the cemetery and a concrete grave liner, so it is the only burial price here that includes the liner most cemeteries require. It doesn't include a viewing, a service or cemetery charges."
   - name: "Nie Family Funeral Home"
     short: "Nie Family"
     starting: true
@@ -40,6 +42,7 @@ homes:
     direct_cremation: 2500
     direct_cremation_note: "Starting price. Includes basic services, refrigeration up to 48 hours, transfers and return of ashes."
     immediate_burial: 3700
+    burial_casket: 4795
     basic_services: ""
     transfer: ""
     embalming: ""
@@ -47,7 +50,7 @@ homes:
     ceremony: ""
     memorial: ""
     hearse: ""
-    notes: "Green burial starting at $3,750. Full price list available to download on their site."
+    notes: "Burial with their cheapest casket is a cloth-covered casket, from their full price list dated May 1, 2023. Green burial with a willow casket is $5,845. A grave liner or vault, if the cemetery requires one, is $1,095 to $3,895 more."
   - name: "Hosmer-Muehlig Funeral Chapel"
     short: "Hosmer-Muehlig"
     town: "Dexter"
@@ -58,6 +61,7 @@ homes:
     direct_cremation: 3690
     direct_cremation_note: "With a container you provide. $4,085 with a cardboard container."
     immediate_burial: 5295
+    burial_casket: 6890
     basic_services: 4495
     transfer: 620
     embalming: 1295
@@ -65,7 +69,7 @@ homes:
     ceremony: 745
     memorial: 1295
     hearse: 570
-    notes: "Second location of Muehlig Funeral Chapel. Part of the Dignity Memorial network."
+    notes: "Second location of Muehlig Funeral Chapel. Part of the Dignity Memorial network. Immediate burial assumes you provide the casket; burial with their cheapest casket is $6,890, not counting a grave liner."
   - name: "Muehlig Funeral Chapel"
     short: "Muehlig"
     town: "Ann Arbor"
@@ -76,6 +80,7 @@ homes:
     direct_cremation: 3765
     direct_cremation_note: "With a container you provide. $4,160 with a cardboard container."
     immediate_burial: 5345
+    burial_casket: 6940
     basic_services: 4495
     transfer: 695
     embalming: 1195
@@ -83,7 +88,7 @@ homes:
     ceremony: 945
     memorial: 1295
     hearse: 595
-    notes: "Part of the Dignity Memorial network. Packages run from $5,845 (cremation) to $21,027 (full funeral with vault)."
+    notes: "Part of the Dignity Memorial network. Immediate burial assumes you provide the casket; burial with their cheapest casket is $6,940, not counting a grave liner. Packages run from $5,845 (cremation) to $21,027 (full funeral with vault)."
 not_posted:
   - name: "Staffan-Mitchell Funeral Home"
     town: "Chelsea"
