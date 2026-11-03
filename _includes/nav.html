@@ -1,10 +1,10 @@
 <nav class="topnav" aria-label="Main">
   <a class="brand" href="/">Grave and Seed</a>
   <div class="links">
-    <a href="/#how"{% if include.here == "home" %} aria-current="page"{% endif %}>Celebrations</a>
+    <a href="/services/"{% if include.here == "services" %} aria-current="page"{% endif %}>Services</a>
     <a href="/prices/"{% if include.here == "prices" %} aria-current="page"{% endif %}>Funeral prices</a>
     <a href="/resources/"{% if include.here == "resources" %} aria-current="page"{% endif %}>Resources</a>
     <a href="/about/"{% if include.here == "about" %} aria-current="page"{% endif %}>About</a>
-    <a href="/#contact">Contact</a>
+    <a class="nav-cta" href="/contact/"{% if include.here == "contact" %} aria-current="page"{% endif %}>Contact</a>
   </div>
 </nav>

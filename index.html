@@ -46,59 +46,21 @@ layout: null
     </section>
 
     <section>
-      <span class="label">What I offer</span>
+      <span class="label">Services</span>
       <h2>{{ c.offer_heading }}</h2>
       <div class="tiers">
         {%- for t in c.tiers %}
-        <div class="tier"><h3>{{ t.name }}{% if t.price_from %}<span class="from">From {% include money.html n=t.price_from %}</span>{% endif %}</h3><p>{{ t.description }} <span class="lead label">{{ t.timing }}</span></p></div>
+        <div class="tier"><h3>{{ t.name }}{% if t.price_from %}<span class="from">From {% include money.html n=t.price_from %}</span>{% endif %}</h3><p>{{ t.description }}</p></div>
         {%- endfor %}
       </div>
-      <p class="note">{{ c.pricing_note }}</p>
-      <h3 class="addons-h">{{ c.addons_heading }}</h3>
-      <div class="tiers">
-        {%- for a in c.addons %}
-        <div class="tier"><h3>{{ a.name }}<span class="from">From {% include money.html n=a.price_from %}</span></h3><p>{{ a.description }}</p></div>
-        {%- endfor %}
-      </div>
-      {% include budget.html %}
-      <p class="note"><a href="/prices/">See what Washtenaw County funeral homes charge</a></p>
+      <p class="note"><a href="/services/">Add-ons, a sample budget and how booking works</a> &middot; <a href="/faq/">FAQ</a></p>
     </section>
 
-    <section id="steps">
-      <span class="label">Booking</span>
-      <h2>{{ c.steps_heading }}</h2>
-      <ol class="steps">
-        {%- for st in c.steps %}
-        <li><h3>{{ st.name }}</h3><p>{{ st.description }}</p></li>
-        {%- endfor %}
-      </ol>
-    </section>
-
-    <section id="faq">
-      <span class="label">FAQ</span>
-      <h2>{{ c.faq_heading }}</h2>
-      <div class="faq">
-        {%- for f in c.faq %}
-        <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
-        {%- endfor %}
-      </div>
-    </section>
-
-    <section id="contact">
-      <span class="label">Get in touch</span>
+    <section class="next">
       <h2>{{ c.contact_heading }}</h2>
-      <div class="contact">
-        <div class="email">
-          <code id="addr">{{ c.email }}</code>
-          <button class="copy" id="copy" type="button">Copy email</button>
-          {%- if c.phone != "" %}
-          <span class="phone">{{ c.phone }} &middot; {{ c.phone_note }}</span>
-          {%- endif %}
-          {%- if c.booking_url != "" %}
-          <a class="book" href="{{ c.booking_url }}" rel="noopener">{{ c.booking_text }} &rarr;</a>
-          {%- endif %}
-        </div>
-        {% include inquiry_form.html source="home" %}
+      <div class="actions">
+        {%- if c.booking_url != "" %}<a class="button" href="{{ c.booking_url }}" rel="noopener">Book a free 20-minute call</a>{% endif %}
+        <a class="button quiet" href="/contact/">Send a message</a>
       </div>
     </section>
   </div>
@@ -106,14 +68,5 @@ layout: null
 
 {% include footer.html %}
 
-<script>
-document.getElementById('copy').addEventListener('click', function () {
-  var b = this, el = document.getElementById('addr');
-  function sel() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
-  try { navigator.clipboard.writeText(el.textContent).then(function () { b.textContent = 'Copied'; }, sel); } catch (e) { sel(); }
-});
-
-</script>
-{% include inquiry_script.html %}
 </body>
 </html>

@@ -1,0 +1,40 @@
+---
+layout: page
+title: Services and prices
+here: services
+heading: Services and prices
+lede: Starting prices for planning, add-ons, and how booking works.
+description: Celebration of life planning in Ann Arbor - full planning, partial planning and day-of coordination with posted starting prices, add-ons and a sample budget.
+permalink: /services/
+---
+{%- assign c = site.data.content -%}
+    <section>
+      <span class="label">Planning</span>
+      <h2>{{ c.offer_heading }}</h2>
+      <div class="tiers">
+        {%- for t in c.tiers %}
+        <div class="tier"><h3>{{ t.name }}{% if t.price_from %}<span class="from">From {% include money.html n=t.price_from %}</span>{% endif %}</h3><p>{{ t.description }} <span class="lead label">{{ t.timing }}</span></p></div>
+        {%- endfor %}
+      </div>
+      <p class="note">{{ c.pricing_note }}</p>
+      <h3 class="addons-h">{{ c.addons_heading }}</h3>
+      <div class="tiers">
+        {%- for a in c.addons %}
+        <div class="tier"><h3>{{ a.name }}<span class="from">From {% include money.html n=a.price_from %}</span></h3><p>{{ a.description }}</p></div>
+        {%- endfor %}
+      </div>
+      {% include budget.html %}
+      <p class="note"><a href="/prices/">See what Washtenaw County funeral homes charge</a></p>
+    </section>
+
+    <section id="steps">
+      <span class="label">Booking</span>
+      <h2>{{ c.steps_heading }}</h2>
+      <ol class="steps">
+        {%- for st in c.steps %}
+        <li><h3>{{ st.name }}</h3><p>{{ st.description }}</p></li>
+        {%- endfor %}
+      </ol>
+    </section>
+
+    <p class="note">More questions? <a href="/faq/">Read the FAQ</a> or <a href="/contact/">get in touch</a>.</p>

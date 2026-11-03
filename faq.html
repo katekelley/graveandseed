@@ -1,0 +1,21 @@
+---
+layout: page
+title: FAQ
+here: faq
+heading: Questions people ask
+lede: Timing, funeral homes, religion, payment and more.
+description: Answers to common questions about planning a celebration of life with Grave and Seed in Ann Arbor.
+permalink: /faq/
+---
+{%- assign c = site.data.content -%}
+    <section id="faq">
+      
+      
+      <div class="faq">
+        {%- for f in c.faq %}
+        <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <p class="note">Didn't see your question? <a href="/contact/">Ask me</a>.</p>

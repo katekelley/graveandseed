@@ -1,0 +1,36 @@
+---
+layout: page
+title: Contact
+here: contact
+heading: Tell me who you're remembering
+lede: Book a free call, text, email or send a message. Whatever is easiest right now.
+description: Contact Grave and Seed, celebration of life planning in Ann Arbor. Book a free 20-minute call or send a message.
+permalink: /contact/
+---
+{%- assign c = site.data.content -%}
+    <section id="contact">
+      
+      
+      <div class="contact">
+        <div class="email">
+          <code id="addr">{{ c.email }}</code>
+          <button class="copy" id="copy" type="button">Copy email</button>
+          {%- if c.phone != "" %}
+          <span class="phone">{{ c.phone }} &middot; {{ c.phone_note }}</span>
+          {%- endif %}
+          {%- if c.booking_url != "" %}
+          <a class="book" href="{{ c.booking_url }}" rel="noopener">{{ c.booking_text }} &rarr;</a>
+          {%- endif %}
+        </div>
+        {% include inquiry_form.html source="contact" %}
+      </div>
+    </section>
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var b = this, el = document.getElementById('addr');
+  function sel() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  try { navigator.clipboard.writeText(el.textContent).then(function () { b.textContent = 'Copied'; }, sel); } catch (e) { sel(); }
+});
+
+</script>
+{% include inquiry_script.html %}
