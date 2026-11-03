@@ -15,18 +15,16 @@ layout: null
 <body>
 <header class="soil">
   <div class="wrap">
-    <div class="mark">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 20v-8" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 13c0-3.5 2.5-5.5 6-5.5 0 3.5-2.5 5.5-6 5.5z" fill="currentColor"/><path d="M12 15c0-2.6-2-4.2-4.8-4.2 0 2.6 2 4.2 4.8 4.2z" fill="currentColor" opacity="0.7"/></svg>
-      {{ c.location }}
-    </div>
-    <h1>Grave and Seed</h1>
+    {% include nav.html here="home" %}
+    <h1>Celebrations of life in {{ c.location | split: "," | first }}</h1>
     <p class="lede">{{ c.tagline_start }} <em>{{ c.tagline_emphasis }}</em>.</p>
+    <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
   </div>
 </header>
 
 <main>
   <div class="wrap">
-    <section>
+    <section id="how">
       <span class="label">How I work</span>
       <h2>{{ c.intro_heading }}</h2>
       <div class="plain">

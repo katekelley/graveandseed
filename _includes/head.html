@@ -35,7 +35,7 @@ a { color: var(--moss); }
 .label { font: 500 0.72rem/1 var(--label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 
 header.soil { background: var(--soil); color: var(--soil-ink); }
-header.soil .wrap { padding-block: 3.5rem 3rem; display: grid; gap: 1.25rem; }
+header.soil .wrap { padding-block: 1.5rem 3rem; display: grid; gap: 1.25rem; }
 .mark { display: flex; align-items: center; gap: 0.6rem; font: 500 0.78rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
 .mark svg { width: 22px; height: 22px; }
 header h1 { font-size: clamp(2.6rem, 9vw, 4.4rem); font-weight: 700; letter-spacing: -0.02em; }
@@ -78,4 +78,12 @@ input:focus, textarea:focus, button:focus-visible { outline: 2px solid var(--mos
 .sent { color: var(--moss); font-weight: 600; }
 
 footer .wrap { padding-block: 1.5rem 2.5rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
+
+.topnav { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1.5rem; }
+.topnav .brand { font: 700 1.05rem/1.2 var(--display); color: var(--soil-ink); text-decoration: none; }
+.topnav .links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
+.topnav .links a { font: 500 0.78rem/1.6 var(--label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--soil-ink); opacity: 0.8; text-decoration: none; }
+.topnav .links a:hover, .topnav .links a[aria-current] { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+.hero-cta { display: inline-block; justify-self: start; margin-top: 0.25rem; padding: 0.7rem 1rem; border: 1px solid rgba(236,231,222,0.5); border-radius: 4px; color: var(--soil-ink); text-decoration: none; font-weight: 600; }
+.hero-cta:hover { background: rgba(236,231,222,0.08); }
 </style>
