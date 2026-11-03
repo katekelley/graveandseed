@@ -2,3 +2,6 @@ title: Grave and Seed
 exclude:
   - README.md
   - .pages.yml
+url: "https://graveandseed.com"
+plugins:
+  - jekyll-sitemap

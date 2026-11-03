@@ -19,6 +19,7 @@ layout: null
     <h1>Celebrations of life in {{ c.location | split: "," | first }}</h1>
     <p class="lede">{{ c.tagline_start }} <em>{{ c.tagline_emphasis }}</em>.</p>
     <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
+    <p class="crisis">{{ c.crisis_note }} <a href="/resources/first-week/">{{ c.crisis_link_text }}</a>.</p>
   </div>
 </header>
 
@@ -63,6 +64,26 @@ layout: null
       <p class="note"><a href="/prices/">See what Washtenaw County funeral homes charge</a></p>
     </section>
 
+    <section id="steps">
+      <span class="label">Booking</span>
+      <h2>{{ c.steps_heading }}</h2>
+      <ol class="steps">
+        {%- for st in c.steps %}
+        <li><h3>{{ st.name }}</h3><p>{{ st.description }}</p></li>
+        {%- endfor %}
+      </ol>
+    </section>
+
+    <section id="faq">
+      <span class="label">FAQ</span>
+      <h2>{{ c.faq_heading }}</h2>
+      <div class="faq">
+        {%- for f in c.faq %}
+        <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
+        {%- endfor %}
+      </div>
+    </section>
+
     <section id="contact">
       <span class="label">Get in touch</span>
       <h2>{{ c.contact_heading }}</h2>
@@ -73,6 +94,9 @@ layout: null
           {%- if c.phone != "" %}
           <span class="phone">{{ c.phone }} &middot; {{ c.phone_note }}</span>
           {%- endif %}
+          {%- if c.booking_url != "" %}
+          <a class="book" href="{{ c.booking_url }}" rel="noopener">{{ c.booking_text }} &rarr;</a>
+          {%- endif %}
         </div>
         {% include inquiry_form.html source="home" %}
       </div>
@@ -80,12 +104,7 @@ layout: null
   </div>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span class="label">Grave and Seed LLC</span>
-    <span class="label">{{ c.location }}</span>
-  </div>
-</footer>
+{% include footer.html %}
 
 <script>
 document.getElementById('copy').addEventListener('click', function () {

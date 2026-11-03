@@ -1,6 +1,8 @@
 tagline_start: "Celebrations of life, planned plainly and"
 tagline_emphasis: "held with care"
 location: "Ann Arbor, Michigan"
+crisis_note: "If someone just died and you don't know where to start:"
+crisis_link_text: "here's the first week"
 
 intro_heading: "Someone died. Let's gather the people who loved them."
 intro:
@@ -44,6 +46,38 @@ email: "kate@graveandseed.com"
 phone: "(734) 489-9915"
 phone_note: "Texts welcome"
 reply_note: "I reply by email, usually within a day or two."
+booking_url: ""
+booking_text: "Or book a free 20-minute call"
+
+steps_heading: "How it works"
+steps:
+  - name: "A free call"
+    description: "Twenty minutes, by phone or video. Tell me about the person and what you're picturing. No pressure to decide anything."
+  - name: "A written proposal"
+    description: "Within a few days, a plan and a clear price, including what you'll pay vendors directly."
+  - name: "A deposit to hold the date"
+    description: "Half the planning fee holds your date. The rest is due a week before the celebration."
+  - name: "Planning together"
+    description: "As many check-ins as you want, or as few. I handle venues, vendors and the order of the day."
+  - name: "The day itself"
+    description: "I arrive first, leave last, and keep things moving so you can be with your people."
+
+faq_heading: "Questions people ask"
+faq:
+  - q: "How soon can you plan something?"
+    a: "Day-of coordination can come together in about a week. For full planning, three weeks or more is best. Many families hold the celebration a month or two after the death, especially after a direct cremation, and that's completely fine."
+  - q: "Do I still need a funeral home?"
+    a: "In Michigan, yes. A licensed funeral director has to handle the body, the death certificate and the permits. I don't do any of that. I plan the gathering, which can be separate and happen later, anywhere. I'm happy to help you compare funeral home prices."
+  - q: "Is it religious?"
+    a: "Only if you want it to be. I plan secular, religious and mixed celebrations, and I'll work with your clergy or a celebrant. I don't officiate myself, but I can recommend people who do."
+  - q: "Can friends hire you, not just family?"
+    a: "Yes. Chosen family, roommates, a band, a gaming group, a group of coworkers. If you're the people throwing the party, I'll work with you."
+  - q: "How do payment and cancellation work?"
+    a: "Half the planning fee holds your date and the rest is due a week before. If plans change, I'll refund the deposit minus time already spent and any vendor costs that can't be refunded. Life is unpredictable right now; I'll be reasonable."
+  - q: "Where do you work?"
+    a: "Ann Arbor, Ypsilanti and the rest of Washtenaw County. I'll travel farther for a mileage fee."
+  - q: "Can we have alcohol?"
+    a: "Yes, served by a licensed caterer or the venue's bar. I can help you find one."
 
 about_heading: "I'm Kate. I live in Ann Arbor, and I plan celebrations of life."
 about:
@@ -62,3 +96,21 @@ addons:
   - name: "Flower table"
     price_from: 200
     description: "Buckets of fresh flowers, shears and mismatched bud vases, so guests can make a small arrangement during the gathering and take it home. I order, prep and set up the flowers; you pay for them at cost, usually $100 to $200 for 50 guests. Needs about a week's notice."
+  - name: "Photo memory table"
+    price_from: 300
+    description: "Send me boxes, albums or phone photos. I scan and choose them with you, print a display for the room and make a slideshow to play during the gathering. The family keeps all the scans."
+  - name: "Memory cards book"
+    price_from: 150
+    description: "Instead of a guest book, cards that ask guests for a story or a memory. Afterward I bind them into a book for the family. Printing is extra."
+  - name: "Livestream"
+    price_from: 150
+    description: "For family who can't be there. A steady camera, good sound and someone watching the stream, with a private link and a recording afterward."
+  - name: "Invitations and program"
+    price_from: 200
+    description: "A simple invitation with an online RSVP, and a printed program with the order of the day, photos and readings. Printing is extra."
+  - name: "Seed packet keepsakes"
+    price_from: 125
+    description: "Packets of Michigan wildflower seeds printed with their name, for guests to take home and plant. Seeds and printing are extra."
+  - name: "Kids' table"
+    price_from: 100
+    description: "A quiet table with drawing, a memory jar and simple crafts, so grieving kids have somewhere to be. I can share local children's grief resources with the family afterward."
