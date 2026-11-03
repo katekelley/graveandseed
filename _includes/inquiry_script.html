@@ -1,0 +1,20 @@
+<script>
+document.getElementById('inquiry').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var form = this, s = document.getElementById('status'), btn = form.querySelector('.send');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  try {
+    var res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
+    var data = await res.json();
+    if (res.ok && data.success) {
+      form.reset();
+      s.textContent = "Thank you. I got your message and will reply by email soon.";
+      s.className = 'note sent';
+    } else { throw new Error(data.message || 'Send failed'); }
+  } catch (err) {
+    s.textContent = "That didn't send. Please email me directly at {{ site.data.content.email }}.";
+    s.className = 'note err';
+  }
+  btn.disabled = false; btn.textContent = 'Send';
+});
+</script>

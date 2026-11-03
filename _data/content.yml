@@ -11,12 +11,16 @@ intro:
 styles_heading: "Event styles"
 styles:
   - name: "The Long Table"
+    link: "/celebrations/long-table/"
     description: "A shared meal, one long table, and time for stories."
   - name: "A Proper Send-Off"
+    link: "/celebrations/proper-send-off/"
     description: "Toasts, a loud room and the songs they'd have picked."
   - name: "Chosen Kin"
+    link: "/celebrations/chosen-kin/"
     description: "A celebration run by friends, on your terms, separate from any official service."
   - name: "Last Roll"
+    link: "/celebrations/last-roll/"
     description: "For the gamers and the fans: dice, character sheets and the campaign recap."
 
 offer_heading: "Planning, from start to finish or just the day"

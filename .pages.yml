@@ -19,6 +19,7 @@ content:
         list: true
         fields:
           - { name: name, label: Name, type: string }
+          - { name: link, label: Page link, type: string }
           - { name: description, label: Description, type: text }
       - { name: offer_heading, label: "Services: heading", type: string }
       - name: tiers

@@ -1,0 +1,30 @@
+---
+layout: page
+here: home
+---
+<section class="prose">
+  {{ content }}
+</section>
+
+<section>
+  <span class="label">What it can look like</span>
+  <ul class="plain-list">
+    {%- for m in page.moments %}
+    <li>{{ m }}</li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="prose">
+  <p>Every celebration is two hours, in a morning or evening slot, at a place that suits the person. Planning starts at {% include money.html n=site.data.content.tiers[1].price_from %} for partial planning. <a href="/#how">How I work</a> &middot; <a href="/prices/">What funerals cost here</a></p>
+</section>
+
+<section id="contact">
+  <span class="label">Get in touch</span>
+  <h2>Tell me who you're remembering</h2>
+  <div class="contact">
+    <p>Email <strong>{{ site.data.content.email }}</strong>{% if site.data.content.phone != "" %} or text {{ site.data.content.phone }}{% endif %}, or use this form.</p>
+    {% include inquiry_form.html source=page.source %}
+  </div>
+</section>
+{% include inquiry_script.html %}

@@ -1,0 +1,18 @@
+        <form id="inquiry" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="cb697c2f-c777-4bc3-983d-63697d17c386">
+          <input type="hidden" name="subject" value="New inquiry from graveandseed.com ({{ include.source | default: "home" }})">
+          <input type="hidden" name="inquiry_source" value="{{ include.source | default: "home" }}">
+          <input type="hidden" name="from_name" value="Grave and Seed website">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="row">
+            <label for="name">Your name<input id="name" name="name" autocomplete="name" required></label>
+            <label for="reply">Your email<input id="reply" name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <div class="row">
+            <label for="who">Who you're remembering<input id="who" name="remembering"></label>
+            <label for="when">Rough date, if you have one<input id="when" name="date"></label>
+          </div>
+          <label for="msg">What you're picturing, even if it's vague<textarea id="msg" name="message"></textarea></label>
+          <button class="send" type="submit">Send</button>
+          <p class="note" id="status" role="status">{{ site.data.content.reply_note }}</p>
+        </form>

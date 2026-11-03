@@ -39,7 +39,7 @@ layout: null
       <h2>{{ c.styles_heading }}</h2>
       <div class="styles">
         {%- for s in c.styles %}
-        <div class="style"><h3>{{ s.name }}</h3><p>{{ s.description }}</p></div>
+        <div class="style"><h3>{% if s.link %}<a href="{{ s.link }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3><p>{{ s.description }}</p></div>
         {%- endfor %}
       </div>
     </section>
@@ -68,23 +68,7 @@ layout: null
           <span class="phone">{{ c.phone }} &middot; {{ c.phone_note }}</span>
           {%- endif %}
         </div>
-        <form id="inquiry" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="cb697c2f-c777-4bc3-983d-63697d17c386">
-          <input type="hidden" name="subject" value="New inquiry from graveandseed.com">
-          <input type="hidden" name="from_name" value="Grave and Seed website">
-          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="row">
-            <label for="name">Your name<input id="name" name="name" autocomplete="name" required></label>
-            <label for="reply">Your email<input id="reply" name="email" type="email" autocomplete="email" required></label>
-          </div>
-          <div class="row">
-            <label for="who">Who you're remembering<input id="who" name="remembering"></label>
-            <label for="when">Rough date, if you have one<input id="when" name="date"></label>
-          </div>
-          <label for="msg">What you're picturing, even if it's vague<textarea id="msg" name="message"></textarea></label>
-          <button class="send" type="submit">Send</button>
-          <p class="note" id="status" role="status">{{ c.reply_note }}</p>
-        </form>
+        {% include inquiry_form.html source="home" %}
       </div>
     </section>
   </div>
@@ -103,24 +87,8 @@ document.getElementById('copy').addEventListener('click', function () {
   function sel() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
   try { navigator.clipboard.writeText(el.textContent).then(function () { b.textContent = 'Copied'; }, sel); } catch (e) { sel(); }
 });
-document.getElementById('inquiry').addEventListener('submit', async function (e) {
-  e.preventDefault();
-  var form = this, s = document.getElementById('status'), btn = form.querySelector('.send');
-  btn.disabled = true; btn.textContent = 'Sending...';
-  try {
-    var res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
-    var data = await res.json();
-    if (res.ok && data.success) {
-      form.reset();
-      s.textContent = "Thank you. I got your message and will reply by email soon.";
-      s.className = 'note sent';
-    } else { throw new Error(data.message || 'Send failed'); }
-  } catch (err) {
-    s.textContent = "That didn't send. Please email me directly at {{ c.email }}.";
-    s.className = 'note err';
-  }
-  btn.disabled = false; btn.textContent = 'Send';
-});
+
 </script>
+{% include inquiry_script.html %}
 </body>
 </html>
