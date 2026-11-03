@@ -59,3 +59,6 @@ addons:
   - name: "Story phone"
     price_from: 150
     description: "A vintage-style phone guests pick up to leave a spoken message or memory. Gentler for people who don't want to be on camera. The family gets every message as an audio file."
+  - name: "Flower table"
+    price_from: 200
+    description: "Buckets of fresh flowers, shears and mismatched bud vases, so guests can make a small arrangement during the gathering and take it home. I order, prep and set up the flowers; you pay for them at cost, usually $100 to $200 for 50 guests. Needs about a week's notice."
