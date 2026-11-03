@@ -49,10 +49,11 @@ layout: null
       <h2>{{ c.offer_heading }}</h2>
       <div class="tiers">
         {%- for t in c.tiers %}
-        <div class="tier"><h3>{{ t.name }}</h3><p>{{ t.description }} <span class="lead label">{{ t.timing }}</span></p></div>
+        <div class="tier"><h3>{{ t.name }}{% if t.price_from %}<span class="from">From {% include money.html n=t.price_from %}</span>{% endif %}</h3><p>{{ t.description }} <span class="lead label">{{ t.timing }}</span></p></div>
         {%- endfor %}
       </div>
       <p class="note">{{ c.pricing_note }}</p>
+      {% include budget.html %}
       <p class="note"><a href="/prices/">See what Washtenaw County funeral homes charge</a></p>
     </section>
 

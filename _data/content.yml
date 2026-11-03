@@ -24,13 +24,16 @@ tiers:
   - name: "Full planning"
     description: "Concept, venue, vendors, décor and running the day."
     timing: "Best with 3+ weeks"
+    price_from: 2100
   - name: "Partial planning"
     description: "You've started. I fill the gaps and run the day."
     timing: "Best with 2+ weeks"
+    price_from: 1250
   - name: "Day-of coordination"
     description: "You have the plan. I make it happen so you don't have to."
     timing: "Short notice is fine"
-pricing_note: "Pricing depends on the size and shape of the day. I'll give you a clear quote after a short conversation."
+    price_from: 850
+pricing_note: "These are starting prices for a two-hour celebration. Larger or more complex days cost more, and I'll give you a clear written quote after a short conversation."
 
 contact_heading: "Tell me who you're remembering"
 email: "kate@graveandseed.com"

@@ -1,0 +1,16 @@
+{%- assign b = site.data.budget -%}
+{%- assign lo = 0 -%}{%- assign hi = 0 -%}
+{%- for l in b.lines -%}{%- assign lo = lo | plus: l.low -%}{%- assign hi = hi | plus: l.high -%}{%- endfor -%}
+<div class="budget">
+  <h3>{{ b.heading }}</h3>
+  <p class="small">{{ b.scenario }}</p>
+  <dl class="items">
+    {%- for l in b.lines %}
+    <dt>{{ l.item }}<br><span class="small">{{ l.note }}</span></dt>
+    <dd>{% if l.low == l.high %}{% include money.html n=l.low %}{% else %}{% include money.html n=l.low %} to {% include money.html n=l.high %}{% endif %}</dd>
+    {%- endfor %}
+    <dt class="total">Total</dt>
+    <dd class="total">{% include money.html n=lo %} to {% include money.html n=hi %}</dd>
+  </dl>
+  <p class="small">{{ b.comparison }}</p>
+</div>

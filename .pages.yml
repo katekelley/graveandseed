@@ -29,6 +29,7 @@ content:
           - { name: name, label: Name, type: string }
           - { name: description, label: Description, type: text }
           - { name: timing, label: Timing note, type: string }
+          - { name: price_from, label: Starting price ($), type: number }
       - { name: pricing_note, label: Pricing note, type: text }
       - { name: contact_heading, label: "Contact: heading", type: string }
       - { name: email, label: Email, type: string }
@@ -75,3 +76,20 @@ content:
           - { name: town, label: Town, type: string }
           - { name: phone, label: Phone, type: string }
           - { name: status, label: Status, type: string }
+  - name: budget
+    label: Sample budget
+    type: file
+    path: _data/budget.yml
+    fields:
+      - { name: heading, label: Heading, type: string }
+      - { name: scenario, label: Scenario, type: text }
+      - name: lines
+        label: Budget lines
+        type: object
+        list: true
+        fields:
+          - { name: item, label: Item, type: string }
+          - { name: low, label: Low ($), type: number }
+          - { name: high, label: High ($), type: number }
+          - { name: note, label: Note, type: string }
+      - { name: comparison, label: Comparison note, type: text }

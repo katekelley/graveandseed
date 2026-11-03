@@ -1,0 +1,24 @@
+heading: "A sample all-in budget"
+scenario: "A celebration of life for about 60 people, with direct cremation and partial planning."
+lines:
+  - item: "Direct cremation"
+    low: 895
+    high: 3765
+    note: "Published Washtenaw County prices"
+  - item: "Grave and Seed partial planning"
+    low: 1250
+    high: 1250
+    note: "Starting price"
+  - item: "Venue"
+    low: 250
+    high: 1000
+    note: "Local venues we've priced"
+  - item: "Food and drink"
+    low: 900
+    high: 2100
+    note: "Rough estimate, $15 to $35 per guest"
+  - item: "Flowers, printing and rentals"
+    low: 200
+    high: 600
+    note: "Rough estimate"
+comparison: "For comparison, Muehlig Funeral Chapel's cremation packages range from $5,845 to $14,030."
