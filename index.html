@@ -7,8 +7,8 @@ layout: null
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Grave and Seed</title>
-<meta name="description" content="{{ c.tagline_start }} {{ c.tagline_emphasis }}. Celebration of life planning in {{ c.location }}.">
+<title>Grave and Seed | Celebrations of life in Ann Arbor</title>
+<meta name="description" content="{{ c.tagline_start }} {{ c.tagline_emphasis }}.">
 {% include head.html %}
 
 <script type="application/ld+json">
@@ -19,7 +19,7 @@ layout: null
 <header class="soil hero">
   <div class="wrap">
     {% include nav.html here="home" %}
-    <h1>Celebrations of life in {{ c.location | split: "," | first }}</h1>
+    <h1>{{ c.hero_heading }}</h1>
     <p class="lede">{{ c.tagline_start }} <em>{{ c.tagline_emphasis }}</em>.</p>
     <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
     <p class="crisis">{{ c.crisis_note }} <a href="/resources/first-week/">{{ c.crisis_link_text }}</a>.</p>

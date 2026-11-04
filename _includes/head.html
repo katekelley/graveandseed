@@ -24,8 +24,9 @@
   --wheat: #A87B2F;
   --wheat-soft: #E6CB8F;
   --card: #FDFBF6;
-  --backing: #1c1c1a;
-  --edge-backing: url("/assets/edges/backing.png");
+  --backing: #243A66;
+  --mat: #D9B873;
+  --edge-backing: url("/assets/edges/backing-blue.png");
   --edge-paper: url("/assets/edges/paper.png");
   --wall-img: url("/assets/collage-home.jpg");
   --line: #E1D6C2;
@@ -37,12 +38,12 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #141B26; --ink: #ECE6DA; --muted: #ADA594; --soil: #0E1520; --soil-ink: #F1EADD;
-    --moss: #93B9DE; --wheat: #E0BF78; --line: #2C3646; --field: #1A2230; --card: #22262b; --backing: #0c0c0b; --edge-backing: url("/assets/edges/backing-dark.png"); --edge-paper: url("/assets/edges/paper-dark.png"); color-scheme: dark;
+    --moss: #93B9DE; --wheat: #E0BF78; --line: #2C3646; --field: #1A2230; --card: #22262b; --backing: #16223C; --mat: #B8954F; --edge-backing: url("/assets/edges/backing-blue-dark.png"); --edge-paper: url("/assets/edges/paper-dark.png"); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #141B26; --ink: #ECE6DA; --muted: #ADA594; --soil: #0E1520; --soil-ink: #F1EADD;
-  --moss: #93B9DE; --wheat: #E0BF78; --line: #2C3646; --field: #1A2230; --card: #22262b; --backing: #0c0c0b; --edge-backing: url("/assets/edges/backing-dark.png"); --edge-paper: url("/assets/edges/paper-dark.png"); color-scheme: dark;
+  --moss: #93B9DE; --wheat: #E0BF78; --line: #2C3646; --field: #1A2230; --card: #22262b; --backing: #16223C; --mat: #B8954F; --edge-backing: url("/assets/edges/backing-blue-dark.png"); --edge-paper: url("/assets/edges/paper-dark.png"); color-scheme: dark;
 }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.08rem/1.6 var(--body); }
 .wrap { max-width: 44rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
@@ -170,21 +171,30 @@ ol.steps p { color: var(--muted); font-size: 1rem; }
 .button:hover, .send:hover { background: var(--moss); }
 .style h3 a { text-decoration-color: var(--wheat-soft); text-underline-offset: 4px; }
 
-/* Collage cards, after katekeepsgrowing.com: the painted collage is the wall, everything sits on torn paper. */
+/* Collage cards, after katekeepsgrowing.com: the painted collage is the wall; each card is cream paper on a thin gold mat on blue construction paper. */
 body { overflow-x: clip; background: var(--soil); }
 body::before { content: ""; position: fixed; inset: 0; z-index: -3; height: 100lvh; background: var(--soil) var(--wall-img) 20% center / cover no-repeat; pointer-events: none; }
 @media (max-width: 700px) { :root { --wall-img: url("/assets/collage-home-1000.jpg"); } body::before { background-position: 12% center; } }
 header.soil, header.soil.slim, header.soil.hero { background: none; min-height: 0; display: block; color: var(--ink); }
 header.soil::before { display: none; }
-header.soil .wrap, header.soil.slim .wrap, main .wrap > section, footer .wrap { position: relative; isolation: isolate; }
+header.soil .wrap, header.soil.slim .wrap, main .wrap > *, footer .wrap { position: relative; isolation: isolate; box-sizing: border-box; }
 header.soil .wrap, header.soil.slim .wrap { margin-top: clamp(2rem, 9vh, 5.5rem); padding: clamp(1.4rem, 4vw, 2.25rem); gap: 1rem; max-width: 44rem; }
-header.soil .wrap::before, main .wrap > section::before, footer .wrap::before { content: ""; position: absolute; z-index: -2; inset: -7px -16px -14px -6px; background-color: var(--backing); border-image: var(--edge-backing) 57 / 19px / 16px round; transform: rotate(var(--tilt, -0.8deg)); }
-header.soil .wrap::after, main .wrap > section::after, footer .wrap::after { content: ""; position: absolute; z-index: -1; inset: 0; background-color: var(--card); border-image: var(--edge-paper) 21 / 7px / 6px round; }
-main .wrap > section:nth-of-type(2n) { --tilt: 0.9deg; }
-main .wrap > section:nth-of-type(2n)::before { inset: -12px -6px -8px -15px; }
-main .wrap { gap: 3rem; padding-block: 2.75rem 3rem; max-width: 44rem; }
-main .wrap > section { padding: clamp(1.4rem, 4vw, 2.25rem); }
-@media (max-width: 560px) { header.soil .wrap, header.soil.slim .wrap, main .wrap, footer .wrap { margin-inline: 14px; width: auto; } header.soil .wrap::before, main .wrap > section::before, footer .wrap::before { inset: -6px -10px -10px -5px; } }
+header.soil .wrap::before, main .wrap > *::before, footer .wrap::before { content: ""; position: absolute; z-index: -2; inset: -12px -18px -16px -11px; background-color: var(--backing); border-image: var(--edge-backing) 57 / 19px / 16px round; transform: rotate(var(--tilt, -0.25deg)); }
+header.soil .wrap::after, main .wrap > *::after, footer .wrap::after { content: ""; position: absolute; z-index: -1; inset: 0; background-color: var(--card); border-image: var(--edge-paper) 21 / 7px / 6px round; filter: drop-shadow(3px 0 0 var(--mat)) drop-shadow(-3px 0 0 var(--mat)) drop-shadow(0 3px 0 var(--mat)) drop-shadow(0 -3px 0 var(--mat)); }
+main .wrap > *:nth-child(2n) { --tilt: 0.3deg; }
+main .wrap > *:nth-child(2n)::before { inset: -16px -11px -12px -19px; }
+main .wrap { gap: 3.25rem; padding-block: 3.25rem 3.5rem; max-width: 44rem; }
+main .wrap > * { padding: clamp(1.4rem, 4vw, 2.25rem); margin: 0; }
+main .wrap > p.note { padding-block: 1rem; }
+@media (max-width: 560px) { header.soil .wrap, header.soil.slim .wrap, main .wrap, footer .wrap { margin-inline: 18px; width: auto; } header.soil .wrap::before, main .wrap > *::before, footer .wrap::before { inset: -9px -12px -12px -8px; } }
+@media (min-width: 1000px) {
+  header.soil .wrap, header.soil.slim .wrap { max-width: 40rem; margin-left: max(24px, calc(50% - 31rem)); }
+  main .wrap { max-width: 62rem; gap: 4.5rem; }
+  main .wrap > * { width: min(40rem, 100%); }
+  main .wrap > *:nth-child(odd) { justify-self: end; }
+  main .wrap > *:nth-child(even) { justify-self: start; }
+  footer .wrap { max-width: 40rem; margin-right: max(24px, calc(50% - 31rem)); margin-left: auto; }
+}
 header.soil h1, header.soil.slim h1 { margin-top: 0.75rem; padding-top: 0; font-size: clamp(2.1rem, 6vw, 3rem); color: var(--ink); text-shadow: none; }
 header .lede, header.soil.slim .lede { font-size: 1.15rem; color: var(--muted); }
 header .lede em { color: var(--wheat); }
@@ -197,6 +207,6 @@ header .lede em { color: var(--wheat); }
 .crisis a { color: var(--moss); }
 header.soil.hero .lede, header.soil.hero .crisis, header.soil.hero h1 { text-shadow: none; }
 .next { background: none; border: 0; border-radius: 0; }
-footer .wrap { border-top: 0; margin-bottom: 3rem; padding: 1rem 1.5rem; max-width: 44rem; box-sizing: border-box; }
+footer .wrap { border-top: 0; margin-bottom: 3.5rem; padding: 1rem 1.5rem; max-width: 44rem; }
 footer .label a, footer .label { color: var(--muted); }
 </style>
