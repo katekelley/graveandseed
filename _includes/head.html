@@ -28,7 +28,7 @@
   --mat: #D9B873;
   --edge-backing: url("/assets/edges/backing.png");
   --edge-paper: url("/assets/edges/paper.png");
-  --wall-img: url("/assets/collage-home.jpg");
+  --wall-img: url("/assets/collage-garden.jpg");
   --line: #E1D6C2;
   --field: #FBF8F1;
   --display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -62,12 +62,12 @@ header.soil.slim .wrap { padding-block: 1.5rem 2rem; }
 header.soil .hero-cta { align-self: flex-start; }
 header.soil.hero { background: var(--soil); min-height: 0; display: block; }
 header.soil.hero::before { display: none; }
-.hero .art { position: relative; background: #1B3A78 url("/assets/collage-home.jpg") center 60% / cover no-repeat; aspect-ratio: 12 / 7; max-height: 70vh; width: 100%; }
+.hero .art { position: relative; background: #1B3A78 url("/assets/collage-garden.jpg") center 60% / cover no-repeat; aspect-ratio: 12 / 7; max-height: 70vh; width: 100%; }
 .hero .art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,22,36,0.55) 0%, rgba(14,22,36,0) 22%, rgba(29,44,70,0) 78%, var(--soil) 100%); }
 .hero .art .wrap { position: relative; z-index: 1; padding-block: 1.5rem 0; }
 header.soil.hero .hero-copy { padding-block: 0.75rem 3rem; }
 header.soil.hero .hero-copy h1 { margin-top: 0; padding-top: 0; }
-@media (max-width: 700px) { .hero .art { aspect-ratio: 4 / 3; background-image: url("/assets/collage-home-1000.jpg"); background-position: 12% 60%; } }
+@media (max-width: 700px) { .hero .art { aspect-ratio: 4 / 3; background-image: url("/assets/collage-garden-1000.jpg"); background-position: 12% 60%; } }
 @media (max-width: 700px) { header.soil { min-height: 32rem; } header.soil.slim { min-height: 23rem; } }
 .mark { display: flex; align-items: center; gap: 0.6rem; font: 500 0.78rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
 .mark svg { width: 22px; height: 22px; }
@@ -175,7 +175,7 @@ ol.steps p { color: var(--muted); font-size: 1rem; }
 /* Collage cards, after katekeepsgrowing.com: the painted collage is the wall; each card is cream paper on a thin gold mat on blue construction paper. */
 body { overflow-x: clip; background: var(--soil); }
 body::before { content: ""; position: fixed; inset: 0; z-index: -3; height: 100lvh; background: var(--soil) var(--wall-img) 20% center / cover no-repeat; pointer-events: none; }
-@media (max-width: 700px) { :root { --wall-img: url("/assets/collage-home-1000.jpg"); } body::before { background-position: 12% center; } }
+@media (max-width: 700px) { :root { --wall-img: url("/assets/collage-garden-1000.jpg"); } body::before { background-position: 12% center; } }
 header.soil, header.soil.slim, header.soil.hero { background: none; min-height: 0; display: block; color: var(--ink); }
 header.soil::before { display: none; }
 header.soil .wrap, header.soil.slim .wrap, main .wrap > *, footer .wrap { position: relative; isolation: isolate; box-sizing: border-box; }
