@@ -17,8 +17,8 @@ layout: null
 </head>
 <body>
 <header class="soil hero">
-  <div class="art"><div class="wrap">{% include nav.html here="home" %}</div></div>
-  <div class="wrap hero-copy">
+  <div class="wrap">
+    {% include nav.html here="home" %}
     <h1>Celebrations of life in {{ c.location | split: "," | first }}</h1>
     <p class="lede">{{ c.tagline_start }} <em>{{ c.tagline_emphasis }}</em>.</p>
     <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
