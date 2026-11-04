@@ -188,12 +188,11 @@ main .wrap > * { padding: clamp(1.4rem, 4vw, 2.25rem); margin: 0; }
 main .wrap > p.note { padding-block: 1rem; }
 @media (max-width: 560px) { header.soil .wrap, header.soil.slim .wrap, main .wrap, footer .wrap { margin-inline: 18px; width: auto; } header.soil .wrap::before, main .wrap > *::before, footer .wrap::before { inset: -9px -12px -12px -8px; } }
 @media (min-width: 1000px) {
-  header.soil .wrap, header.soil.slim .wrap { max-width: 40rem; margin-left: max(24px, calc(50% - 31rem)); }
+  header.soil .wrap, header.soil.slim .wrap { max-width: 40rem; margin-inline: auto; }
   main .wrap { max-width: 62rem; gap: 4.5rem; }
   main .wrap > * { width: min(40rem, 100%); }
-  main .wrap > *:nth-child(odd) { justify-self: end; }
-  main .wrap > *:nth-child(even) { justify-self: start; }
-  footer .wrap { max-width: 40rem; margin-right: max(24px, calc(50% - 31rem)); margin-left: auto; }
+  main .wrap > * { justify-self: center; }
+  footer .wrap { max-width: 40rem; margin-inline: auto; }
 }
 header.soil h1, header.soil.slim h1 { margin-top: 0.75rem; padding-top: 0; font-size: clamp(2.1rem, 6vw, 3rem); color: var(--ink); text-shadow: none; }
 header .lede, header.soil.slim .lede { font-size: 1.15rem; color: var(--muted); }
