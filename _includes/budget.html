@@ -1,8 +1,10 @@
 {%- assign b = site.data.budget -%}
 {%- assign lo = 0 -%}{%- assign hi = 0 -%}
 {%- for l in b.lines -%}{%- assign lo = lo | plus: l.low -%}{%- assign hi = hi | plus: l.high -%}{%- endfor -%}
-<div class="budget">
-  <h3>{{ b.heading }}</h3>
+{%- if include.section %}<span class="label">Budget</span>
+<div class="budget plain">
+  <h2>{{ b.heading }}</h2>{% else %}<div class="budget">
+  <h3>{{ b.heading }}</h3>{% endif %}
   <p class="small">{{ b.scenario }}</p>
   <dl class="items">
     {%- for l in b.lines %}
