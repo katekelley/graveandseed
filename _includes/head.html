@@ -48,17 +48,19 @@ a { color: var(--moss); }
 
 header.soil { background: var(--soil) url("/assets/collage-strip.jpg") center 40% / cover no-repeat; color: var(--soil-ink); position: relative; isolation: isolate; }
 header.soil::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(14,22,36,0.55) 0%, rgba(14,22,36,0.72) 100%); }
-header.soil.hero { background-image: url("/assets/collage-home.jpg"); background-position: 30% center; min-height: min(88vh, 46rem); display: flex; }
+header.soil { min-height: 30rem; display: flex; }
+header.soil .wrap, header.soil.slim .wrap { width: 100%; box-sizing: border-box; display: flex; flex-direction: column; gap: 1.25rem; padding-block: 1.5rem 2.75rem; }
+header.soil h1 { margin-top: auto; padding-top: 2rem; }
+header.soil .hero-cta { align-self: flex-start; }
+@media (max-width: 700px) { header.soil { min-height: 27rem; } }
+header.soil.hero { background-image: url("/assets/collage-home.jpg"); background-position: 30% center; }
 header.soil.hero::before { background: linear-gradient(180deg, rgba(14,22,36,0.55) 0%, rgba(14,22,36,0.05) 22%, rgba(14,22,36,0.1) 45%, rgba(14,22,36,0.82) 100%); }
-header.soil.hero .wrap { width: 100%; box-sizing: border-box; display: flex; flex-direction: column; padding-block: 1.5rem 3rem; }
-header.soil.hero h1 { margin-top: auto; padding-top: 6rem; text-shadow: 0 2px 18px rgba(0,0,0,0.35); }
-header.soil.hero .hero-cta { align-self: flex-start; }
+header.soil.hero h1 { text-shadow: 0 2px 18px rgba(0,0,0,0.35); }
 header.soil.hero .lede, header.soil.hero .crisis { text-shadow: 0 1px 10px rgba(0,0,0,0.4); }
 @media (max-width: 700px) { header.soil.hero { background-image: url("/assets/collage-home-1000.jpg"); background-position: 34% center; } }
-header.soil .wrap { padding-block: 1.5rem 3rem; display: grid; gap: 1.25rem; }
 .mark { display: flex; align-items: center; gap: 0.6rem; font: 500 0.78rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
 .mark svg { width: 22px; height: 22px; }
-header h1 { font-size: clamp(2.6rem, 9vw, 4.4rem); font-weight: 600; letter-spacing: -0.01em; }
+header h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); font-weight: 600; letter-spacing: -0.01em; }
 header .lede { font-size: 1.25rem; max-width: 34rem; }
 header .lede em { font-style: italic; color: var(--wheat-soft); }
 
@@ -115,8 +117,7 @@ dl.items dd { margin: 0; font-family: var(--label); font-variant-numeric: tabula
 dl.items .total { border-top: 1px solid var(--line); padding-top: 0.5rem; font-weight: 600; }
 .tier .from { font-family: var(--label); font-variant-numeric: tabular-nums; font-size: 1rem; color: var(--moss); display: block; margin-top: 0.35rem; }
 
-header.soil.slim .wrap { padding-block: 1.5rem 2.25rem; }
-header.soil.slim h1 { font-size: clamp(2rem, 7vw, 3.2rem); }
+header.soil.slim h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); }
 .cards { display: grid; gap: 0; border-top: 1px solid var(--line); }
 .card { display: grid; gap: 0.45rem; padding-block: 1.1rem; border-bottom: 1px solid var(--line); min-width: 0; }
 .card h3 { font-size: 1.25rem; font-weight: 500; }
