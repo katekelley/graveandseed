@@ -1,0 +1,68 @@
+---
+layout: page
+title: Food for a celebration of life in Ann Arbor
+here: resources
+heading: Food for a celebration of life
+lede: How much to order, what it costs around Ann Arbor, and who will bring it.
+description: Catering for a celebration of life or funeral luncheon in Ann Arbor and Ypsilanti - how much food to order, typical costs per person, and local caterers with posted prices.
+permalink: /resources/food/
+---
+<section class="prose">
+  <p>Food does a lot of work at a celebration of life. It gives people a reason to stay, something to do with their hands, and a way to talk to strangers. It doesn't have to be fancy or expensive.</p>
+
+  <h2>What it usually costs</h2>
+  <p>From prices posted by Ann Arbor-area caterers in November 2026:</p>
+  <dl class="facts">
+    <dt>$5 to $10 per person</dt><dd>Grocery deli trays and hot pans, or coffee and pastries for a morning gathering</dd>
+    <dt>$8 to $15</dt><dd>Restaurant trays: pita platters, tagines, sandwiches, salads</dd>
+    <dt>$16 to $28</dt><dd>Boxed lunches from places like Zingerman's or Plum Market</dd>
+    <dt>$40 to $60+</dt><dd>A staffed buffet with servers, setup and cleanup</dd>
+  </dl>
+  <p class="small">Add delivery ($15 to $50), plates and utensils, and a tip for staff. Ordering through a site like ezCater can cost more than calling the restaurant.</p>
+
+  <h2>How much to order</h2>
+  <ul>
+    <li><strong>Mid-afternoon or evening without a meal:</strong> light food is fine. Plan on roughly 6 to 8 small pieces per person.</li>
+    <li><strong>Around lunch or dinner:</strong> people will expect to eat. A common rule of thumb is about a pound of food per adult in total.</li>
+    <li><strong>More people come than you expect.</strong> Celebrations of life often draw coworkers, neighbors and old friends you didn't know about. Order for your honest guess, not your RSVP count, and plan for leftovers.</li>
+    <li><strong>Ask about dietary needs once,</strong> in the invitation. Most caterers below can do vegetarian; a few cover vegan, halal or kosher.</li>
+  </ul>
+
+  <h2>Drop-off or staffed?</h2>
+  <p><strong>Drop-off</strong> is cheaper: the food arrives in trays and someone you trust sets it out and keeps it tidy. <strong>Staffed</strong> catering costs more but means nobody in the family is refilling the hummus. If you hire a planner, that's part of what they handle.</p>
+
+  <h2>Easy things to forget</h2>
+  <ul>
+    <li>Serving spoons and tongs, napkins, plates and cups</li>
+    <li>Ice, and a cooler or fridge for drinks</li>
+    <li>Fuel for chafing dishes if the food is hot</li>
+    <li>Trash and recycling bags</li>
+    <li>Containers so family can take leftovers home</li>
+    <li>Alcohol, if you want it, through a licensed caterer or the venue's bar</li>
+  </ul>
+
+  <h2>Don't overlook</h2>
+  <ul>
+    <li><strong>Your congregation.</strong> Many churches, meetings and synagogues have a funeral meal team that cooks for members' families at little or no cost.</li>
+    <li><strong>A potluck.</strong> Friends often want something to do. Give them a sign-up sheet and a few categories.</li>
+  </ul>
+</section>
+
+<section>
+  <span class="label">Local caterers</span>
+  <h2>Who will bring it</h2>
+  <div class="cards">
+    {%- for f in site.data.food %}
+    <div class="card">
+      <h3><a href="{{ f.url }}" rel="noopener">{{ f.name }}</a></h3>
+      <p class="meta">{{ f.area }} &middot; {{ f.style }}</p>
+      <dl class="facts">
+        <dt>Posted prices</dt><dd>{{ f.example }}</dd>
+        <dt>Notice</dt><dd>{{ f.notice }}</dd>
+        <dt>Service</dt><dd>{{ f.service }}</dd>
+      </dl>
+    </div>
+    {%- endfor %}
+  </div>
+  <p class="small">Checked November 2026 from each caterer's site or ordering page. Prices and terms change, so confirm when you order. Not listed here isn't a judgment; tell me who I'm missing at {{ site.data.content.email }}. Want help pulling it all together? <a href="/contact/">Get in touch</a>.</p>
+</section>
