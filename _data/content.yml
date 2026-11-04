@@ -106,6 +106,9 @@ addons:
   - name: "Livestream"
     price_from: 150
     description: "For family who can't be there. A steady camera, good sound and someone watching the stream, with a private link and a recording afterward."
+  - name: "Obituary writing"
+    price_from: 175
+    description: "An hour with your family, by phone or in person, to ask the questions that get at who they were. Within about two days I write a long version for online and a short one for print, with a round of edits. Available on its own, without booking anything else."
   - name: "Invitations and program"
     price_from: 200
     description: "A simple invitation with an online RSVP, and a printed program with the order of the day, photos and readings. Printing is extra."
