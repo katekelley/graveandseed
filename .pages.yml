@@ -106,6 +106,7 @@ content:
           - { name: ceremony, label: Funeral ceremony ($), type: string }
           - { name: memorial, label: Memorial service ($), type: string }
           - { name: hearse, label: Hearse ($), type: string }
+          - { name: owner_short, label: Owner (short; shown in the table), type: string }
           - { name: owner, label: Owner and home base, type: string }
           - { name: notes, label: Notes, type: text }
           - { name: yelp, label: Yelp page link, type: string }

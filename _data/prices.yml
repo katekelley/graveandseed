@@ -14,6 +14,7 @@ items:
   - { key: hearse, label: "Hearse" }
 homes:
   - name: "Generations Funeral & Cremation Services"
+    owner_short: "The Wilbur Group joint venture, Farmington Hills"
     owner: "The Wilbur Group, LLC, with Generations Funeral and Cremation Services Inc. and WGPN LLC (Farmington Hills, MI)"
     yelp: "https://www.yelp.com/biz/generations-funeral-and-cremation-services-farmington-hills"
     short: "Generations"
@@ -35,6 +36,7 @@ homes:
     hearse: ""
     notes: "Their other locations are listed as temporarily closed; they still serve Washtenaw County. Simple burial ($4,895) includes local transport, paperwork, a minimal casket, transport to the cemetery and a concrete grave liner, so it is the only burial price here that includes the liner most cemeteries require. It doesn't include a viewing, a service or cemetery charges."
   - name: "Nie Family Funeral Home"
+    owner_short: "Nie Funeral Home Inc., Ann Arbor"
     owner: "Nie Funeral Home Inc. (Ann Arbor, MI)"
     yelp: "https://www.yelp.com/biz/nie-family-funeral-home-and-cremation-service-ann-arbor"
     yelp_more: "https://www.yelp.com/biz/nie-funeral-home-ann-arbor-2"
@@ -58,6 +60,7 @@ homes:
     hearse: ""
     notes: "Burial with their cheapest casket is a cloth-covered casket, from their full price list dated May 1, 2023. Green burial with a willow casket is $5,845. A grave liner or vault, if the cemetery requires one, is $1,095 to $3,895 more."
   - name: "Hosmer-Muehlig Funeral Chapel"
+    owner_short: "SCI, a national public company, Houston, TX"
     owner: "SCI Michigan Funeral Services Inc., part of Service Corporation International, a publicly traded company (Houston, TX)"
     yelp: "https://www.yelp.com/biz/hosmer-muehlig-funeral-chapel-dexter"
     short: "Hosmer-Muehlig"
@@ -79,6 +82,7 @@ homes:
     hearse: 570
     notes: "Second location of Muehlig Funeral Chapel. Part of the Dignity Memorial network. Immediate burial assumes you provide the casket; burial with their cheapest casket is $6,890, not counting a grave liner."
   - name: "Muehlig Funeral Chapel"
+    owner_short: "SCI, a national public company, Houston, TX"
     owner: "SCI Michigan Funeral Services Inc., part of Service Corporation International, a publicly traded company (Houston, TX)"
     yelp: "https://www.yelp.com/biz/muehlig-funeral-chapel-ann-arbor"
     short: "Muehlig"
