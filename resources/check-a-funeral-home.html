@@ -1,0 +1,63 @@
+---
+layout: page
+title: How to check a funeral home in Michigan
+here: resources
+heading: How to check a funeral home in Michigan
+lede: Who really owns it, whether its license is current, and whether the state has disciplined it. It takes about five minutes.
+description: How to look up a Michigan funeral home's license, owner and discipline history, with the results for funeral homes serving Washtenaw County.
+permalink: /resources/check-a-funeral-home/
+---
+{%- assign l = site.data.licenses -%}
+<section class="prose">
+  <p>In Michigan, every funeral home needs a state license for each location where it does business. The license record is public. It tells you who actually owns the funeral home, whether the license is current, and whether the state has disciplined it.</p>
+
+  <h2>How to look one up</h2>
+  <ol>
+    <li>Go to the state's license lookup at <a href="https://www.mi.gov/licenselookup" rel="noopener">mi.gov/licenselookup</a>. This is LARA's MiCLEAR search, which covers funeral homes. The other LARA search, for doctors and nurses, doesn't include them.</li>
+    <li>Set <strong>License Type</strong> to <em>Funeral Establishment</em>. To see every funeral home in a county, type the county name (for example, <em>Washtenaw</em>) and leave the rest blank.</li>
+    <li>Click a license number to open the details.</li>
+  </ol>
+
+  <h2>What the record tells you</h2>
+  <ul>
+    <li><strong>License status.</strong> Only <em>Active</em> means the funeral home can operate under that license. <em>Closed</em> or <em>Lapsed</em> means it can't. Ignore the expiration date: a license can be closed years before it was set to expire.</li>
+    <li><strong>Business name vs. DBA name.</strong> The business name is the legal owner. The DBA ("doing business as") is the name on the sign. A local-sounding name can belong to a national company.</li>
+    <li><strong>Conditions.</strong> A notice at the top of the record means the state took action, such as a fine, probation or suspension. Fines are often shared ("joint and several") with the funeral director in charge.</li>
+    <li><strong>Old closed licenses under the same name</strong> are usually normal. A new license is issued whenever a funeral home changes owners, moves or reorganizes.</li>
+  </ul>
+
+  <h2>Red flags</h2>
+  <ul>
+    <li><strong>No license at the address where you're meeting.</strong> Arrangements and sales have to happen at a licensed location. In 2026 the Michigan Court of Appeals upheld fines against a company that sold cremations from unlicensed offices, including one in Ann Arbor.</li>
+    <li><strong>A company that isn't in the lookup at all.</strong> Some online cremation sellers have never been licensed in Michigan. The state has ordered at least one to stop operating here.</li>
+    <li><strong>A prepaid plan from a seller you can't find.</strong> Prepaid funeral sellers need their own <em>Prepaid Funeral Provider</em> license. Search for that license type too.</li>
+  </ul>
+  <p>If something looks wrong, call LARA at (517) 241-9221 or email CSCLonline@michigan.gov.</p>
+</section>
+
+<section>
+  <h2>Funeral homes serving Washtenaw County</h2>
+  <p class="small">From the state license lookup, checked {{ l.updated }}. These are the funeral homes on our <a href="/prices/">price comparison</a>. Records change, so check the lookup yourself before you decide.</p>
+  <div class="cards">
+    {%- for h in l.homes %}
+    <div class="card">
+      <h3>{{ h.name }}</h3>
+      <p class="meta">{{ h.town }}</p>
+      <dl class="facts">
+        <dt>License</dt><dd>{{ h.status }}</dd>
+        <dt>Owner</dt><dd>{{ h.owner }}</dd>
+        <dt>State action</dt><dd>{{ h.discipline }}</dd>
+        {%- if h.since != "" %}<dt>Note</dt><dd>{{ h.since }}</dd>{% endif %}
+        <dt>License no.</dt><dd>{{ h.license }}</dd>
+      </dl>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section>
+  <div class="box">
+    <p>Your rights don't depend on who owns the funeral home. Under the federal Funeral Rule, every funeral home must give you an itemized price list and let you buy only what you want. <a href="/prices/">Compare Washtenaw prices</a></p>
+    <p class="small">This is general information, not legal advice. Grave and Seed has no financial relationship with any funeral home listed. Spot an error or a change? Email {{ site.data.content.email }}.</p>
+  </div>
+</section>
