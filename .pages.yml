@@ -106,6 +106,8 @@ content:
           - { name: memorial, label: Memorial service ($), type: string }
           - { name: hearse, label: Hearse ($), type: string }
           - { name: notes, label: Notes, type: text }
+          - { name: yelp, label: Yelp page link, type: string }
+          - { name: yelp_more, label: Second Yelp page link (optional), type: string }
       - name: not_posted
         label: Funeral homes without posted prices
         type: object
@@ -115,6 +117,25 @@ content:
           - { name: town, label: Town, type: string }
           - { name: phone, label: Phone, type: string }
           - { name: status, label: Status, type: string }
+          - { name: yelp, label: Yelp page link, type: string }
+  - name: licenses
+    label: Funeral home licenses page
+    type: file
+    path: _data/licenses.yml
+    fields:
+      - { name: updated, label: Date licenses were checked, type: string }
+      - name: homes
+        label: Funeral homes
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: town, label: Town, type: string }
+          - { name: status, label: License status, type: string }
+          - { name: owner, label: Owner, type: text }
+          - { name: discipline, label: State action, type: string }
+          - { name: since, label: Note (leave blank to hide), type: text }
+          - { name: license, label: License number(s), type: string }
   - name: budget
     label: Sample budget
     type: file
