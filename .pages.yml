@@ -80,6 +80,7 @@ content:
     path: _data/prices.yml
     fields:
       - { name: updated, label: Date prices were checked, type: string }
+      - { name: owners_note, label: Note on where owner info comes from, type: string }
       - { name: intro, label: Intro, type: text }
       - name: homes
         label: Funeral homes with posted prices (list from cheapest to most expensive direct cremation)
@@ -105,6 +106,7 @@ content:
           - { name: ceremony, label: Funeral ceremony ($), type: string }
           - { name: memorial, label: Memorial service ($), type: string }
           - { name: hearse, label: Hearse ($), type: string }
+          - { name: owner, label: Owner and home base, type: string }
           - { name: notes, label: Notes, type: text }
           - { name: yelp, label: Yelp page link, type: string }
           - { name: yelp_more, label: Second Yelp page link (optional), type: string }
@@ -117,6 +119,7 @@ content:
           - { name: town, label: Town, type: string }
           - { name: phone, label: Phone, type: string }
           - { name: status, label: Status, type: string }
+          - { name: owner, label: Owner and home base, type: string }
           - { name: yelp, label: Yelp page link, type: string }
   - name: licenses
     label: Funeral home licenses page

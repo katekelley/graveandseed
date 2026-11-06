@@ -112,7 +112,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
       </div>
       <ol class="notes">
         {%- for h in p.homes %}
-        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}{% if h.yelp_more and h.yelp_more != "" %} &middot; <a href="{{ h.yelp_more }}" rel="noopener">Yelp (second location)</a>{% endif %}</li>
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.owner and h.owner != "" %} Owned by {{ h.owner }}.{% endif %}{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}{% if h.yelp_more and h.yelp_more != "" %} &middot; <a href="{{ h.yelp_more }}" rel="noopener">Yelp (second location)</a>{% endif %}</li>
         {%- endfor %}
       </ol>
     </section>
@@ -127,7 +127,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
       <h2>Funeral homes without posted prices</h2>
       <ul class="plain-list">
         {%- for h in p.not_posted %}
-        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}: {{ h.status }}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}</li>
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}: {{ h.status }}{% if h.owner and h.owner != "" %}. Owned by {{ h.owner }}{% endif %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}</li>
         {%- endfor %}
       </ul>
     </section>
@@ -136,7 +136,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
       <span class="label">Your rights</span>
       <div class="box">
         <p>Under the federal Funeral Rule, a funeral home must give you its itemized price list when you visit, and tell you prices over the phone. You can buy a casket or urn somewhere else, and they can't charge you for using it. You can buy only the items you want. <a href="https://consumer.ftc.gov/articles/ftc-funeral-rule" rel="noopener">More from the FTC</a></p>
-        <p class="small">Prices come from each funeral home's own published list on the date shown. Grave and Seed has no financial relationship with any funeral home listed and doesn't recommend one over another. Read their reviews on Yelp and decide for yourself. Spot an error or a newer price? Email {{ c.email }}.</p>
+        <p class="small">Prices come from each funeral home's own published list on the date shown. Grave and Seed has no financial relationship with any funeral home listed and doesn't recommend one over another. Read their reviews on Yelp and decide for yourself. {{ p.owners_note }} Spot an error or a newer price? Email {{ c.email }}.</p>
       </div>
     </section>
   </div>
