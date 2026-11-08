@@ -102,7 +102,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
             <tr>
               <th scope="row">Reviews</th>
               {%- for h in p.homes %}
-              <td class="text">{% if h.yelp and h.yelp != "" %}<a href="{{ h.yelp }}" rel="noopener">{% if h.yelp_rating and h.yelp_rating != "" %}&#9733;&nbsp;{{ h.yelp_rating }} on Yelp{% if h.yelp_reviews and h.yelp_reviews != "" %} ({{ h.yelp_reviews }}&nbsp;reviews){% endif %}{% else %}Yelp{% endif %}</a>{% if h.yelp_more and h.yelp_more != "" %}, <a href="{{ h.yelp_more }}" rel="noopener">2nd location</a>{% endif %}{% else %}&mdash;{% endif %}</td>
+              <td class="text">{% if h.yelp and h.yelp != "" %}<a href="{{ h.yelp }}" rel="noopener">Yelp</a>{% if h.yelp_more and h.yelp_more != "" %}, <a href="{{ h.yelp_more }}" rel="noopener">2nd location</a>{% endif %}{% else %}&mdash;{% endif %}</td>
               {%- endfor %}
             </tr>
             {%- for it in p.items %}
@@ -126,7 +126,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
       <p class="small">Before you choose, check who owns a funeral home, whether its license is current, and whether the state has disciplined it: <a href="/resources/check-a-funeral-home/">How to check a funeral home in Michigan</a>.</p>
       <ol class="notes">
         {%- for h in p.homes %}
-        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.owner and h.owner != "" %} Owned by {{ h.owner }}.{% endif %}{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">{% if h.yelp_rating and h.yelp_rating != "" %}&#9733;&nbsp;{{ h.yelp_rating }} on Yelp{% if h.yelp_reviews and h.yelp_reviews != "" %} ({{ h.yelp_reviews }}&nbsp;reviews){% endif %}{% else %}Reviews on Yelp{% endif %}</a>{% endif %}{% if h.yelp_more and h.yelp_more != "" %} &middot; <a href="{{ h.yelp_more }}" rel="noopener">Yelp (second location)</a>{% endif %}</li>
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.owner and h.owner != "" %} Owned by {{ h.owner }}.{% endif %}{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}{% if h.yelp_more and h.yelp_more != "" %} &middot; <a href="{{ h.yelp_more }}" rel="noopener">Yelp (second location)</a>{% endif %}</li>
         {%- endfor %}
       </ol>
     </section>
@@ -141,7 +141,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
       <h2>Funeral homes without posted prices</h2>
       <ul class="plain-list">
         {%- for h in p.not_posted %}
-        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}: {{ h.status }}{% if h.owner and h.owner != "" %}. Owned by {{ h.owner }}{% endif %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">{% if h.yelp_rating and h.yelp_rating != "" %}&#9733;&nbsp;{{ h.yelp_rating }} on Yelp{% if h.yelp_reviews and h.yelp_reviews != "" %} ({{ h.yelp_reviews }}&nbsp;reviews){% endif %}{% else %}Reviews on Yelp{% endif %}</a>{% endif %}</li>
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}: {{ h.status }}{% if h.owner and h.owner != "" %}. Owned by {{ h.owner }}{% endif %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}</li>
         {%- endfor %}
       </ul>
     </section>
@@ -150,7 +150,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
       <span class="label">Your rights</span>
       <div class="box">
         <p>Under the federal Funeral Rule, a funeral home must give you its itemized price list when you visit, and tell you prices over the phone. You can buy a casket or urn somewhere else, and they can't charge you for using it. You can buy only the items you want. <a href="https://consumer.ftc.gov/articles/ftc-funeral-rule" rel="noopener">More from the FTC</a></p>
-        <p class="small">Prices come from each funeral home's own published list on the date shown. Grave and Seed has no financial relationship with any funeral home listed and doesn't recommend one over another. Read their reviews on Yelp and decide for yourself. {{ p.owners_note }}{% if p.ratings_checked and p.ratings_checked != "" %} Yelp ratings checked {{ p.ratings_checked }}; they change, so click through for the latest.{% endif %} Spot an error or a newer price? Email {{ c.email }}.</p>
+        <p class="small">Prices come from each funeral home's own published list on the date shown. Grave and Seed has no financial relationship with any funeral home listed and doesn't recommend one over another. Read their reviews on Yelp and decide for yourself. {{ p.owners_note }} Spot an error or a newer price? Email {{ c.email }}.</p>
       </div>
     </section>
   </div>

@@ -8,7 +8,7 @@ layout: null
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Grave and Seed | Celebrations of life in Ann Arbor</title>
-<meta name="description" content="{{ c.tagline_start }} {{ c.tagline_emphasis }}.">
+<meta name="description" content="{{ c.tagline_start }}{% if c.tagline_emphasis != "" %} {{ c.tagline_emphasis }}{% endif %}.">
 {% include head.html %}
 
 <script type="application/ld+json">
@@ -20,7 +20,7 @@ layout: null
   <div class="wrap">
     {% include nav.html here="home" %}
     <h1>{{ c.hero_heading }}</h1>
-    <p class="lede">{{ c.tagline_start }} <em>{{ c.tagline_emphasis }}</em>.</p>
+    <p class="lede">{{ c.tagline_start }}{% if c.tagline_emphasis != "" %} <em>{{ c.tagline_emphasis }}</em>{% endif %}.</p>
     <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
     <p class="crisis">{{ c.crisis_note }} <a href="/resources/first-week/">{{ c.crisis_link_text }}</a>.</p>
   </div>

@@ -81,7 +81,6 @@ content:
     fields:
       - { name: updated, label: Date prices were checked, type: string }
       - { name: owners_note, label: Note on where owner info comes from, type: string }
-      - { name: ratings_checked, label: Date Yelp ratings were checked, type: string }
       - { name: intro, label: Intro, type: text }
       - name: homes
         label: Funeral homes with posted prices (list from cheapest to most expensive direct cremation)
@@ -111,8 +110,6 @@ content:
           - { name: owner, label: Owner and home base, type: string }
           - { name: notes, label: Notes, type: text }
           - { name: yelp, label: Yelp page link, type: string }
-          - { name: yelp_rating, label: Yelp star rating (like 4.5), type: string }
-          - { name: yelp_reviews, label: Number of Yelp reviews, type: string }
           - { name: yelp_more, label: Second Yelp page link (optional), type: string }
       - name: not_posted
         label: Funeral homes without posted prices
@@ -125,8 +122,6 @@ content:
           - { name: status, label: Status, type: string }
           - { name: owner, label: Owner and home base, type: string }
           - { name: yelp, label: Yelp page link, type: string }
-          - { name: yelp_rating, label: Yelp star rating (like 4.5), type: string }
-          - { name: yelp_reviews, label: Number of Yelp reviews, type: string }
   - name: licenses
     label: Funeral home licenses page
     type: file
