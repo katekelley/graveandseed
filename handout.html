@@ -23,7 +23,7 @@ sitemap: false
 :root { --ink: #2B1F17; --muted: #5A4C40; --rule: #B9AC98; }
 * { box-sizing: border-box; }
 html { background: #E9E2D6; }
-body { margin: 0; color: var(--ink); font: 400 10.7pt/1.4 "Source Serif 4", Georgia, serif; }
+body { margin: 0; color: var(--ink); font: 400 10.4pt/1.38 "Source Serif 4", Georgia, serif; }
 .bar { display: flex; gap: 1rem; justify-content: center; align-items: center; padding: 14px; font: 600 15px/1 "Source Serif 4", Georgia, serif; }
 .bar a { color: #3B2A20; }
 .bar button { font: inherit; padding: 9px 16px; border: 1px solid #3B2A20; background: #FBF6EC; border-radius: 4px; cursor: pointer; }
@@ -36,15 +36,34 @@ h1 { font: 600 24pt/1.05 "Fraunces", Georgia, serif; margin: 0 0 4pt; }
 .qrbox p { margin: 0; font-size: 9.2pt; line-height: 1.3; }
 .qrbox strong { display: block; font-size: 9.4pt; }
 .cols { columns: 2; column-gap: 0.32in; column-rule: 1px solid #E3DACB; padding-top: 0.13in; flex: 1; }
-section { break-inside: avoid; margin: 0 0 11pt; }
+section { break-inside: avoid; margin: 0 0 10pt; }
 h2 { font: 600 12.6pt/1.15 "Fraunces", Georgia, serif; margin: 0 0 3pt; }
 ul { margin: 0; padding-left: 1.05em; }
 li { margin: 0 0 3.4pt; }
 li::marker { color: var(--muted); }
 p { margin: 0 0 3pt; }
 .nw { white-space: nowrap; }
+.sheet + .sheet { break-before: page; }
+.back h2.big { font: 600 18pt/1.1 "Fraunces", Georgia, serif; margin: 0 0 3pt; }
+.back .lead { margin: 0 0 10pt; color: var(--muted); font-size: 10.6pt; }
+table.prices { width: 100%; border-collapse: collapse; font-size: 10.2pt; margin: 0 0 6pt; }
+table.prices th, table.prices td { text-align: left; vertical-align: top; padding: 5pt 6pt 5pt 0; border-bottom: 1px solid var(--rule); }
+table.prices thead th { font: 600 8.6pt/1.2 "Source Serif 4", Georgia, serif; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); border-bottom: 1.5px solid var(--ink); }
+table.prices td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; padding-right: 2pt; }
+table.prices thead th.num { text-align: right; padding-right: 2pt; }
+table.prices .who { font-weight: 600; }
+table.prices .meta { display: block; color: var(--muted); font-size: 8.8pt; }
+.small { font-size: 8.8pt; color: var(--muted); margin: 0 0 9pt; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0.32in; margin-top: 4pt; align-items: start; }
+.box { border: 1px solid var(--rule); padding: 8pt 10pt; border-radius: 3px; }
+.back h3 { font: 600 11.6pt/1.15 "Fraunces", Georgia, serif; margin: 0 0 4pt; }
+.back ul.plain { list-style: none; padding: 0; margin: 0; }
+.back ul.plain li { margin: 0 0 3pt; }
+.spacer { flex: 1; }
 .foot { border-top: 1px solid var(--rule); padding-top: 5pt; font-size: 8.4pt; color: var(--muted); display: flex; justify-content: space-between; gap: 12pt; }
 @media screen and (max-width: 860px) {
+  .two { grid-template-columns: 1fr; }
+  table.prices { font-size: 14px; }
   .sheet { width: auto; height: auto; margin: 0 10px 30px; padding: 22px 18px; overflow: visible; }
   .top { flex-direction: column; }
   .cols { columns: 1; }
@@ -60,7 +79,7 @@ p { margin: 0 0 3pt; }
 </style>
 </head>
 <body>
-<div class="bar"><button type="button" onclick="window.print()">Print this page</button><a href="/resources/first-week/">Read the full guides</a></div>
+<div class="bar"><button type="button" onclick="window.print()">Print</button><span>Front and back of one sheet</span><a href="/resources/first-week/">Read the full guides</a></div>
 <div class="sheet">
   <div class="top">
     <div>
@@ -136,6 +155,47 @@ p { margin: 0 0 3pt; }
   <div class="foot">
     <span>From Grave and Seed &middot; graveandseed.com &middot; Free to copy and share</span>
     <span>General information, not legal advice. Checked November 2026.</span>
+  </div>
+</div>
+<div class="sheet back">
+  <h2 class="big">What funeral homes charge here</h2>
+  <p class="lead">Prices Washtenaw County funeral homes post online, checked {{ p.updated }}. Prices change, so always confirm when you call.</p>
+  <table class="prices">
+    <thead><tr><th>Funeral home</th><th class="num">Direct cremation</th><th class="num">Immediate burial</th><th class="num">Burial with their lowest-cost casket</th></tr></thead>
+    <tbody>
+      {%- for h in p.homes %}
+      <tr>
+        <td><span class="who">{{ h.name }}</span><span class="meta">{{ h.town }} &middot; <span class="nw">{{ h.phone }}</span></span>{% if h.owner_short and h.owner_short != "" %}<span class="meta">Owned by {{ h.owner_short }}</span>{% endif %}</td>
+        {%- for k in "direct_cremation,immediate_burial,burial_casket" | split: "," %}
+        {%- assign v = h[k] -%}
+        <td class="num">{% if v != "" and v != nil %}{% if h.starting %}from {% endif %}{% include money.html n=v %}{% else %}&mdash;{% endif %}</td>
+        {%- endfor %}
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+  <p class="small"><strong>Direct cremation</strong> is cremation soon after death, with no viewing or ceremony at the funeral home. <strong>Immediate burial</strong> is burial soon after death, without a viewing; the cemetery plot and opening the grave are extra. A dash means the price isn't posted. Grave and Seed has no financial relationship with any funeral home and doesn't recommend one over another.</p>
+
+  <div class="two">
+    <div>
+      <h3>Funeral homes that don't post prices</h3>
+      <ul class="plain">
+        {%- for h in p.not_posted %}
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}: <span class="nw">{{ h.phone }}</span></li>
+        {%- endfor %}
+      </ul>
+      <p class="small" style="margin-top:5pt">They have to tell you their prices over the phone if you ask.</p>
+    </div>
+    <div class="box">
+      <h3>Your rights</h3>
+      <p>Under the federal Funeral Rule, a funeral home must give you its itemized price list when you visit and tell you prices over the phone. You can buy a casket or urn somewhere else, and they can't charge you for using it. You only have to buy the items you choose.</p>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <div class="foot">
+    <span>Full price details, notes and how to check a funeral home's license: graveandseed.com/prices</span>
+    <span>Free to copy and share.</span>
   </div>
 </div>
 </body>
