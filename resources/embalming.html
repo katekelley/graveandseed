@@ -1,0 +1,62 @@
+---
+layout: page
+title: Is embalming required in Michigan?
+here: resources
+heading: Is embalming required in Michigan?
+lede: When the law requires it, when it's only a funeral home's policy, and what to ask for instead.
+description: Embalming is rarely required in Michigan. When state law requires it, why funeral homes ask for it anyway, what the CDC and FTC say, and alternatives like refrigeration and a home vigil, with sources.
+permalink: /resources/embalming/
+---
+{%- assign p = site.data.prices -%}
+<section class="prose">
+  <p>Many families are never told that embalming is a choice. In Michigan it's rarely required by law, it doesn't protect anyone's health, and a funeral home can't do it without your permission. Here's what the rules actually say.</p>
+
+  <h2>When Michigan law requires it</h2>
+  <ul>
+    <li><strong>Certain contagious diseases.</strong> If the person died of diphtheria, a meningococcal infection, plague, polio, scarlet fever or smallpox, the body has to be embalmed before it's transported.<sup><a href="#s1">1</a></sup></li>
+    <li><strong>Moving the body after 48 hours.</strong> A state rule requires embalming if a body is transported more than 48 hours after death. The rule was written for shipping bodies, but the state licensing agency reads it to mean an unembalmed body can't be moved at all once 48 hours have passed, and funeral homes follow that reading.<sup><a href="#s1">1</a>,<a href="#s2">2</a></sup></li>
+  </ul>
+  <p>That's all. No Michigan law requires embalming because there's a viewing, a funeral or a burial. What matters is timing: if the burial or cremation happens within about two days, embalming isn't needed.</p>
+
+  <h2>It needs your permission</h2>
+  <ul>
+    <li>Michigan law says a funeral director can't embalm a body without being expressly authorized by a relative or the person in charge of the arrangements.<sup><a href="#s1">1</a></sup></li>
+    <li>Under the federal Funeral Rule, a funeral home can't charge you for embalming you didn't approve, unless the law required it.<sup><a href="#s3">3</a></sup></li>
+  </ul>
+
+  <h2>It doesn't protect public health</h2>
+  <p>According to the Funeral Consumers Alliance, the U.S. Centers for Disease Control and Canadian health authorities say embalming provides no public health benefit. The chemicals are toxic enough that embalmers are required to wear respirators.<sup><a href="#s4">4</a></sup> Refrigeration is the usual alternative for the days before a burial or cremation.</p>
+
+  <h2>Why funeral homes ask for it anyway</h2>
+  <p>The FTC itself notes that many funeral homes have a policy requiring embalming if the body will be publicly viewed, even though most states don't require it by law.<sup><a href="#s3">3</a></sup> The FTC also makes every price list say that embalming "may be necessary" for "certain funeral arrangements, such as a funeral with viewing." That reads like a rule even when it's house policy. In 2022 the FTC said it was considering changing that wording so people better understand how rarely embalming is actually required.<sup><a href="#s5">5</a></sup></p>
+  <p>Funeral homes' reasons are mostly about how a body looks at a visitation several days after death. Embalming is also a paid service.{% assign emb = "" %}{% for h in p.homes %}{% if h.embalming != "" %}{% assign emb = "yes" %}{% endif %}{% endfor %}{% if emb == "yes" %} Around here, posted prices are{% for h in p.homes %}{% if h.embalming != "" %} {% include money.html n=h.embalming %} at {{ h.short }}{% unless forloop.last %} and{% endunless %}{% endif %}{% endfor %}.{% endif %} <a href="/prices/">Compare funeral home prices</a></p>
+
+  <h2>What to ask instead</h2>
+  <ul>
+    <li>Can we have a private family viewing without embalming, soon after the death?</li>
+    <li>Do you refrigerate instead, and what does that cost?</li>
+    <li>If we want a public visitation, can it happen within two days so embalming isn't needed?</li>
+    <li>Will you help us keep them at home for a vigil?</li>
+  </ul>
+
+  <h2>Keeping them at home</h2>
+  <p>Michigan is one of only a handful of states that requires a licensed funeral director to be involved in caring for a body and arranging the burial or cremation.<sup><a href="#s6">6</a>,<a href="#s7">7</a></sup> You can still hold a vigil at home with a funeral director who's willing to work with you. Families usually keep the body cool with dry ice or reusable cooling packs, and an open window or air conditioning. Because of the 48-hour rule, plan on a vigil of a day or two before the funeral director moves them. Dry ice should never touch skin, and the room needs fresh air. Ask your funeral director or a home funeral guide to show you how.<sup><a href="#s8">8</a></sup></p>
+  <p>Green burial means no embalming, so if you're considering one, you can skip it entirely. <a href="/resources/green-burial/">Green burial in Michigan</a></p>
+</section>
+
+<section>
+  <div class="box">
+    <h2>Sources</h2>
+    <ol class="sources">
+      <li id="s1"><a href="https://www.michigan.gov/lara/bureau-list/cscl/licensing/prof/mortuary/spotlight/embalming-final-disposition-and-fe-inspections" rel="noopener">Embalming, final disposition and funeral establishment inspections</a>, Michigan Department of Licensing and Regulatory Affairs. Covers MCL 339.1810 and Mich Admin Code R 325.1 and R 325.2.</li>
+      <li id="s2"><a href="https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-325-2" rel="noopener">Mich Admin Code R 325.2</a>, transportation of certain bodies.</li>
+      <li id="s3"><a href="https://consumer.ftc.gov/articles/ftc-funeral-rule" rel="noopener">The FTC Funeral Rule</a>, Federal Trade Commission.</li>
+      <li id="s4"><a href="https://funerals.org/embalming/" rel="noopener">Embalming explained</a>, Funeral Consumers Alliance.</li>
+      <li id="s5"><a href="https://www.ftc.gov/business-guidance/resources/complying-funeral-rule" rel="noopener">Complying with the Funeral Rule</a>, Federal Trade Commission, and a <a href="https://iccfa.com/?p=738" rel="noopener">summary of the FTC's 2022 Funeral Rule review</a> from the International Cemetery, Cremation and Funeral Association.</li>
+      <li id="s6"><a href="https://www.nolo.com/legal-encyclopedia/michigan-home-funeral-laws.html" rel="noopener">Michigan home funeral laws</a>, Nolo.</li>
+      <li id="s7"><a href="https://www.metrotimes.com/news/grave-debate-2196992/" rel="noopener">Grave debate</a>, Metro Times, on Michigan's 2003 and 2006 funeral director requirements.</li>
+      <li id="s8"><a href="https://www.funerals.org/get-help/making-decisions/how-to-arrange-a-home-funeral/" rel="noopener">How to arrange a home funeral</a>, Funeral Consumers Alliance.</li>
+    </ol>
+    <p class="small">This is general information, not legal advice. Checked November 2026. Spot an error? Email {{ site.data.content.email }}.</p>
+  </div>
+</section>
