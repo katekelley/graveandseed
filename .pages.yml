@@ -11,6 +11,7 @@ content:
       - { name: tagline_start, label: Tagline (plain part), type: string }
       - { name: tagline_emphasis, label: Tagline (italic ending), type: string }
       - { name: location, label: Location, type: string }
+      - { name: meta_description, label: "Home: description Google shows under the title", type: text }
       - { name: crisis_note, label: "Home: 'someone just died' note", type: string }
       - { name: crisis_link_text, label: "Home: 'someone just died' link text", type: string }
       - { name: intro_heading, label: "How I work: heading", type: string }

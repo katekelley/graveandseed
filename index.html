@@ -8,11 +8,11 @@ layout: null
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Grave and Seed | Celebrations of life in Ann Arbor</title>
-<meta name="description" content="{{ c.tagline_start }}{% if c.tagline_emphasis != "" %} {{ c.tagline_emphasis }}{% endif %}.">
+<meta name="description" content="{% if c.meta_description and c.meta_description != "" %}{{ c.meta_description }}{% else %}{{ c.tagline_start }}{% if c.tagline_emphasis != "" %} {{ c.tagline_emphasis }}{% endif %}.{% endif %}">
 {% include head.html %}
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Grave and Seed","description":"Celebration of life planning in Ann Arbor, Michigan.","url":"https://graveandseed.com","email":"{{ c.email }}","telephone":"+1-734-489-9915","image":"https://graveandseed.com/assets/share.jpg","logo":"https://graveandseed.com/assets/icon-180.png","areaServed":{"@type":"AdministrativeArea","name":"Washtenaw County, Michigan"},"address":{"@type":"PostalAddress","addressLocality":"Ann Arbor","addressRegion":"MI","addressCountry":"US"},"priceRange":"$$"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Grave and Seed","description":"Celebration of life planning in Ann Arbor, Michigan.","url":"https://graveandseed.com","email":"{{ c.email }}","telephone":"+1-734-489-9915","image":"https://graveandseed.com/assets/share.jpg","logo":"https://graveandseed.com/assets/icon-180.png","areaServed":[{"@type":"AdministrativeArea","name":"Washtenaw County, Michigan"},{"@type":"City","name":"Ann Arbor, Michigan"},{"@type":"City","name":"Ypsilanti, Michigan"},{"@type":"City","name":"Dexter, Michigan"},{"@type":"City","name":"Saline, Michigan"},{"@type":"City","name":"Chelsea, Michigan"}],"sameAs":["https://www.google.com/maps?cid=17332117641198366502"],"address":{"@type":"PostalAddress","addressLocality":"Ann Arbor","addressRegion":"MI","addressCountry":"US"},"priceRange":"$$"}
 </script>
 </head>
 <body>
