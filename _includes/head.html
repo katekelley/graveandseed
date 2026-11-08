@@ -223,4 +223,27 @@ header.soil.hero .lede, header.soil.hero .crisis, header.soil.hero h1 { text-sha
 footer .wrap { margin-bottom: 3.5rem; }
 footer .wrap > * { padding: 1rem clamp(1.4rem, 4vw, 2.25rem); }
 footer .label a, footer .label { color: var(--muted); }
+.print-source { display: none; }
+/* Print: plain black on white, no collage, menu or buttons, and the address of every link written out, since links don't work on paper. */
+@media print {
+  @page { margin: 0.6in 0.65in; }
+  :root, :root[data-theme="dark"], :root:not([data-theme="light"]) { --paper: #fff; --card: #fff; --field: #fff; --ink: #000; --muted: #333; --moss: #000; --wheat: #333; --line: #999; }
+  html, body { background: #fff !important; color: #000 !important; font-size: 11pt; line-height: 1.45; }
+  body::before, header.soil::before { display: none !important; }
+  header.soil, header.soil.slim, header.soil.hero { background: none !important; min-height: 0 !important; color: #000 !important; }
+  .topnav .links, .hero-cta, .nav-cta, .button, .send, form, footer, .no-print { display: none !important; }
+  header.soil .wrap, header.soil.slim .wrap, main .wrap { margin: 0 !important; padding: 0 !important; max-width: none !important; width: auto !important; gap: 0.9rem !important; }
+  header.soil .wrap::before, header.soil .wrap::after, main .wrap > *::before, main .wrap > *::after { display: none !important; }
+  main .wrap { padding-top: 1rem !important; gap: 1.1rem !important; }
+  main .wrap > * { padding: 0 !important; width: auto !important; transform: none !important; }
+  .prose { max-width: none; }
+  h1 { font-size: 22pt !important; }
+  h2 { font-size: 14pt !important; break-after: avoid; }
+  h3 { break-after: avoid; }
+  li, dt, dd, tr, blockquote, .home, .guide { break-inside: avoid; }
+  a { color: #000 !important; }
+  main a[href^="/"]::after { content: " (graveandseed.com" attr(href) ")"; font-size: 0.85em; }
+  main a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; word-break: break-all; }
+  .print-source { display: block !important; margin-top: 1.5rem; font-size: 9pt; color: #333; border-top: 1px solid #999; padding-top: 0.4rem; }
+}
 </style>
