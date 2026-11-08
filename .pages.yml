@@ -8,7 +8,7 @@ content:
     path: _data/content.yml
     fields:
       - { name: hero_heading, label: Home headline, type: string }
-      - { name: tagline_start, label: Tagline (plain part), type: string }
+      - { name: tagline_start, label: Tagline (first part, regular text), type: string }
       - { name: tagline_emphasis, label: Tagline (italic ending), type: string }
       - { name: location, label: Location, type: string }
       - { name: meta_description, label: "Home: description Google shows under the title", type: text }
