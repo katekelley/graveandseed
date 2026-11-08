@@ -5,3 +5,4 @@ exclude:
 url: "https://graveandseed.com"
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
