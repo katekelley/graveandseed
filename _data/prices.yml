@@ -4,7 +4,7 @@ intro: "Funeral prices in Washtenaw County vary a lot, and most homes don't post
 items:
   - { key: direct_cremation, label: "Direct cremation" }
   - { key: immediate_burial, label: "Immediate burial" }
-  - { key: burial_casket, label: "Burial with their most affordable casket" }
+  - { key: burial_casket, label: "Burial with their simplest casket" }
   - { key: basic_services, label: "Basic services fee" }
   - { key: transfer, label: "Transfer of remains" }
   - { key: embalming, label: "Embalming" }
@@ -58,7 +58,7 @@ homes:
     ceremony: ""
     memorial: ""
     hearse: ""
-    notes: "Burial with their most affordable casket is a cloth-covered casket, from their full price list dated May 1, 2023. Green burial with a willow casket is $5,845. A grave liner or vault, if the cemetery requires one, is $1,095 to $3,895 more."
+    notes: "Burial with their simplest casket is a cloth-covered casket, from their full price list dated May 1, 2023. Green burial with a willow casket is $5,845. A grave liner or vault, if the cemetery requires one, is $1,095 to $3,895 more."
   - name: "Hosmer-Muehlig Funeral Chapel"
     owner_short: "SCI, a national public company, Houston, TX"
     owner: "SCI Michigan Funeral Services Inc., part of Service Corporation International, a publicly traded company (Houston, TX)"
@@ -80,7 +80,7 @@ homes:
     ceremony: 745
     memorial: 1295
     hearse: 570
-    notes: "Second location of Muehlig Funeral Chapel. Part of the Dignity Memorial network. Immediate burial assumes you provide the casket; burial with their most affordable casket is $6,890, not counting a grave liner."
+    notes: "Second location of Muehlig Funeral Chapel. Part of the Dignity Memorial network. Immediate burial assumes you provide the casket; burial with their simplest casket is $6,890, not counting a grave liner."
   - name: "Muehlig Funeral Chapel"
     owner_short: "SCI, a national public company, Houston, TX"
     owner: "SCI Michigan Funeral Services Inc., part of Service Corporation International, a publicly traded company (Houston, TX)"
@@ -102,7 +102,7 @@ homes:
     ceremony: 945
     memorial: 1295
     hearse: 595
-    notes: "Part of the Dignity Memorial network. Immediate burial assumes you provide the casket; burial with their most affordable casket is $6,940, not counting a grave liner. Packages run from $5,845 (cremation) to $21,027 (full funeral with vault)."
+    notes: "Part of the Dignity Memorial network. Immediate burial assumes you provide the casket; burial with their simplest casket is $6,940, not counting a grave liner. Packages run from $5,845 (cremation) to $21,027 (full funeral with vault)."
 not_posted:
   - name: "Staffan-Mitchell Funeral Home"
     owner: "Staffan-Mitchell Funeral Home Inc. (Chelsea, MI)"
