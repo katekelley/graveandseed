@@ -63,6 +63,10 @@ content:
       - { name: paperwork_heading, label: "Paperwork companion: heading", type: string }
       - { name: paperwork, label: "Paperwork companion: description", type: text }
       - { name: paperwork_note, label: "Paperwork companion: not-legal-advice note", type: text }
+      - { name: celebrant_heading, label: "Celebrant: heading", type: string }
+      - { name: celebrant, label: "Celebrant: description", type: text }
+      - { name: celebrant_price_from, label: "Celebrant: starting price ($)", type: number }
+      - { name: celebrant_note, label: "Celebrant: what's included note", type: text }
       - { name: kit_intro, label: "What I bring: intro", type: text }
       - { name: kit_items, label: "What I bring: items", type: string, list: true }
       - { name: kit_note, label: "What I bring: note under the list", type: text }

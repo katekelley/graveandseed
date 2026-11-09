@@ -46,6 +46,11 @@ paperwork_heading: "Company while you do the paperwork"
 paperwork: "Plenty of people know what they want but put off writing it down, because it feels heavy to do alone. I'll sit with you while you fill out your own planning papers, like Five Wishes, a patient advocate designation or your wishes for your own celebration. I'll keep us on track, explain what each section is asking, and leave you with a list of what still needs signing, and by whom. The choices and the words are yours."
 paperwork_note: "I'm not a lawyer, and this isn't legal or medical advice. For a will, finances or anything complicated, I'll point you to an estate planning attorney."
 
+celebrant_heading: "Leading the service"
+celebrant: "Already working with a funeral home, or just need someone to lead the ceremony? I can be your celebrant: a secular officiant who leads a memorial or funeral built around the person, not a script. We meet so I can hear the stories, I write the service and send you a draft to change as much as you like, and on the day I hold the room so your family can just be there. Religious readings, prayers and hymns are welcome if you want them; I'm also glad to share the service with your clergy."
+celebrant_price_from: 450
+celebrant_note: "Includes a family meeting, a written service with a round of edits, coordinating with your funeral home or venue, and leading the service. If I'm already planning your celebration, see the add-on below."
+
 contact_heading: "Tell me who you're remembering"
 email: "kate@graveandseed.com"
 phone: "(734) 489-9915"
@@ -76,7 +81,7 @@ faq:
   - q: "Can you help write the obituary?"
     a: "Yes, and you don't need to book anything else. We talk for about an hour, and within about two days I send a long version for online and a short one for the newspaper. If you'd rather write it yourself, <a href='/resources/obituary/'>my free guide</a> walks you through it."
   - q: "Is it religious?"
-    a: "Only if you want it to be. I plan secular, religious and mixed celebrations, and I'll work with your clergy or a celebrant. I don't officiate myself, but I can recommend people who do."
+    a: "Only if you want it to be. I plan secular, religious and mixed celebrations, and I can lead the service myself as a secular celebrant, or work alongside your clergy."
   - q: "Can friends hire you, not just family?"
     a: "Yes. Chosen family, roommates, a band, a gaming group, a group of coworkers. If you're the people throwing the party, I'll work with you."
   - q: "How do payment and cancellation work?"
@@ -103,6 +108,9 @@ kit_caption: "From a May Day gathering, set with pieces from my collection."
 
 addons_heading: "Add-ons"
 addons:
+  - name: "Leading the ceremony"
+    price_from: 250
+    description: "I'll be your celebrant as well as your planner: I write the order of the service, tie together the stories, readings and music, and lead it on the day, so no one in the family has to stand up and hold it together."
   - name: "Story corner"
     price_from: 350
     description: "A quiet corner at the celebration where guests sit and tell a story about the person on camera, with someone there to help. Afterward I edit each story and deliver them on a USB drive and in a private online folder for the family."

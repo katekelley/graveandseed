@@ -4,7 +4,7 @@ title: Services and prices
 here: services
 heading: Services and prices
 lede: Starting prices for planning, add-ons, and how booking works.
-description: Celebration of life planning in Ann Arbor - full planning, partial planning and day-of coordination with posted starting prices, add-ons and a sample budget.
+description: Celebration of life planning in Ann Arbor - full planning, partial planning, day-of coordination and secular celebrant services with posted starting prices, add-ons and a sample budget.
 permalink: /services/
 ---
 {%- assign c = site.data.content -%}
@@ -17,6 +17,15 @@ permalink: /services/
         {%- endfor %}
       </div>
       <p class="note">{{ c.pricing_note }}</p>
+    </section>
+
+    <section id="celebrant">
+      <span class="label">Celebrant</span>
+      <h2>{{ c.celebrant_heading }}</h2>
+      <div class="tiers">
+        <div class="tier"><h3>Celebrant only<span class="from">From {% include money.html n=c.celebrant_price_from %}</span></h3><p>{{ c.celebrant }}</p></div>
+      </div>
+      <p class="note">{{ c.celebrant_note }} <a href="{{ c.booking_url }}" rel="noopener">Ask about it on a free call</a></p>
     </section>
 
     <section id="paperwork">
