@@ -23,7 +23,10 @@ og_description: "Celebration of life planning in Ann Arbor. What things cost, wh
     {% include nav.html here="home" %}
     <h1>{{ c.hero_heading }}</h1>
     <p class="lede">{{ c.tagline_start }}{% if c.tagline_emphasis != "" %} <em>{{ c.tagline_emphasis }}</em>{% endif %}.</p>
-    <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
+    <div class="hero-actions">
+      <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
+      <a class="hero-cta quiet" href="{{ c.booking_url }}" rel="noopener">Book a free call</a>
+    </div>
     <p class="crisis">{{ c.crisis_note }} <a href="/resources/first-week/">{{ c.crisis_link_text }}</a>.</p>
   </div>
 </header>

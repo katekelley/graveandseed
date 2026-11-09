@@ -236,6 +236,9 @@ footer .label a, footer .label { color: var(--muted); }
 .handout-card .go { font: 600 0.82rem/1 var(--label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--moss); }
 .handout-card:hover h3 { text-decoration: underline; }
 @media (max-width: 560px) { .handout-card { grid-template-columns: 5.5rem 1fr; gap: 0.85rem; padding: 0.85rem; } }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+.hero-actions .hero-cta { margin-top: 0; }
+.hero-cta.quiet { font-weight: 500; }
 .print-source { display: none; }
 /* Print: plain black on white, no collage, menu or buttons, and the address of every link written out, since links don't work on paper. */
 @media print {
