@@ -1,0 +1,19 @@
+<script>
+// Counts contact actions in GoatCounter as events, named by action, titled with the page they happened on.
+(function () {
+  function count(name) {
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: name, title: location.pathname, event: true }); } catch (e) {}
+  }
+  window.gsCount = count;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a, button');
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('calendar.app.google') > -1) count('contact: book a call');
+    else if (h.indexOf('tel:') === 0) count('contact: phone');
+    else if (h.indexOf('sms:') === 0) count('contact: text');
+    else if (h.indexOf('mailto:') === 0) count('contact: email link');
+    else if (a.id === 'copy') count('contact: copy email');
+  }, true);
+})();
+</script>
