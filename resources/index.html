@@ -7,7 +7,7 @@ lede: Local information for planning a death and a goodbye in Washtenaw County.
 description: Free guides to funeral prices, green burial, venues and practical steps after a death in Washtenaw County, Michigan.
 permalink: /resources/
 ---
-{%- assign groups = "Someone just died|Planning a celebration|Costs and planning ahead" | split: "|" %}
+{%- assign groups = "Someone just died|Planning a celebration|Costs and planning ahead|Printable handouts" | split: "|" %}
 {%- for g in groups %}
 <section>
   <h2>{{ g }}</h2>
@@ -19,6 +19,9 @@ permalink: /resources/
     </a>
     {%- endif %}{% endfor %}
   </div>
+  {%- if g == "Printable handouts" %}
+  <p class="note">Free to print, copy and share. <a href="/handouts/">About the handouts</a></p>
+  {%- endif %}
 </section>
 {%- endfor %}
 {%- assign ungrouped = "" %}

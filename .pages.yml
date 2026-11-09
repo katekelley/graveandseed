@@ -95,7 +95,7 @@ content:
     path: _data/resources.yml
     list: true
     fields:
-      - { name: group, label: "Group (Someone just died / Planning a celebration / Costs and planning ahead)", type: string }
+      - { name: group, label: "Group (Someone just died / Planning a celebration / Costs and planning ahead / Printable handouts)", type: string }
       - { name: title, label: Title, type: string }
       - { name: blurb, label: Blurb, type: text }
       - { name: url, label: Link, type: string }
