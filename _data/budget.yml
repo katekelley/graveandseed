@@ -3,7 +3,7 @@ scenario: "A celebration of life for about 60 people, with direct cremation and 
 lines:
   - item: "Direct cremation"
     low: 895
-    high: 3765
+    high: 4160
     note: "Published Washtenaw County prices"
   - item: "Grave and Seed partial planning"
     low: 1250

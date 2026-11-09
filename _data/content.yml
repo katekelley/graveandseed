@@ -46,7 +46,7 @@ tiers:
     price_from: 1250
   - name: "Day-of coordination"
     description: "You have the plan. I make it happen so you don't have to."
-    timing: "Short notice is fine"
+    timing: "Can come together in about a week"
     price_from: 850
 pricing_note: "These are starting prices for a two-hour celebration. Larger or more complex days cost more, and I'll give you a clear written quote after a short conversation."
 other_heading: "Other ways I help"
@@ -96,14 +96,14 @@ faq:
   - q: "How do payment and cancellation work?"
     a: "Half the planning fee holds your date and the rest is due a week before. If plans change, I'll refund the deposit minus time already spent and any vendor costs that can't be refunded. Life is unpredictable; I'll be reasonable."
   - q: "Where do you work?"
-    a: "Ann Arbor, Ypsilanti and the rest of Washtenaw County. I'll travel farther for a mileage fee."
+    a: "Ann Arbor, Ypsilanti and the rest of Washtenaw County. Travel within 25 miles of Ann Arbor is included. Farther than that, I charge the IRS mileage rate for the extra miles, round trip."
   - q: "Can we have alcohol?"
     a: "Yes, served by a licensed caterer or the venue's bar. I can help you find one."
 
 about_heading: "I'm Kate, and I guide people through saying goodbye."
 about:
   - "I'm direct. I'll tell you what things cost, what you actually need, and what you can skip. I'm also not in a hurry. If you want to sit and talk about the person before we talk about chairs, all the better."
-  - "By day I'm a structural engineer, which mostly means I like a plan and I notice details. Chosen family, unconventional families, and people who want something that doesn't look like a funeral are all welcome here."
+  - "I trained as a structural engineer, which mostly means I like a plan and I notice details, and I've worked in both the funeral and wedding industries. Chosen family, unconventional families, and people who want something that doesn't look like a funeral are all welcome here."
 
 kit_heading: "What I bring"
 kit_intro: "Every celebration starts from my own collection, so you're not renting or buying décor for one afternoon."
