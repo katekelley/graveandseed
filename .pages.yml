@@ -44,6 +44,7 @@ content:
       - { name: phone, label: Phone (leave blank to hide), type: string }
       - { name: phone_note, label: Phone note, type: string }
       - { name: reply_note, label: Reply note under the form, type: string }
+      - { name: facebook_url, label: Facebook page link (leave blank to hide), type: string }
       - { name: booking_url, label: Booking page link (leave blank to hide), type: string }
       - { name: booking_text, label: Booking link text, type: string }
       - { name: steps_heading, label: "How it works: heading", type: string }
