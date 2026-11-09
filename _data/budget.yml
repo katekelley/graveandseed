@@ -12,7 +12,7 @@ lines:
   - item: "Venue"
     low: 250
     high: 1000
-    note: "Local venues we've priced"
+    note: "Local venues I've priced"
   - item: "Food and drink"
     low: 900
     high: 2100
@@ -21,4 +21,4 @@ lines:
     low: 200
     high: 600
     note: "Rough estimate"
-comparison: "For comparison, Muehlig Funeral Chapel's cremation packages range from $5,845 to $14,030."
+comparison: "For comparison, Muehlig Funeral Chapel's cremation packages range from $5,845 to $14,030, and those don't include a venue or food."

@@ -3,8 +3,8 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <meta property="og:site_name" content="Grave and Seed">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Grave and Seed">
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Celebrations of life and memorials in Ann Arbor.{% endif %}">
+<meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.title %}{{ page.title }} | Grave and Seed{% else %}Grave and Seed{% endif %}">
+<meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% elsif page.description %}{{ page.description }}{% else %}Celebrations of life and memorials in Ann Arbor.{% endif %}">
 <link rel="canonical" href="https://graveandseed.com{{ page.url | replace: 'index.html', '' }}">
 <meta property="og:url" content="https://graveandseed.com{{ page.url | replace: 'index.html', '' }}">
 <meta property="og:image" content="https://graveandseed.com/assets/share-v4.jpg">

@@ -19,7 +19,7 @@
 <main>
   <div class="wrap">
 {{ content }}
-<p class="print-source">Printed from graveandseed.com{{ page.url }}. Free to copy and share.</p>
+{% unless page.print_source == false %}<p class="print-source" hidden aria-hidden="true">Printed from graveandseed.com{{ page.url }}. Free to copy and share.</p>{% endunless %}
   </div>
 </main>
 {% include footer.html %}

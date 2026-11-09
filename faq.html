@@ -19,3 +19,8 @@ permalink: /faq/
     </section>
 
     <p class="note">Didn't see your question? <a href="/contact/">Ask me</a>.</p>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{%- for f in c.faq %}{"@type":"Question","name":{{ f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor -%}
+]}
+</script>

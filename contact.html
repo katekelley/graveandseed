@@ -6,6 +6,7 @@ heading: Tell me who you're remembering
 lede: Book a free call, text, email or send a message. Whatever is easiest right now.
 description: Contact Grave and Seed, celebration of life planning in Ann Arbor. Book a free 20-minute call or send a message.
 permalink: /contact/
+print_source: false
 ---
 {%- assign c = site.data.content -%}
     <section id="contact">
@@ -16,7 +17,7 @@ permalink: /contact/
           <code id="addr">{{ c.email }}</code>
           <button class="copy" id="copy" type="button">Copy email</button>
           {%- if c.phone != "" %}
-          <span class="phone">{{ c.phone }} &middot; {{ c.phone_note }}</span>
+          <span class="phone"><a href="tel:+17344899915">{{ c.phone }}</a> &middot; {{ c.phone_note }}</span>
           {%- endif %}
           {%- if c.booking_url != "" %}
           <a class="book" href="{{ c.booking_url }}" rel="noopener">{{ c.booking_text }} &rarr;</a>

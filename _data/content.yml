@@ -75,7 +75,7 @@ steps:
   - name: "A written proposal"
     description: "Within a few days, a plan and a clear price, including what you'll pay vendors directly."
   - name: "A deposit to hold the date"
-    description: "Half the planning fee holds your date. The rest is due a week before the celebration."
+    description: "Half the planning fee holds your date. The rest is due a week before the celebration. If plans change, I refund the deposit minus time already spent and any vendor costs that can't be refunded."
   - name: "Planning together"
     description: "As many check-ins as you want, or as few. I handle venues, vendors and the order of the day."
   - name: "The day itself"
@@ -94,7 +94,7 @@ faq:
   - q: "Can friends hire you, not just family?"
     a: "Yes. Chosen family, roommates, a band, a gaming group, a group of coworkers. If you're the people throwing the party, I'll work with you."
   - q: "How do payment and cancellation work?"
-    a: "Half the planning fee holds your date and the rest is due a week before. If plans change, I'll refund the deposit minus time already spent and any vendor costs that can't be refunded. Life is unpredictable right now; I'll be reasonable."
+    a: "Half the planning fee holds your date and the rest is due a week before. If plans change, I'll refund the deposit minus time already spent and any vendor costs that can't be refunded. Life is unpredictable; I'll be reasonable."
   - q: "Where do you work?"
     a: "Ann Arbor, Ypsilanti and the rest of Washtenaw County. I'll travel farther for a mileage fee."
   - q: "Can we have alcohol?"
@@ -142,7 +142,7 @@ addons:
   - name: "Obituary writing"
     featured: true
     price_from: 175
-    description: "An hour with your family, by phone or in person, to ask the questions that get at who they were. Within about two days I write a long version for online and a short one for print, with a round of edits. Available on its own, without booking anything else."
+    description: "An hour with your family, by phone or in person, to ask the questions that get at who they were. Within about two days I write a long version for online and a short one for print, with a round of edits. Available on its own, without booking anything else. Rather write it yourself? <a href='/resources/obituary/'>Use my free obituary guide</a>."
   - name: "Invitations and program"
     featured: true
     price_from: 200

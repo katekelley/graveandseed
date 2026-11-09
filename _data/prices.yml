@@ -1,6 +1,6 @@
-updated: "November 8, 2026"
+updated: "November 3–8, 2026"
 owners_note: "Owners are from each funeral home's Michigan license record, checked November 6, 2026."
-intro: "Funeral prices in Washtenaw County vary a lot, and half the funeral homes here don't post them online. These are the prices each funeral home publishes, with the date we checked. Always confirm with the funeral home before deciding."
+intro: "Funeral prices in Washtenaw County vary a lot, and half the funeral homes here don't post them online. These are the prices each funeral home publishes, with the date I checked. Always confirm with the funeral home before deciding."
 items:
   - { key: direct_cremation, label: "Direct cremation" }
   - { key: immediate_burial, label: "Immediate burial" }
@@ -73,6 +73,8 @@ homes:
     direct_cremation_note: "Starting price. Includes basic services, refrigeration up to 48 hours, transfers and return of ashes."
     immediate_burial: 3700
     burial_casket: 4795
+    dated:
+      burial_casket: "May 2023 price list"
     basic_services: ""
     transfer: ""
     embalming: ""

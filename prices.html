@@ -1,6 +1,8 @@
 ---
 layout: null
 permalink: /prices/
+og_title: What funerals and cremation cost around Ann Arbor
+og_description: "Published cremation, burial and service prices from every funeral home serving Washtenaw County that posts them, side by side, with the date each was checked. Free to share."
 ---
 {%- assign p = site.data.prices -%}
 {%- assign c = site.data.content -%}
@@ -10,7 +12,7 @@ permalink: /prices/
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Funeral and Cremation Prices in Ann Arbor and Washtenaw County | Grave and Seed</title>
-<meta name="description" content="Funeral and cremation prices around Ann Arbor: published direct cremation, burial and service costs for every Washtenaw County funeral home, side by side, with the date each was checked.">
+<meta name="description" content="Funeral and cremation prices around Ann Arbor: published direct cremation, burial and service costs from every funeral home serving Washtenaw County that posts them, side by side, with the date each was checked.">
 {% include head.html %}
 <style>
 header.soil.slim a.home { color: var(--soil-ink); text-decoration: none; font: 500 0.78rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
@@ -32,7 +34,19 @@ table.compare { border-collapse: collapse; width: 100%; min-width: 34rem; font-s
 table.compare th, table.compare td { padding: 0.45rem 0.6rem; text-align: right; vertical-align: bottom; }
 table.compare thead th { font: 600 0.9rem/1.25 var(--body); border-bottom: 1px solid var(--ink); }
 table.compare thead th .town { display: block; font: 500 0.68rem/1.4 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-table.compare tbody th { text-align: left; font-weight: 400; color: var(--ink); position: sticky; left: 0; background: var(--paper); }
+table.compare tbody th, table.compare thead th:first-child { text-align: left; font-weight: 400; color: var(--ink); position: sticky; left: 0; z-index: 1; background: var(--card); box-shadow: 1px 0 0 var(--line); }
+table.compare td.low { font-weight: 700; }
+table.compare .low-mark { font-size: 0.6em; margin-right: 0.3em; vertical-align: 0.15em; }
+table.compare .dated { display: block; font: italic 400 0.75rem/1.3 var(--body); color: #8A3F1A; white-space: nowrap; }
+@media (prefers-color-scheme: dark) { table.compare .dated { color: var(--wheat); } }
+.table-wrap:focus-visible { outline: 2px solid var(--moss); outline-offset: 2px; }
+.scroll-hint { display: none; }
+@media (max-width: 640px) {
+  .scroll-hint { display: block; }
+  table.compare { min-width: 0; font-size: 0.92rem; }
+  table.compare tbody th, table.compare thead th:first-child { min-width: 7.5rem; max-width: 7.5rem; white-space: normal; line-height: 1.3; font-size: 0.88rem; }
+  table.compare td.text { min-width: 7rem; }
+}
 table.compare td { font-family: var(--label); font-variant-numeric: tabular-nums; white-space: nowrap; }
 table.compare tbody tr:last-child th, table.compare tbody tr:last-child td { border-bottom: 1px solid var(--ink); }
 table.compare tbody tr:first-child th, table.compare tbody tr:first-child td { padding-top: 0.7rem; }
@@ -81,8 +95,9 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
     <section>
       <span class="label">Funeral home by funeral home</span>
       <h2>Posted prices, side by side</h2>
-      <p class="small">The lowest posted price in each row is highlighted. A dash means the funeral home doesn't post that price online.</p>
-      <div class="table-wrap">
+      <p class="small">The lowest posted price in each row is in <strong>bold</strong> and marked &#9660;. A dash means the funeral home doesn't post that price online.</p>
+      <p class="small scroll-hint">Scroll sideways to see every funeral home. The left column stays put.</p>
+      <div class="table-wrap" role="region" aria-label="Posted prices by funeral home" tabindex="0">
         <table class="compare">
           <thead>
             <tr>
@@ -113,7 +128,8 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
               {%- for h in p.homes %}
               {%- assign v = h[it.key] -%}
               {%- if v != "" and v != nil -%}{%- assign vn = v | plus: 0 -%}
-              <td{% if vn == low %} class="low"{% endif %}>{% if h.starting %}<span class="from-sm">from </span>{% endif %}{% include money.html n=vn %}</td>
+              {%- assign dn = h.dated[it.key] %}
+              <td{% if vn == low %} class="low"{% endif %}>{% if vn == low %}<span class="low-mark" aria-hidden="true">&#9660;</span>{% endif %}{% if h.starting %}<span class="from-sm">from </span>{% endif %}{% include money.html n=vn %}{% if vn == low %}<span class="sr"> (lowest)</span>{% endif %}{% if dn %}<span class="dated">{{ dn }}</span>{% endif %}</td>
               {%- else %}
               <td class="none">&mdash;</td>
               {%- endif %}
@@ -164,7 +180,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
         <p class="small">Prices come from each funeral home's own published list on the date shown. Grave and Seed has no financial relationship with any funeral home listed and doesn't recommend one over another. Read their reviews on Yelp and decide for yourself. {{ p.owners_note }} Spot an error or a newer price? Email {{ c.email }}.</p>
       </div>
     </section>
-<p class="print-source">Printed from graveandseed.com/prices/. Free to copy and share.</p>
+<p class="print-source" hidden aria-hidden="true">Printed from graveandseed.com/prices/. Free to copy and share.</p>
   </div>
 </main>
 
