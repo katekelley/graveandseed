@@ -110,7 +110,7 @@ addons_heading: "Add-ons"
 addons:
   - name: "Leading the ceremony"
     price_from: 250
-    description: "I'll be your celebrant as well as your planner: I write the order of the service, tie together the stories, readings and music, and lead it on the day, so no one in the family has to stand up and hold it together."
+    description: "I'll be your celebrant (a secular officiant) as well as your planner: I write the order of the service, tie together the stories, readings and music, and lead it on the day, so no one in the family has to stand up and hold it together."
   - name: "Story corner"
     price_from: 350
     description: "A quiet corner at the celebration where guests sit and tell a story about the person on camera, with someone there to help. Afterward I edit each story and deliver them on a USB drive and in a private online folder for the family."
