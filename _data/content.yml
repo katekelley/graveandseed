@@ -1,10 +1,17 @@
 hero_heading: "Your guide through goodbye."
-tagline_start: "Celebrations of life and memorials in Ann Arbor"
+tagline_start: "Plain answers, fair prices, and a celebration of life that looks like the person"
 tagline_emphasis: ""
 location: "Ann Arbor, Michigan"
 meta_description: "Celebration of life planning in Ann Arbor and Washtenaw County, with posted prices and free local guides for the first days after a death."
 crisis_note: "If someone just died and you don't know where to start:"
 crisis_link_text: "here's the first week"
+
+start_heading: "Start here"
+start_intro: "Free, plain-language guides for Ann Arbor and Ypsilanti, whether or not you ever hire me."
+start_here:
+  - "/resources/first-week/"
+  - "/resources/plan-a-celebration-of-life/"
+  - "/resources/planning-ahead/"
 
 intro_heading: "Someone died. Let's gather the people who loved them."
 intro:
@@ -42,15 +49,16 @@ tiers:
     timing: "Short notice is fine"
     price_from: 850
 pricing_note: "These are starting prices for a two-hour celebration. Larger or more complex days cost more, and I'll give you a clear written quote after a short conversation."
-paperwork_heading: "Company for the paperwork, before and after"
-paperwork: "Plenty of people know what they want but put off writing it down, because it feels heavy to do alone. I'll sit with you while you fill out your own planning papers, like Five Wishes, a patient advocate designation or your wishes for your own celebration. I'll keep us on track, explain what each section is asking, and leave you with a list of what still needs signing, and by whom. The choices and the words are yours."
-after_paperwork: "After a death, there's a long list nobody warns you about: Social Security, canceling accounts and subscriptions, ordering enough death certificates, keeping track of who's been told. It's tedious, it's lonely, and grief makes it harder to concentrate. I'll sit with you in person while you work through it. We'll make a list, go down it together, and you'll leave knowing what's done and what's next."
+other_heading: "Other ways I help"
+paperwork: "Plenty of people know what they want but put off writing it down. I'll sit with you while you fill out Five Wishes, a patient advocate designation, a funeral representative form or your wishes for your own celebration, and leave you with a list of what still needs signing. The choices and the words are yours."
+after_paperwork: "After a death there's a long list nobody warns you about: Social Security, accounts, death certificates, who's been told. I'll sit with you in person while you work through it, so you leave knowing what's done and what's next."
 paperwork_note: "I'm not a lawyer, and this isn't legal or medical advice. For a will, finances or anything complicated, I'll point you to an estate planning attorney."
 
-celebrant_heading: "Leading the service"
-celebrant: "Already working with a funeral home, or just need someone to lead the ceremony? I can be your celebrant: a secular officiant who leads a memorial or funeral built around the person, not a script. We meet so I can hear the stories, I write the service and send you a draft to change as much as you like, and on the day I hold the room so your family can just be there. Religious readings, prayers and hymns are welcome if you want them; I'm also glad to share the service with your clergy."
+celebrant: "Already working with a funeral home, or just need someone to lead the ceremony? I meet with you to hear the stories, write a service built around the person, and lead it on the day so your family can just be there. Readings, prayers and hymns are welcome, and I'm glad to share the service with your clergy."
 celebrant_price_from: 400
-celebrant_note: "I also lead short scattering and interment ceremonies, from $200, for families who have ashes at home and want a way to finally lay them to rest. Includes a family meeting, a written service with a round of edits, coordinating with your funeral home or venue, and leading the service. If I'm already planning your celebration, see the add-on below."
+celebrant_note: "Includes a family meeting, a written service with a round of edits, and leading it on the day. If I'm also planning your celebration, it's a $250 add-on instead."
+scatter_price_from: 200
+scatter: "A short ceremony at a lake, a garden or a graveside, for ashes that have been waiting at home."
 
 contact_heading: "Tell me who you're remembering"
 email: "kate@graveandseed.com"
@@ -108,11 +116,10 @@ kit_note: "Ask on your free call what would suit your gathering."
 kit_caption: "From a May Day gathering, set with pieces from my collection."
 
 addons_heading: "Add-ons"
+addons_more_label: "Also available"
 addons:
-  - name: "Leading the ceremony"
-    price_from: 250
-    description: "I'll be your celebrant (a secular officiant) as well as your planner: I write the order of the service, tie together the stories, readings and music, and lead it on the day, so no one in the family has to stand up and hold it together."
   - name: "Story corner"
+    featured: true
     price_from: 350
     description: "A quiet corner at the celebration where guests sit and tell a story about the person on camera, with someone there to help. Afterward I edit each story and deliver them on a USB drive and in a private online folder for the family."
   - name: "Story phone"
@@ -122,18 +129,22 @@ addons:
     price_from: 200
     description: "Buckets of fresh flowers, shears and mismatched bud vases, so guests can make a small arrangement during the gathering and take it home. I order, prep and set up the flowers; you pay for them at cost, usually $100 to $200 for 50 guests. Needs about a week's notice."
   - name: "Photo memory table"
+    featured: true
     price_from: 300
     description: "Send me boxes, albums or phone photos. I scan and choose them with you, print a display for the room and make a slideshow to play during the gathering. The family keeps all the scans."
   - name: "Memory cards book"
     price_from: 150
     description: "Instead of a guest book, cards that ask guests for a story or a memory. Afterward I bind them into a book for the family. Printing is extra."
   - name: "Livestream"
+    featured: true
     price_from: 150
     description: "For family who can't be there. A steady camera, good sound and someone watching the stream, with a private link and a recording afterward."
   - name: "Obituary writing"
+    featured: true
     price_from: 175
     description: "An hour with your family, by phone or in person, to ask the questions that get at who they were. Within about two days I write a long version for online and a short one for print, with a round of edits. Available on its own, without booking anything else."
   - name: "Invitations and program"
+    featured: true
     price_from: 200
     description: "A simple invitation with an online RSVP, and a printed program with the order of the day, photos and readings. Printing is extra."
   - name: "Seed packet keepsakes"

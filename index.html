@@ -28,22 +28,30 @@ layout: null
 
 <main>
   <div class="wrap">
+    <section id="start">
+      <span class="label">Free guides</span>
+      <h2>{{ c.start_heading }}</h2>
+      <p class="note">{{ c.start_intro }}</p>
+      <div class="guides">
+        {%- for u in c.start_here %}
+        {%- assign r = site.data.resources | where: "url", u | first %}
+        {%- if r %}
+        <a class="guide" href="{{ r.url }}">
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.blurb }}</p>
+        </a>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+      <p class="note"><a href="/resources/">All guides and printable handouts</a></p>
+    </section>
+
     <section id="how">
       <span class="label">How I work</span>
       <h2>{{ c.intro_heading }}</h2>
       <div class="plain">
         {%- for p in c.intro %}
         <p>{{ p }}</p>
-        {%- endfor %}
-      </div>
-    </section>
-
-    <section>
-      <span class="label">Ways to remember</span>
-      <h2>{{ c.styles_heading }}</h2>
-      <div class="styles">
-        {%- for s in c.styles %}
-        <div class="style"><h3>{% if s.link %}<a href="{{ s.link }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3><p>{{ s.description }}</p></div>
         {%- endfor %}
       </div>
     </section>
@@ -56,7 +64,7 @@ layout: null
         <div class="tier"><h3>{{ t.name }}{% if t.price_from %}<span class="from">From {% include money.html n=t.price_from %}</span>{% endif %}</h3><p>{{ t.description }}</p></div>
         {%- endfor %}
       </div>
-      <p class="note"><a href="/services/">Add-ons, a sample budget and how booking works</a> &middot; <a href="/faq/">FAQ</a></p>
+      <p class="note"><a href="/services/">Celebrant services, add-ons, a sample budget and how booking works</a> &middot; <a href="/faq/">FAQ</a></p>
     </section>
 
     <section class="next">

@@ -7,13 +7,32 @@ lede: Local information for planning a death and a goodbye in Washtenaw County.
 description: Free guides to funeral prices, green burial, venues and practical steps after a death in Washtenaw County, Michigan.
 permalink: /resources/
 ---
+{%- assign groups = "Someone just died|Planning a celebration|Costs and planning ahead" | split: "|" %}
+{%- for g in groups %}
 <section>
+  <h2>{{ g }}</h2>
   <div class="guides">
-    {%- for r in site.data.resources %}
+    {%- for r in site.data.resources %}{% if r.group == g %}
     <a class="guide" href="{{ r.url }}">
       <h3>{{ r.title }}</h3>
       <p>{{ r.blurb }}</p>
     </a>
-    {%- endfor %}
+    {%- endif %}{% endfor %}
   </div>
 </section>
+{%- endfor %}
+{%- assign ungrouped = "" %}
+{%- for r in site.data.resources %}{% unless groups contains r.group %}{% assign ungrouped = ungrouped | append: "x" %}{% endunless %}{% endfor %}
+{%- if ungrouped != "" %}
+<section>
+  <h2>More</h2>
+  <div class="guides">
+    {%- for r in site.data.resources %}{% unless groups contains r.group %}
+    <a class="guide" href="{{ r.url }}">
+      <h3>{{ r.title }}</h3>
+      <p>{{ r.blurb }}</p>
+    </a>
+    {%- endunless %}{% endfor %}
+  </div>
+</section>
+{%- endif %}

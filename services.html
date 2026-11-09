@@ -19,24 +19,13 @@ permalink: /services/
       <p class="note">{{ c.pricing_note }}</p>
     </section>
 
-    <section id="celebrant">
-      <span class="label">Celebrant</span>
-      <h2>{{ c.celebrant_heading }}</h2>
-      <div class="tiers">
-        <div class="tier"><h3>Celebrant (secular officiant)<span class="from">From {% include money.html n=c.celebrant_price_from %}</span></h3><p>{{ c.celebrant }}</p></div>
-      </div>
-      <p class="note">{{ c.celebrant_note }} <a href="{{ c.booking_url }}" rel="noopener">Ask about it on a free call</a></p>
-    </section>
-
-    <section id="paperwork">
-      <span class="label">Before and after</span>
-      <h2>{{ c.paperwork_heading }}</h2>
-      <div class="plain">
-        <h3>Planning ahead</h3>
-        <p>{{ c.paperwork }}</p>
-        <h3 id="after">After a death</h3>
-        <p>{{ c.after_paperwork }}</p>
-        <p class="note">{{ c.paperwork_note }} <a href="/resources/planning-ahead/">What to put in writing</a> &middot; <a href="/resources/first-week/">The first week after a death</a> &middot; <a href="{{ c.booking_url }}" rel="noopener">Ask about it on a free call</a></p>
+    <section id="styles">
+      <span class="label">Styles</span>
+      <h2>{{ c.styles_heading }}</h2>
+      <div class="styles">
+        {%- for st in c.styles %}
+        <div class="style"><h3>{% if st.link %}<a href="{{ st.link }}">{{ st.name }}</a>{% else %}{{ st.name }}{% endif %}</h3><p>{{ st.description }}</p></div>
+        {%- endfor %}
       </div>
     </section>
 
@@ -64,10 +53,26 @@ permalink: /services/
       <span class="label">Extras</span>
       <h2>{{ c.addons_heading }}</h2>
       <div class="tiers">
-        {%- for a in c.addons %}
+        {%- for a in c.addons %}{% if a.featured %}
         <div class="tier"><h3>{{ a.name }}<span class="from">From {% include money.html n=a.price_from %}</span></h3><p>{{ a.description }}</p></div>
-        {%- endfor %}
+        {%- endif %}{% endfor %}
       </div>
+      <p class="note"><strong>{{ c.addons_more_label }}:</strong>
+        {%- assign first = true %}
+        {%- for a in c.addons %}{% unless a.featured %}{% unless first %};{% endunless %} {{ a.name | downcase }} (from {% include money.html n=a.price_from %}){% assign first = false %}{% endunless %}{% endfor %}.
+        Ask about any of them on a <a href="{{ c.booking_url }}" rel="noopener">free call</a>.</p>
+    </section>
+
+    <section id="other">
+      <span class="label">Celebrant and paperwork</span>
+      <h2>{{ c.other_heading }}</h2>
+      <div class="tiers">
+        <div class="tier" id="celebrant"><h3>Celebrant (secular officiant)<span class="from">From {% include money.html n=c.celebrant_price_from %}</span></h3><p>{{ c.celebrant }} <span class="muted">{{ c.celebrant_note }}</span></p></div>
+        <div class="tier" id="scattering"><h3>Scattering and interment ceremonies<span class="from">From {% include money.html n=c.scatter_price_from %}</span></h3><p>{{ c.scatter }}</p></div>
+        <div class="tier" id="paperwork"><h3>Company for planning paperwork<span class="from">Ask on a free call</span></h3><p>{{ c.paperwork }} <a href="/resources/planning-ahead/">What to put in writing</a></p></div>
+        <div class="tier" id="after"><h3>Company for the after-death list<span class="from">Ask on a free call</span></h3><p>{{ c.after_paperwork }} <a href="/resources/first-week/">The first week after a death</a></p></div>
+      </div>
+      <p class="note">{{ c.paperwork_note }}</p>
     </section>
 
     <section id="sample-budget">
