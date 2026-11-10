@@ -33,6 +33,9 @@ styles:
   - name: "Last Roll"
     link: "/celebrations/last-roll/"
     description: "For the gamers and the fans: dice, character sheets and the campaign recap."
+  - name: "The Whole Story"
+    link: "/celebrations/whole-story/"
+    description: "For someone who wasn't always easy to love: honest words, and space for every feeling people bring."
 
 offer_heading: "Planning, from start to finish or just the day"
 tiers:
