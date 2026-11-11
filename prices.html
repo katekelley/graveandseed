@@ -58,6 +58,16 @@ ol.notes { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; font-si
 table.compare .from-sm { font: 400 0.75rem var(--body); color: var(--muted); }
 table.compare td.text { font-family: var(--body); white-space: normal; text-align: left; vertical-align: top; font-size: 0.85rem; line-height: 1.35; min-width: 8rem; }
 ol.notes strong { color: var(--ink); font-weight: 600; }
+.picker { display: none; gap: 0.9rem; }
+.picker-tabs { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.picker-tabs button { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 0.55rem 0.75rem; font: 500 0.88rem/1.2 var(--body); }
+.picker-tabs button[aria-pressed="true"] { background: var(--moss); border-color: var(--moss); color: var(--card); }
+.pick-panel .bar-label .sub { display: block; font: italic 400 0.78rem/1.3 var(--body); color: var(--muted); }
+.pick-panel .bar-label .town { display: block; font: 500 0.66rem/1.4 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.pick-panel .low strong { color: var(--moss); }
+.pick-panel .not-posted { margin-top: 0.4rem; font-size: 0.88rem; color: var(--muted); }
+@media (max-width: 640px) { .picker.ready { display: grid; } .js-picker .scroll-hint { display: none; } }
+@media print { .picker { display: none !important; } }
 </style>
 </head>
 <body>
@@ -97,6 +107,41 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
       <h2>Posted prices, side by side</h2>
       <p class="small">The lowest posted price in each row is in <strong>bold</strong> and marked &#9660;. A dash means the funeral home doesn't post that price online.</p>
       <p class="small scroll-hint">Scroll sideways to see every funeral home. The left column stays put.</p>
+      <div class="picker" id="picker" role="region" aria-label="Compare one price">
+        <p class="small">Pick an item to see every funeral home's price for it, lowest first.</p>
+        <div class="picker-tabs" role="group" aria-label="Choose an item">
+          {%- for it in p.items %}
+          {%- assign hasany = false -%}{%- for h in p.homes -%}{%- assign v = h[it.key] -%}{%- if v != "" and v != nil -%}{%- assign hasany = true -%}{%- endif -%}{%- endfor -%}
+          {%- if hasany %}
+          <button type="button" data-pick="{{ it.key }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="pick-{{ it.key }}">{{ it.label }}</button>
+          {%- endif %}
+          {%- endfor %}
+        </div>
+        {%- for it in p.items %}
+        {%- assign rows = "" | split: "" -%}{%- assign missing = "" | split: "" -%}{%- assign maxv = 0 -%}
+        {%- for h in p.homes -%}{%- assign v = h[it.key] -%}
+          {%- if v != "" and v != nil -%}{%- assign vn = v | plus: 0 -%}{%- if vn > maxv -%}{%- assign maxv = vn -%}{%- endif -%}
+            {%- assign key = vn | plus: 1000000 | append: "|" | append: forloop.index0 -%}{%- assign rows = rows | push: key -%}
+          {%- else -%}{%- assign missing = missing | push: h.short -%}{%- endif -%}
+        {%- endfor -%}
+        {%- if rows.size > 0 %}
+        {%- assign rows = rows | sort %}
+        <div class="pick-panel bars" id="pick-{{ it.key }}"{% unless forloop.first %} hidden{% endunless %}>
+          {%- for r in rows %}
+          {%- assign idx = r | split: "|" | last | plus: 0 -%}{%- assign h = p.homes[idx] -%}{%- assign vn = h[it.key] | plus: 0 -%}{%- assign pct = vn | times: 100 | divided_by: maxv -%}{%- assign dn = h.dated[it.key] %}
+          <div class="bar-row{% if forloop.first %} low{% endif %}">
+            <div class="bar-label"><span>{{ h.short }}<sup>{{ idx | plus: 1 }}</sup><span class="town">{{ h.town | split: " (" | first }}</span>{% if dn %}<span class="sub">{{ dn }}</span>{% endif %}</span><strong>{% if forloop.first %}<span class="low-mark" aria-hidden="true">&#9660; </span>{% endif %}{% if h.starting %}from {% endif %}{% include money.html n=vn %}{% if forloop.first %}<span class="sr"> (lowest)</span>{% endif %}</strong></div>
+            <div class="bar"><span style="width: {{ pct }}%"></span></div>
+          </div>
+          {%- endfor %}
+          {%- if missing.size > 0 %}
+          <p class="not-posted">Not posted online: {{ missing | join: ", " }}.</p>
+          {%- endif %}
+        </div>
+        {%- endif %}
+        {%- endfor %}
+        <p class="small">Or scroll the full table below to see everything side by side.</p>
+      </div>
       <div class="table-wrap" role="region" aria-label="Posted prices by funeral home" tabindex="0">
         <table class="compare">
           <thead>
@@ -185,5 +230,25 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
 </main>
 
 {% include footer.html %}
+<script>
+(function () {
+  var pk = document.getElementById('picker');
+  if (!pk) return;
+  pk.classList.add('ready');
+  document.documentElement.classList.add('js-picker');
+  var btns = pk.querySelectorAll('[data-pick]');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (o) {
+        var on = o === b;
+        o.setAttribute('aria-pressed', on ? 'true' : 'false');
+        var panel = document.getElementById('pick-' + o.dataset.pick);
+        if (panel) panel.hidden = !on;
+      });
+      if (window.gsCount) window.gsCount('prices: ' + b.textContent.trim());
+    });
+  });
+})();
+</script>
 </body>
 </html>
