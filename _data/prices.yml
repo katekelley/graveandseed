@@ -4,13 +4,13 @@ intro: "Funeral prices in Washtenaw County vary a lot, and half the funeral home
 items:
   - { key: direct_cremation, label: "Direct cremation" }
   - { key: immediate_burial, label: "Immediate burial" }
-  - { key: burial_casket, label: "Burial with their simplest casket" }
-  - { key: basic_services, label: "Basic services fee" }
-  - { key: transfer, label: "Transfer of remains" }
+  - { key: burial_casket, label: "Burial with their simplest casket", button: "Burial with casket" }
+  - { key: basic_services, label: "Basic services fee", button: "Basic services" }
+  - { key: transfer, label: "Transfer of remains", button: "Transfer" }
   - { key: embalming, label: "Embalming" }
   - { key: visitation, label: "Visitation" }
-  - { key: ceremony, label: "Funeral ceremony at the home" }
-  - { key: memorial, label: "Memorial service at the home" }
+  - { key: ceremony, label: "Funeral ceremony at the home", button: "Funeral ceremony" }
+  - { key: memorial, label: "Memorial service at the home", button: "Memorial service" }
   - { key: hearse, label: "Hearse" }
 homes:
   - name: "Generations Funeral & Cremation Services"

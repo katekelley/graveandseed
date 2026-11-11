@@ -59,6 +59,7 @@ table.compare .from-sm { font: 400 0.75rem var(--body); color: var(--muted); }
 table.compare td.text { font-family: var(--body); white-space: normal; text-align: left; vertical-align: top; font-size: 0.85rem; line-height: 1.35; min-width: 8rem; }
 ol.notes strong { color: var(--ink); font-weight: 600; }
 .picker { display: none; gap: 0.9rem; }
+.pick-panel[hidden] { display: none; }
 .picker-tabs { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .picker-tabs button { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 0.55rem 0.75rem; font: 500 0.88rem/1.2 var(--body); }
 .picker-tabs button[aria-pressed="true"] { background: var(--moss); border-color: var(--moss); color: var(--card); }
@@ -113,7 +114,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
           {%- for it in p.items %}
           {%- assign hasany = false -%}{%- for h in p.homes -%}{%- assign v = h[it.key] -%}{%- if v != "" and v != nil -%}{%- assign hasany = true -%}{%- endif -%}{%- endfor -%}
           {%- if hasany %}
-          <button type="button" data-pick="{{ it.key }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="pick-{{ it.key }}">{{ it.label }}</button>
+          <button type="button" data-pick="{{ it.key }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="pick-{{ it.key }}">{{ it.button | default: it.label }}</button>
           {%- endif %}
           {%- endfor %}
         </div>
