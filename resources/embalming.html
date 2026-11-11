@@ -9,40 +9,40 @@ permalink: /resources/embalming/
 ---
 {%- assign p = site.data.prices -%}
 <section class="prose">
-  <p>Many families are never told that embalming is a choice. In Michigan it's rarely required by law, it doesn't protect anyone's health, and a funeral home can't do it without your permission. Here's what the rules actually say.</p>
+  <p>Many families are never told that embalming is a choice. In Michigan, the law rarely requires it. It doesn't protect anyone's health. And a funeral home can't do it without your permission. Here's what the rules say.</p>
 
   <h2>When Michigan law requires it</h2>
   <ul>
-    <li><strong>Certain contagious diseases.</strong> If the person died of diphtheria, a meningococcal infection, plague, polio, scarlet fever or smallpox, the body has to be embalmed before it's transported.<sup><a href="#s1">1</a></sup></li>
-    <li><strong>Shipping a body more than 48 hours after death.</strong> A state rule says a body can be accepted for shipping in a sturdy shipping case only if it will arrive within 48 hours of death; otherwise it has to be embalmed. The rule is written for shipping, with permits fastened to the outside of the box and escorts, not for a funeral home moving someone across town.<sup><a href="#s2">2</a></sup></li>
+    <li><strong>A few rare diseases.</strong> If the person died of diphtheria, a meningococcal infection, plague, polio, scarlet fever or smallpox, the body must be embalmed before it's moved.<sup><a href="#s1">1</a></sup></li>
+    <li><strong>Shipping a body more than 48 hours after death.</strong> A state rule says a body can be shipped in a sealed case only if it will arrive within 48 hours of the death. Later than that, it must be embalmed. The rule is about shipping, with permits taped to the box. It isn't about a funeral home moving someone across town.<sup><a href="#s2">2</a></sup></li>
   </ul>
-  <p>That's all. No Michigan law requires embalming because there's a viewing, a funeral or a burial, or because some time has passed. State law treats refrigeration as the normal way to hold a body: in a dispute over who controls the arrangements, a funeral home may embalm only if refrigeration isn't reasonably available, and since 2025 Michigan licenses refrigeration facilities that hold bodies before burial or cremation.<sup><a href="#s9">9</a>,<a href="#s10">10</a></sup></p>
-  <p class="small">One caution: the state licensing agency's guidance reads the shipping rule much more broadly, as if an unembalmed body can't be moved at all after 48 hours.<sup><a href="#s1">1</a></sup> In practice, funeral homes here regularly hold refrigerated bodies longer than that before cremation, and that reading doesn't fit the rest of Michigan law, but if a funeral home cites it, ask them to show you what they're relying on.</p>
+  <p>That's all. No Michigan law requires embalming for a viewing, a funeral or a burial, or because a few days have passed. State law treats cooling as the normal way to hold a body. When family members disagree about plans, a funeral home may embalm only if cooling isn't available. Since 2025, Michigan also licenses cold-storage places that hold bodies before burial or cremation.<sup><a href="#s9">9</a>,<a href="#s10">10</a></sup></p>
+  <p class="small">One caution: the state licensing office reads the shipping rule much more broadly, as if a body that isn't embalmed can't be moved at all after 48 hours.<sup><a href="#s1">1</a></sup> In practice, funeral homes here often keep bodies cool for longer than that before cremation. That reading also doesn't fit the rest of Michigan law. If a funeral home cites it, ask them to show you the rule they mean.</p>
 
-  <h2>It needs your permission</h2>
+  <h2>They need your permission</h2>
   <ul>
-    <li>Michigan law says a funeral director can't embalm a body without being expressly authorized by a relative or the person in charge of the arrangements.<sup><a href="#s1">1</a></sup></li>
+    <li>Michigan law says a funeral director can't embalm a body unless a relative, or the person in charge of the plans, clearly says yes.<sup><a href="#s1">1</a></sup></li>
     <li>Under the federal Funeral Rule, a funeral home can't charge you for embalming you didn't approve, unless the law required it.<sup><a href="#s3">3</a></sup></li>
   </ul>
 
   <h2>It doesn't protect public health</h2>
-  <p>According to the Funeral Consumers Alliance, the U.S. Centers for Disease Control and Canadian health authorities say embalming provides no public health benefit. The chemicals are toxic enough that embalmers are required to wear respirators.<sup><a href="#s4">4</a></sup> Refrigeration is the usual alternative for the days before a burial or cremation.</p>
+  <p>The Funeral Consumers Alliance says the U.S. Centers for Disease Control and health officials in Canada agree: embalming does nothing for public health. The chemicals are toxic enough that embalmers must wear masks that filter the air.<sup><a href="#s4">4</a></sup> Cooling is the usual choice for the days before a burial or cremation.</p>
 
   <h2>Why funeral homes ask for it anyway</h2>
-  <p>The FTC itself notes that many funeral homes have a policy requiring embalming if the body will be publicly viewed, even though most states don't require it by law.<sup><a href="#s3">3</a></sup> The FTC also makes every price list say that embalming "may be necessary" for "certain funeral arrangements, such as a funeral with viewing." That reads like a rule even when it's house policy. In 2022 the FTC said it was considering changing that wording so people better understand how rarely embalming is actually required.<sup><a href="#s5">5</a></sup></p>
-  <p>Funeral homes' reasons are mostly about how a body looks at a visitation several days after death. Embalming is also a paid service.{% assign emb = "" %}{% for h in p.homes %}{% if h.embalming != "" %}{% assign emb = "yes" %}{% endif %}{% endfor %}{% if emb == "yes" %} Around here, posted prices are{% for h in p.homes %}{% if h.embalming != "" %} {% include money.html n=h.embalming %} at {{ h.short }}{% unless forloop.last %} and{% endunless %}{% endif %}{% endfor %}.{% endif %} <a href="/prices/">Compare funeral home prices</a></p>
+  <p>The FTC notes that many funeral homes require embalming if the public will see the body, even though most states don't.<sup><a href="#s3">3</a></sup> The FTC also makes every price list say embalming "may be necessary" for some plans, like a viewing. That sounds like a law, even when it's just the funeral home's policy. In 2022, the FTC said it might change that wording so people understand how rarely embalming is needed.<sup><a href="#s5">5</a></sup></p>
+  <p>Funeral homes mostly want it so the body looks a certain way at a viewing several days after the death. It's also something they charge for.{% assign emb = "" %}{% for h in p.homes %}{% if h.embalming != "" %}{% assign emb = "yes" %}{% endif %}{% endfor %}{% if emb == "yes" %} Around here, posted prices are{% for h in p.homes %}{% if h.embalming != "" %} {% include money.html n=h.embalming %} at {{ h.short }}{% unless forloop.last %} and{% endunless %}{% endif %}{% endfor %}.{% endif %} <a href="/prices/">Compare funeral home prices</a></p>
 
   <h2>What to ask instead</h2>
   <ul>
-    <li>Can we have a private family viewing without embalming, soon after the death?</li>
-    <li>Do you refrigerate instead, and what does that cost?</li>
-    <li>If we want a public visitation, can our person be viewed without embalming, and if not, why not?</li>
+    <li>Can our family see them privately, soon after the death, without embalming?</li>
+    <li>Do you keep bodies cool instead? What does that cost?</li>
+    <li>If we want a public viewing, can they be seen without embalming? If not, why not?</li>
     <li>Will you help us keep them at home for a vigil?</li>
   </ul>
 
   <h2>Keeping them at home</h2>
-  <p>Michigan is one of only a handful of states that requires a licensed funeral director to be involved in caring for a body and arranging the burial or cremation.<sup><a href="#s6">6</a>,<a href="#s7">7</a></sup> You can still hold a vigil at home with a funeral director who's willing to work with you. Families usually keep the body cool with dry ice or reusable cooling packs, and an open window or air conditioning. With good cooling, families often keep a vigil for up to about three days. Dry ice should never touch skin, and the room needs fresh air. Ask your funeral director or a home funeral guide to show you how.<sup><a href="#s8">8</a></sup></p>
-  <p>Green burial means no embalming, so if you're considering one, you can skip it entirely. <a href="/resources/green-burial/">Green burial in Michigan</a></p>
+  <p>Michigan is one of only a few states that requires a licensed funeral director to help care for the body and arrange the burial or cremation.<sup><a href="#s6">6</a>,<a href="#s7">7</a></sup> You can still hold a vigil at home with a funeral director who's willing to work with you. Families usually keep the body cool with dry ice or reusable cold packs, plus an open window or air conditioning. With good cooling, a home vigil often lasts up to about three days. Dry ice should never touch skin, and the room needs fresh air. Ask your funeral director or a home funeral guide to show you how.<sup><a href="#s8">8</a></sup></p>
+  <p>Green burial means no embalming, so if you're thinking about one, you can skip it entirely. <a href="/resources/green-burial/">Green burial in Michigan</a></p>
 </section>
 
 <section>
