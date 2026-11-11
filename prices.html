@@ -67,7 +67,8 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
 .pick-panel .bar-label .town { display: block; font: 500 0.66rem/1.4 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .pick-panel .low strong { color: var(--moss); }
 .pick-panel .not-posted { margin-top: 0.4rem; font-size: 0.88rem; color: var(--muted); }
-@media (max-width: 640px) { .picker.ready { display: grid; } .js-picker .scroll-hint { display: none; } }
+.picker.ready { display: grid; margin-bottom: 1.5rem; }
+@media (max-width: 640px) { .js-picker .scroll-hint { display: none; } }
 @media print { .picker { display: none !important; } }
 </style>
 </head>
@@ -141,7 +142,7 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
         </div>
         {%- endif %}
         {%- endfor %}
-        <p class="small">Or scroll the full table below to see everything side by side.</p>
+        <p class="small">Or see everything side by side in the full table below.</p>
       </div>
       <div class="table-wrap" role="region" aria-label="Posted prices by funeral home" tabindex="0">
         <table class="compare">
