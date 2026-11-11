@@ -57,9 +57,9 @@ paperwork: "Plenty of people know what they want but put off writing it down. I'
 after_paperwork: "After a death there's a long list nobody warns you about: Social Security, accounts, death certificates, who's been told. I'll sit with you in person while you work through it, so you leave knowing what's done and what's next."
 paperwork_note: "I'm not a lawyer, and this isn't legal or medical advice. For a will, finances or anything complicated, I'll point you to an estate planning attorney."
 
-celebrant: "Already working with a funeral home, or just need someone to lead the ceremony? I meet with you to hear the stories, write a service built around the person, and lead it on the day so your family can just be there. Readings, prayers and hymns are welcome, and I'm glad to share the service with your clergy."
+celebrant: "Already working with a funeral home, or just need someone to lead the ceremony? I meet with you to hear the stories, write a service built around the person, and lead it on the day so you can just be there. Readings, prayers and hymns are welcome, and I'm glad to share the service with your clergy."
 celebrant_price_from: 400
-celebrant_note: "Includes a family meeting, a written service with a round of edits, and leading it on the day. If I'm also planning your celebration, it's a $250 add-on instead."
+celebrant_note: "Includes a planning meeting, a written service with a round of edits, and leading it on the day. If I'm also planning your celebration, it's a $250 add-on instead."
 scatter_price_from: 200
 scatter: "A short ceremony at a lake, a garden or a graveside, for ashes that have been waiting at home."
 
@@ -91,7 +91,7 @@ steps:
 faq_heading: "Questions people ask"
 faq:
   - q: "How soon can you plan something?"
-    a: "Day-of coordination can come together in about a week. For full planning, three weeks or more is best. Many families hold the celebration a month or two after the death, especially after a direct cremation, and that's completely fine."
+    a: "Day-of coordination can come together in about a week. For full planning, three weeks or more is best. Many people hold the celebration a month or two after the death, especially after a direct cremation, and that's completely fine."
   - q: "Do I still need a funeral home?"
     a: "In Michigan, yes. A licensed funeral director has to handle the body, the death certificate and the permits. I don't do any of that. I plan the gathering, which can be separate and happen later, anywhere. I'm happy to help you compare funeral home prices."
   - q: "Can you help write the obituary?"
@@ -110,7 +110,7 @@ faq:
 about_heading: "I'm Kate, and I guide people through saying goodbye."
 about:
   - "I'm direct. I'll tell you what things cost, what you actually need, and what you can skip. I'm also not in a hurry. If you want to sit and talk about the person before we talk about chairs, all the better."
-  - "When my grandpa was dying in hospice, one of the people caring for him told us about a more affordable option we didn't know existed. That one conversation made a real difference for our family. It's why I publish local funeral prices and free guides: I want every family to have someone who tells them what their options really are."
+  - "When my grandpa was dying in hospice, one of the people caring for him told us about a more affordable option we didn't know existed. That one conversation made a real difference for our family. It's why I publish local funeral prices and free guides: I want everyone to have someone who tells them what their options really are."
   - "I trained as a structural engineer, which mostly means I like a plan and I notice details, and I've worked in both the funeral and wedding industries. Chosen family, unconventional families, and people who want something that doesn't look like a funeral are all welcome here."
   - "I'm part of the death education group at Ann Arbor Friends Meeting (Quaker), where we talk openly about dying, grief and the practical side of what comes after."
 
@@ -130,28 +130,28 @@ addons:
   - name: "Story corner"
     featured: true
     price_from: 350
-    description: "A quiet corner at the celebration where guests sit and tell a story about the person on camera, with someone there to help. Afterward I edit each story and deliver them on a USB drive and in a private online folder for the family."
+    description: "A quiet corner at the celebration where guests sit and tell a story about the person on camera, with someone there to help. Afterward I edit each story and deliver them on a USB drive and in a private online folder for you."
   - name: "Story phone"
     price_from: 150
-    description: "A vintage-style phone guests pick up to leave a spoken message or memory. Gentler for people who don't want to be on camera. The family gets every message as an audio file."
+    description: "A vintage-style phone guests pick up to leave a spoken message or memory. Gentler for people who don't want to be on camera. You get every message as an audio file."
   - name: "Flower table"
     price_from: 200
     description: "Buckets of fresh flowers, shears and mismatched bud vases, so guests can make a small arrangement during the gathering and take it home. I order, prep and set up the flowers; you pay for them at cost, usually $100 to $200 for 50 guests. Needs about a week's notice."
   - name: "Photo memory table"
     featured: true
     price_from: 300
-    description: "Send me boxes, albums or phone photos. I scan and choose them with you, print a display for the room and make a slideshow to play during the gathering. The family keeps all the scans."
+    description: "Send me boxes, albums or phone photos. I scan and choose them with you, print a display for the room and make a slideshow to play during the gathering. You keep all the scans."
   - name: "Memory cards book"
     price_from: 150
-    description: "Instead of a guest book, cards that ask guests for a story or a memory. Afterward I bind them into a book for the family. Printing is extra."
+    description: "Instead of a guest book, cards that ask guests for a story or a memory. Afterward I bind them into a book for you. Printing is extra."
   - name: "Livestream"
     featured: true
     price_from: 150
-    description: "For family who can't be there. A steady camera, good sound and someone watching the stream, with a private link and a recording afterward."
+    description: "For people who can't be there. A steady camera, good sound and someone watching the stream, with a private link and a recording afterward."
   - name: "Obituary writing"
     featured: true
     price_from: 175
-    description: "An hour with your family, by phone or in person, to ask the questions that get at who they were. Within about two days I write a long version for online and a short one for print, with a round of edits. Available on its own, without booking anything else. Rather write it yourself? <a href='/resources/obituary/'>Use my free obituary guide</a>."
+    description: "An hour with you and anyone else who knew them, by phone or in person, to ask the questions that get at who they were. Within about two days I write a long version for online and a short one for print, with a round of edits. Available on its own, without booking anything else. Rather write it yourself? <a href='/resources/obituary/'>Use my free obituary guide</a>."
   - name: "Invitations and program"
     featured: true
     price_from: 200
@@ -161,4 +161,4 @@ addons:
     description: "Packets of Michigan wildflower seeds printed with their name, for guests to take home and plant. Seeds and printing are extra."
   - name: "Kids' table"
     price_from: 100
-    description: "A quiet table with drawing, a memory jar and simple crafts, so grieving kids have somewhere to be. I can share local children's grief resources with the family afterward."
+    description: "A quiet table with drawing, a memory jar and simple crafts, so grieving kids have somewhere to be. I can share local children's grief resources with you afterward."
