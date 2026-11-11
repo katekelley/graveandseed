@@ -25,6 +25,7 @@ print_source: false
         </div>
         {% include inquiry_form.html source="contact" %}
       </div>
+      <p class="note">Also on <a href="https://www.google.com/maps?cid=17332117641198366502" rel="noopener">Google</a> &middot; <a href="https://www.yelp.com/biz/grave-and-seed-ann-arbor" rel="noopener">Yelp</a> &middot; <a href="https://nextdoor.com/page/grave-and-seed-ann-arbor-mi/" rel="noopener">Nextdoor</a>{% if c.facebook_url and c.facebook_url != "" %} &middot; <a href="{{ c.facebook_url }}" rel="noopener">Facebook</a>{% endif %}</p>
     </section>
 <script>
 document.getElementById('copy').addEventListener('click', function () {
