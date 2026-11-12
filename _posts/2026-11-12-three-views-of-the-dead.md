@@ -27,6 +27,4 @@ But the process didn’t stop there. Like a lot of people after a long illness, 
 
 I think families deserve to know they don’t have to embalm to see their beloved dead, and that they can be embalmed but allowed to look more like themselves. The industry has an idea of the cosmetic dead, but it isn’t the only option available.
 
-If you’re planning for someone you love, here’s what you can ask for. You can sit with them at home, or soon after the death, without embalming. If you do choose embalming, you can ask the funeral home to skip the fillers and keep the makeup light. Bring a photo, or their own makeup. Ask to see them before anyone else does, so you can ask for changes.
-
-Dead people aren’t so scary — they’re just like us.
+As a kid, the dead scared me because they looked like strangers. My grandpa didn’t scare me at all. He looked like himself, finally at rest.
