@@ -70,6 +70,12 @@ ol.notes strong { color: var(--ink); font-weight: 600; }
 .picker.ready { display: grid; margin-bottom: 1.5rem; }
 @media (max-width: 640px) { .js-picker .scroll-hint { display: none; } }
 @media print { .picker { display: none !important; } }
+/* cemetery table: wider labels, wrapped notes, top-aligned so rows stay compact */
+table.compare.cem th, table.compare.cem td { vertical-align: top; }
+table.compare.cem tbody th { min-width: 11rem; }
+table.compare.cem td { min-width: 9rem; }
+table.compare.cem .dated { white-space: normal; line-height: 1.25; margin-top: 0.15rem; }
+@media (max-width: 640px) { table.compare.cem tbody th, table.compare.cem thead th:first-child { min-width: 8.5rem; max-width: 8.5rem; } table.compare.cem td { min-width: 7.5rem; } }
 #cemeteries h3 { font-size: 1.15rem; font-weight: 500; margin-top: 1.5rem; }
 dl.terms { margin: 0 0 1.25rem; display: grid; gap: 0.35rem; max-width: 44rem; }
 dl.terms dt { font-weight: 600; margin-top: 0.6rem; }
@@ -221,7 +227,7 @@ dl.terms dd { margin: 0; }
       <p class="small">Checked {{ cm.updated }}. The lowest posted price in each row is in <strong>bold</strong> and marked &#9660;. A dash means the cemetery doesn't post that price. None of these totals include a vault, a headstone or its foundation.</p>
       <p class="small scroll-hint">Scroll sideways to see every cemetery. The left column stays put.</p>
       <div class="table-wrap" role="region" aria-label="Posted prices by cemetery" tabindex="0">
-        <table class="compare">
+        <table class="compare cem">
           <thead>
             <tr>
               <th scope="col"><span class="sr">Item</span></th>
@@ -247,6 +253,12 @@ dl.terms dd { margin: 0; }
               {%- endfor %}
             </tr>
             {%- endfor %}
+            <tr>
+              <th scope="row">Reviews</th>
+              {%- for h in cm.cemeteries %}
+              <td class="text">{% if h.yelp and h.yelp != "" %}<a href="{{ h.yelp }}" rel="noopener">Yelp</a>{% else %}None on Yelp{% endif %}</td>
+              {%- endfor %}
+            </tr>
             {%- for it in cm.text_items %}
             <tr>
               <th scope="row">{{ it.label }}</th>
@@ -260,13 +272,13 @@ dl.terms dd { margin: 0; }
       </div>
       <ol class="notes">
         {%- for h in cm.cemeteries %}
-        <li><strong>{{ h.name }}</strong>, {{ h.town }}{% if h.phone != "" %}, {{ h.phone }}{% endif %}. Prices effective {{ h.effective }}; checked {{ h.checked }}. {{ h.notes }} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.rules != "" %} &middot; <a href="{{ h.rules }}" rel="noopener">Their rules</a>{% endif %}</li>
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}{% if h.phone != "" %}, {{ h.phone }}{% endif %}. Prices effective {{ h.effective }}; checked {{ h.checked }}. {{ h.notes }} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.rules != "" %} &middot; <a href="{{ h.rules }}" rel="noopener">Their rules</a>{% endif %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}</li>
         {%- endfor %}
       </ol>
       <h3>Cemeteries without posted prices</h3>
       <ul class="plain-list">
         {%- for h in cm.not_posted %}
-        <li><strong>{{ h.name }}</strong>, {{ h.town }}{% if h.phone != "" %}, {{ h.phone }}{% endif %}: {{ h.status }}{% if h.link != "" %} &middot; <a href="{{ h.link }}" rel="noopener">{{ h.link_text | default: "Link" }}</a>{% endif %}</li>
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}{% if h.phone != "" %}, {{ h.phone }}{% endif %}: {{ h.status }}{% if h.link != "" %} &middot; <a href="{{ h.link }}" rel="noopener">{{ h.link_text | default: "Link" }}</a>{% endif %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}</li>
         {%- endfor %}
       </ul>
     </section>

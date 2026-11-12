@@ -180,6 +180,7 @@ content:
           - { name: ashes_ground, label: Ashes in the ground lowest total ($), type: string }
           - { name: niche, label: Niche for ashes lowest total ($), type: string }
           - { name: notes, label: Notes, type: text }
+          - { name: yelp, label: Yelp page link, type: string }
       - name: not_posted
         label: Cemeteries without posted prices
         type: object
@@ -188,6 +189,7 @@ content:
           - { name: name, label: Name, type: string }
           - { name: town, label: Town, type: string }
           - { name: phone, label: Phone, type: string }
+          - { name: yelp, label: Yelp page link, type: string }
           - { name: status, label: Status, type: string }
           - { name: link, label: Link, type: string }
           - { name: link_text, label: Link text, type: string }
