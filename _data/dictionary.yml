@@ -254,6 +254,15 @@ behind:
     description: "Usually formaldehyde or a similar chemical mixed with water. A stronger kind, called cavity fluid, goes into the chest and belly. These old bottles are in a museum; today's look much the same."
     link: "/resources/embalming/"
     link_text: "Is embalming required?"
+  - term: Tissue builder
+    aka: "Feature builder, filler"
+    image: ""
+    alt: ""
+    credit: ""
+    credit_url: ""
+    description: "A filler injected under the skin where the face has sunk, often around the eyes, cheeks and temples. If you'd rather they look like themselves after an illness, you can ask the funeral home not to use it."
+    link: "/resources/embalming/"
+    link_text: "What embalming involves"
   - term: Restorative wax and cosmetics
     aka: ""
     image: "/assets/dictionary/restorative.jpg"
