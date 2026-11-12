@@ -22,10 +22,10 @@ sections:
         link_text: ""
       - term: Rental casket
         aka: Ceremonial casket
-        image: ""
-        alt: ""
-        credit: ""
-        credit_url: ""
+        image: "/assets/dictionary/rental-casket.jpg"
+        alt: "A wooden rental casket with the lid open and the inner tray sliding out of the foot end"
+        credit: "Chad Eversole, CC BY-SA 3.0"
+        credit_url: "https://commons.wikimedia.org/wiki/File:Starmark-footenddoor-RENTAL-CASKET.png"
         description: "A nice outer casket used only for a viewing or service before cremation. The body rests on a removable insert, and the insert goes to the crematory. At Muehlig, renting one costs $1,100."
         link: ""
         link_text: ""
@@ -116,10 +116,10 @@ sections:
     items:
       - term: Burial vault
         aka: Outer burial container
-        image: ""
-        alt: ""
-        credit: ""
-        credit_url: ""
+        image: "/assets/dictionary/vault.jpg"
+        alt: "An open grave with a white concrete vault set in it, waiting for the casket"
+        credit: "Robert Lawton, CC BY-SA 2.5"
+        credit_url: "https://commons.wikimedia.org/wiki/File:Fresh_grave.JPG"
         description: "A concrete box, sealed with a lid, set in the grave before the casket goes in. No law requires one, but most cemeteries do, so the ground stays level for mowing."
         link: /cemeteries/
         link_text: What cemeteries cost
@@ -184,19 +184,19 @@ behind_note: "These are part of what happens at a funeral home or crematory. Som
 behind:
   - term: Dressing table
     aka: Preparation table
-    image: ""
-    alt: ""
-    credit: ""
-    credit_url: ""
+    image: "/assets/dictionary/dressing-table.jpg"
+    alt: "A long stainless steel table in a clean, tiled preparation room"
+    credit: "Davidrase, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Plancha_embalsamamiento.jpg"
     description: "A steel table where staff wash and dress the person, and do embalming if the family asked for it."
     link: ""
     link_text: ""
   - term: Cooler
     aka: Refrigeration
-    image: ""
-    alt: ""
-    credit: ""
-    credit_url: ""
+    image: "/assets/dictionary/cooler.jpg"
+    alt: "A white wall with three insulated refrigerator doors with steel handles"
+    credit: "Daniel Capilla, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Mortuary_Refrigerator_of_the_San_Miguel_Cemetery.jpg"
     description: "A walk-in or cabinet refrigerator that keeps a body cool until burial or cremation. It's the normal alternative to embalming."
     link: /resources/embalming/
     link_text: Is embalming required?
@@ -211,10 +211,10 @@ behind:
     link_text: Is embalming required?
   - term: Retort
     aka: Cremation chamber
-    image: ""
-    alt: ""
-    credit: ""
-    credit_url: ""
+    image: "/assets/dictionary/retort.jpg"
+    alt: "A large stainless steel cremation chamber with a control panel, in Frankfurt, Germany"
+    credit: "Dontworry, CC BY-SA 3.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Hauptfriedhof-ffm-krematoriums-ofen-ausgang-001.jpg"
     description: "The large brick-lined oven where cremation happens. From the outside it looks like an industrial furnace with a steel door. Some crematories let family members be there when it starts."
     link: ""
     link_text: ""
