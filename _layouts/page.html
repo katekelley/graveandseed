@@ -16,7 +16,7 @@
     {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
   </div>
 </header>
-<main>
+<main id="main" tabindex="-1">
   <div class="wrap">
 {{ content }}
 {% unless page.print_source == false %}<p class="print-source" hidden aria-hidden="true">Printed from graveandseed.com{{ page.url }}. Free to copy and share.</p>{% endunless %}
