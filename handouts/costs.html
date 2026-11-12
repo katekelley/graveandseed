@@ -55,11 +55,11 @@ sitemap: false
   </div>
 
   <table class="prices" style="margin-top:10pt">
-    <thead><tr><th>Funeral home</th><th class="num">Direct cremation</th><th class="num">Immediate burial</th><th class="num">Burial with their simplest casket</th></tr></thead>
+    <thead><tr><th>Funeral home</th><th class="num fw">Direct cremation</th><th class="num fw">Immediate burial</th><th class="num fw">Burial with simplest casket</th></tr></thead>
     <tbody>
       {%- for h in p.homes %}
       <tr>
-        <td><span class="who">{{ h.name }}</span><span class="meta">{{ h.town }} &middot; <span class="nw">{{ h.phone }}</span></span>{% if h.owner_short and h.owner_short != "" %}<span class="meta">Owned by {{ h.owner_short }}</span>{% endif %}</td>
+        <td><span class="who">{{ h.name }}</span><span class="meta">{{ h.town | split: " (" | first }} &middot; <span class="nw">{{ h.phone }}</span>{% if h.owner_short and h.owner_short != "" %} &middot; Owned by {{ h.owner_short }}{% endif %}</span></td>
         {%- for k in cols %}
         {%- assign v = h[k] -%}
         <td class="num">{% if v != "" and v != nil %}{% if h.starting %}from {% endif %}{% include money.html n=v %}{% else %}&mdash;{% endif %}</td>
