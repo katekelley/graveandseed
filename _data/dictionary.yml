@@ -65,6 +65,24 @@ sections:
         description: "A cloth wrap for the body, often used for green burial instead of a casket. A favorite quilt or blanket can work. Ask the cemetery what it allows."
         link: /resources/caskets/
         link_text: Where to find one
+      - term: Church truck
+        aka: Casket carriage, bier
+        image: "/assets/dictionary/church-truck.jpg"
+        alt: "A wheeled cart with a black fabric skirt and a steel frame on top, in a chapel"
+        credit: "Cherubino, CC BY-SA 3.0"
+        credit_url: "https://commons.wikimedia.org/wiki/File:Friedhofskapelle_Butzbach_19.JPG"
+        description: "A folding stand on wheels that holds the casket at a funeral, visitation or graveside service. It's often hidden under a skirt of fabric. It lets staff move the casket without carrying it."
+        link: ""
+        link_text: ""
+      - term: Showroom truck
+        aka: Casket display stand
+        image: "/assets/dictionary/showroom.jpg"
+        alt: "A carpeted funeral home room with open caskets displayed on low stands"
+        credit: "Wolfdog406, CC BY-SA 4.0"
+        credit_url: "https://commons.wikimedia.org/wiki/File:A_casket_showroom_in_Billings,_Montana.jpg"
+        description: "A low stand that holds a casket in the funeral home's selection room so you can see it at full size. You don't have to buy a casket you see on display, and you can bring in one from somewhere else."
+        link: ""
+        link_text: ""
   - heading: Ashes
     items:
       - term: Cremated remains
@@ -154,10 +172,10 @@ sections:
         link_text: The first week
       - term: Pouch
         aka: Body bag, first call pouch
-        image: ""
-        alt: ""
-        credit: ""
-        credit_url: ""
+        image: "/assets/dictionary/pouch.jpg"
+        alt: "Three men hold up an empty white body bag with a long black zipper"
+        credit: "US Navy, public domain"
+        credit_url: "https://commons.wikimedia.org/wiki/File:Body_bag.jpg"
         description: "A heavy zippered bag used to move someone. Hospitals and the medical examiner often use one. For deaths at home, many funeral homes use only the cot cover. If you're there, you can ask that they not zip your person into a bag in front of you, or that they use a family quilt instead."
         link: /resources/first-week/
         link_text: The first week
@@ -192,7 +210,7 @@ behind_heading: Behind the door
 behind_note: "These are part of what happens at a funeral home or crematory. Most of them are used only if the family agrees to embalming. Some people find it helps to know; others would rather not. Open this only if you want to."
 behind:
   - term: Dressing table
-    aka: Preparation table
+    aka: Preparation table, embalming table, operating table
     image: "/assets/dictionary/dressing-table.jpg"
     alt: "A long stainless steel table in a clean, tiled preparation room"
     credit: "Davidrase, CC BY-SA 3.0"
