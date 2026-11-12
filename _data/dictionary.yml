@@ -180,7 +180,7 @@ sections:
         link: /resources/died-away-from-home/
         link_text: How to mail ashes
 behind_heading: Behind the door
-behind_note: "These are part of what happens at a funeral home or crematory. Some people find it helps to know; others would rather not. Open this only if you want to."
+behind_note: "These are part of what happens at a funeral home or crematory. Most of them are used only if the family agrees to embalming. Some people find it helps to know; others would rather not. Open this only if you want to."
 behind:
   - term: Dressing table
     aka: Preparation table
@@ -200,15 +200,69 @@ behind:
     description: "A walk-in or cabinet refrigerator that keeps a body cool until burial or cremation. It's the normal alternative to embalming."
     link: /resources/embalming/
     link_text: Is embalming required?
+  - term: Embalming tools
+    aka: ""
+    image: "/assets/dictionary/embalming-tools.jpg"
+    alt: "Steel clamps, scissors, a curved needle and other instruments laid out on a pad"
+    credit: "Vladimir S, CC BY-SA 4.0"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Utensils_used_for_embalming.jpg"
+    description: "Clamps, scissors, curved needles and small tubes, a lot like a surgeon's tools. They're used to reach an artery and a vein, and to stitch the openings closed afterward."
+    link: "/resources/embalming/"
+    link_text: "Is embalming required?"
+  - term: Embalming machine
+    aka: "Embalming pump"
+    image: ""
+    alt: ""
+    credit: ""
+    credit_url: ""
+    description: "A pump with a tank on top. It pushes about two gallons of embalming fluid into an artery while blood drains out of a nearby vein."
+    link: "/resources/embalming/"
+    link_text: "Is embalming required?"
+  - term: Eye caps
+    aka: ""
+    image: ""
+    alt: ""
+    credit: ""
+    credit_url: ""
+    description: "Thin, curved pieces of plastic with a rough surface. They go under the eyelids to keep them closed and looking full. Sometimes glue is used instead or as well."
+    link: "/resources/embalming/"
+    link_text: "Is embalming required?"
+  - term: Needle injector
+    aka: "Mouth closure"
+    image: ""
+    alt: ""
+    credit: ""
+    credit_url: ""
+    description: "A tool that sets small wires into the upper and lower jaw, which are then twisted together to hold the mouth closed. Some embalmers stitch the mouth closed instead. A plastic mouth former shapes the lips."
+    link: "/resources/embalming/"
+    link_text: "Is embalming required?"
   - term: Trocar
     aka: ""
     image: ""
     alt: ""
     credit: ""
     credit_url: ""
-    description: "A long, hollow steel tool used during embalming to remove fluid from the chest and belly. It's part of what you're paying for when you approve embalming."
+    description: "A long, pointed metal tube attached to a suction hose. It goes in near the navel to drain fluid and gas from the organs in the chest and belly, and then cavity fluid goes in through it."
     link: /resources/embalming/
     link_text: Is embalming required?
+  - term: Embalming fluid
+    aka: "Cavity fluid"
+    image: "/assets/dictionary/embalming-fluid.jpg"
+    alt: "Old glass bottles of embalming fluid on a wooden shipping crate, in a museum"
+    credit: "Mycota, public domain"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Embalming_fluid.jpg"
+    description: "Usually formaldehyde or a similar chemical mixed with water. A stronger kind, called cavity fluid, goes into the chest and belly. These old bottles are in a museum; today's look much the same."
+    link: "/resources/embalming/"
+    link_text: "Is embalming required?"
+  - term: Restorative wax and cosmetics
+    aka: ""
+    image: "/assets/dictionary/restorative.jpg"
+    alt: "A museum case of old mortuary makeup, wax and small tools"
+    credit: "Robert Lawton, CC BY-SA 2.5"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Mortician%27s_resorative_tools.JPG"
+    description: "Wax to shape or rebuild features, and makeup for the face and hands. This museum display shows older versions. It's the last step before dressing and casketing."
+    link: "/resources/embalming/"
+    link_text: "Is embalming required?"
   - term: Retort
     aka: Cremation chamber
     image: "/assets/dictionary/retort.jpg"
