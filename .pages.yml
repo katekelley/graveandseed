@@ -149,6 +149,55 @@ content:
           - { name: status, label: Status, type: string }
           - { name: owner, label: Owner and home base, type: string }
           - { name: yelp, label: Yelp page link, type: string }
+  - name: cemeteries
+    label: Cemetery prices (on the prices page)
+    type: file
+    path: _data/cemeteries.yml
+    fields:
+      - { name: updated, label: Date prices were checked, type: string }
+      - { name: intro, label: Intro, type: text }
+      - name: cemeteries
+        label: Cemeteries with posted prices (list from cheapest to most expensive grave plus opening)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: short, label: Short name for table, type: string }
+          - { name: town, label: Town, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: website, label: Link to their prices, type: string }
+          - { name: rules, label: Link to their rules, type: string }
+          - { name: effective, label: Prices effective, type: string }
+          - { name: checked, label: Date checked, type: string }
+          - { name: run_by, label: Run by, type: string }
+          - { name: vault, label: Vault or liner required?, type: string }
+          - { name: buyback, label: Buys back unused graves?, type: string }
+          - { name: sunday, label: Sunday burials?, type: string }
+          - { name: grave, label: Lowest-priced grave ($), type: string }
+          - { name: open_weekday, label: Opening and closing weekday ($), type: string }
+          - { name: open_saturday, label: Opening and closing Saturday ($), type: string }
+          - { name: burial_total, label: Grave plus weekday opening ($), type: string }
+          - { name: ashes_ground, label: Ashes in the ground lowest total ($), type: string }
+          - { name: niche, label: Niche for ashes lowest total ($), type: string }
+          - { name: notes, label: Notes, type: text }
+      - name: not_posted
+        label: Cemeteries without posted prices
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: town, label: Town, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: status, label: Status, type: string }
+          - { name: link, label: Link, type: string }
+          - { name: link_text, label: Link text, type: string }
+      - name: terms
+        label: Cemetery words explained
+        type: object
+        list: true
+        fields:
+          - { name: term, label: Term, type: string }
+          - { name: meaning, label: Meaning, type: text }
   - name: licenses
     label: Funeral home licenses page
     type: file

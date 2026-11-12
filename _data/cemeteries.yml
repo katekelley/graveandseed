@@ -1,0 +1,153 @@
+updated: "November 11, 2026"
+intro: "A burial has two bills: one from the funeral home and one from the cemetery. Cemeteries don't have to give you a price list the way funeral homes do, and their prices come in pieces that only make sense added up. These are the prices Ann Arbor and Ypsilanti cemeteries post online, with the date I checked. Always confirm with the cemetery before you buy."
+items:
+  - { key: grave, label: "Lowest-priced grave", button: "Grave" }
+  - { key: open_weekday, label: "Opening and closing, weekday", button: "Opening, weekday" }
+  - { key: open_saturday, label: "Opening and closing, Saturday", button: "Opening, Saturday" }
+  - { key: burial_total, label: "Grave plus weekday opening", button: "Grave + opening" }
+  - { key: ashes_ground, label: "Ashes in the ground, lowest total", button: "Ashes in the ground" }
+  - { key: niche, label: "Niche for ashes, lowest total", button: "Niche" }
+text_items:
+  - { key: run_by, label: "Run by" }
+  - { key: vault, label: "Vault or liner required?" }
+  - { key: buyback, label: "Buys back unused graves?" }
+  - { key: sunday, label: "Sunday burials?" }
+cemeteries:
+  - name: "Fairview Cemetery"
+    short: "Fairview"
+    town: "Ann Arbor"
+    phone: "(734) 794-6140 (City Clerk)"
+    website: "https://www.a2gov.org/city-clerk/fairview-cemetery/lot-prices-burial-arrangements/"
+    rules: "https://www.a2gov.org/city-clerk/fairview-cemetery/rules-regulations/"
+    effective: "July 1, 2026"
+    checked: "Nov 11, 2026"
+    run_by: "City of Ann Arbor"
+    vault: "Yes, steel or concrete. Not for ashes."
+    buyback: "Yes, at the price you paid"
+    sunday: "No"
+    grave: 850
+    open_weekday: 900
+    open_saturday: 1100
+    burial_total: 1750
+    ashes_ground: 1350
+    niche: ""
+    dated:
+      grave: "city residents; $1,100 others"
+      burial_total: "residents; $2,000 others"
+      ashes_ground: "full grave plus ashes burial"
+    notes: "Just under 100 graves are left. Lots are bought through the City Clerk, and payment is due in full. The city also sells graves just for ashes and for infants, but doesn't post those prices. An extra fee applies on city holidays."
+  - name: "Forest Hill Cemetery"
+    short: "Forest Hill"
+    town: "Ann Arbor"
+    phone: "(734) 663-5018"
+    website: "https://foresthillcemeteryaa.org/burial-rights/prices-and-layout/"
+    rules: "https://foresthillcemeteryaa.org/burial-rights/rules-and-regulations/"
+    effective: "2026"
+    checked: "Nov 11, 2026"
+    run_by: "Forest Hill Cemetery Company (nonprofit)"
+    vault: "Not stated. Ask."
+    buyback: "No. You can give it back, but they won't pay for it."
+    sunday: "No"
+    grave: 900
+    open_weekday: 1500
+    open_saturday: 1800
+    burial_total: 2400
+    ashes_ground: 1000
+    niche: 1365
+    dated:
+      grave: "2 Park section; New Section $1,600"
+      open_saturday: "before noon; $1,900 after"
+      ashes_ground: "includes the burial"
+      niche: "includes placement and nameplate"
+    notes: "Each grave holds one casket, one casket plus one set of ashes, or two sets of ashes. Graves in the Old Section are $2,500. Checks and money orders only, no cash."
+  - name: "Highland Cemetery"
+    short: "Highland"
+    town: "Ypsilanti"
+    phone: ""
+    website: "https://www.highlandcemetery.com/prices.html"
+    rules: ""
+    effective: "April 1, 2026"
+    checked: "Nov 11, 2026"
+    run_by: "Highland Cemetery Association (nonprofit)"
+    vault: "Not stated. Ask."
+    buyback: "Not stated. Ask."
+    sunday: "Not stated. Ask."
+    grave: 1425
+    open_weekday: 1400
+    open_saturday: 1700
+    burial_total: 2825
+    ashes_ground: 2375
+    niche: 1500
+    dated:
+      grave: "flat-marker sections"
+      open_saturday: "before noon"
+      ashes_ground: "includes marker and granite base"
+      niche: "niche from $900, plus placement"
+    notes: "Graves where you can use an upright headstone are $1,625 to $1,825. Their price list says to ask about green burial. The chapel rents for $500 for 2½ hours."
+  - name: "Bethlehem Cemetery"
+    short: "Bethlehem"
+    town: "Ann Arbor"
+    phone: "(734) 761-6878"
+    website: "https://bethlehemcemeteryaa.org/purchase-price/"
+    rules: "https://bethlehemcemeteryaa.org/about/rules-and-regulations/"
+    effective: "January 1, 2026"
+    checked: "Nov 11, 2026"
+    run_by: "Bethlehem United Church of Christ"
+    vault: "Yes: stone, metal or concrete"
+    buyback: "No"
+    sunday: "No"
+    grave: 1900
+    open_weekday: 1775
+    open_saturday: 2150
+    burial_total: 3675
+    ashes_ground: 800
+    niche: 1900
+    dated:
+      grave: "holds 1 casket and 1 set of ashes"
+      open_weekday: "before 3:30 p.m."
+      open_saturday: "before noon; $2,300 after"
+      ashes_ground: "Memorial Garden, at time of death only"
+      niche: "includes placement and nameplate"
+    notes: "Church members and veterans get 10% off. Weekday burials after 3:30 p.m. add $225 an hour. They may add a fee when the ground is frozen. Ashes in the Memorial Garden are buried without a container, and the price includes a nameplate and the burial. Ashes in the regular cremation area are $925 for the space plus $925 to bury."
+not_posted:
+  - name: "Washtenong Memorial Park"
+    town: "Ann Arbor"
+    phone: "(734) 665-6187"
+    status: "No price list on their own site that I could find. Temple Beth Emeth links to one for its Jewish section."
+    link: "https://www.templebethemeth.org/cemeteries-lots"
+    link_text: "Temple Beth Emeth's cemetery page"
+  - name: "Arborcrest Memorial Park"
+    town: "Ann Arbor"
+    phone: ""
+    status: "No price list online that I could find. Temple Beth Emeth links to one for its Jewish section."
+    link: "https://www.templebethemeth.org/cemeteries-lots"
+    link_text: "Temple Beth Emeth's cemetery page"
+  - name: "St. Thomas Catholic Cemetery"
+    town: "Ann Arbor"
+    phone: ""
+    status: "No price list online that I could find"
+    link: ""
+  - name: "St. John Catholic Cemetery"
+    town: "Ypsilanti"
+    phone: ""
+    status: "No price list online that I could find"
+    link: ""
+terms:
+  - term: "Grave, plot, lot or burial right"
+    meaning: "You don't buy the land. You buy the right to be buried in one spot. Some cemeteries let one grave hold a casket plus a set of ashes, or two sets of ashes."
+  - term: "Opening and closing (interment)"
+    meaning: "The fee to dig the grave, lower the casket or urn, fill the grave back in and fix the ground. It's charged at the time of burial, on top of the grave price. It costs more on Saturdays and late in the day."
+  - term: "Vault or grave liner"
+    meaning: "A concrete or steel box around the casket that keeps the ground from sinking. No Michigan law requires one, but many cemeteries do. You usually buy it from the funeral home or a vault company, not the cemetery, so it won't show up on the cemetery's price list."
+  - term: "Marker, headstone and foundation"
+    meaning: "A flat marker lies level with the grass. An upright headstone stands up and is only allowed in some sections. Most cemeteries pour a concrete base under the stone themselves and charge for it. Many won't pour bases in winter."
+  - term: "Niche or columbarium"
+    meaning: "A space for an urn in a wall or cabinet built for ashes. The price often includes placing the urn and a nameplate."
+  - term: "Perpetual care or endowment care"
+    meaning: "Part of the grave price goes into a fund that pays for mowing and upkeep for good. At Forest Hill it's 15%."
+  - term: "Transfer or deed fee"
+    meaning: "What you pay to put a grave you already own in someone else's name."
+  - term: "Buyback"
+    meaning: "Whether the cemetery will refund a grave you no longer need. Many won't. If you're buying ahead, ask before you pay."
+  - term: "Disinterment"
+    meaning: "Moving someone who is already buried. It usually costs more than the first burial."
