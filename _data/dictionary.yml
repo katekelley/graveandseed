@@ -1,0 +1,211 @@
+intro: "Most of us never see these things until we're asked to pay for them. Here's what they are and what they look like, so nothing at the funeral home is a surprise."
+sections:
+  - heading: Caskets and containers
+    items:
+      - term: Casket
+        aka: Coffin (a coffin is six-sided; a casket is a rectangle)
+        image: "https://images.unsplash.com/photo-1718801666793-ed47601f8270?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
+        alt: A white casket on a wood floor
+        credit: Ivo Santos on Unsplash
+        credit_url: "https://unsplash.com/photos/3IVT9G1IaUI"
+        description: "A box for burial or viewing, usually metal or wood with a cloth lining. It's often the most marked-up thing a funeral home sells. You can buy one elsewhere, and the funeral home has to accept it."
+        link: /resources/caskets/
+        link_text: Caskets and lower-cost options
+      - term: Rental casket
+        aka: Ceremonial casket
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "A nice outer casket used only for a viewing or service before cremation. The body rests on a removable insert, and the insert goes to the crematory. At Muehlig, renting one costs $1,100."
+        link: ""
+        link_text: ""
+      - term: Cremation container
+        aka: Alternative container
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "A simple box, usually heavy cardboard, that holds the body during cremation. No law requires a casket for cremation. This is all you need."
+        link: /prices/
+        link_text: Compare cremation prices
+      - term: Cardboard coffin
+        aka: ""
+        image: "https://images.unsplash.com/photo-1644669144234-cda5e5153033?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
+        alt: A cardboard coffin covered in handwritten messages and flowers
+        credit: The Good Funeral Guide on Unsplash
+        credit_url: "https://unsplash.com/photos/n01GmOCropI"
+        description: "A sturdier, nicer cardboard box made for burial or a service. Some families decorate it or write messages on it."
+        link: ""
+        link_text: ""
+      - term: Willow casket
+        aka: Woven casket
+        image: "https://images.unsplash.com/photo-1780400358053-ba41f35eb2b7?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
+        alt: A woven willow casket covered in bright flowers
+        credit: Dead Good Legacies on Unsplash
+        credit_url: "https://unsplash.com/photos/H6xs9oRcWUs"
+        description: "Woven from willow or other plants. It breaks down in the soil, so it's a common choice for green burial. One is made near Dexter."
+        link: /resources/green-burial/
+        link_text: Green burial in Michigan
+      - term: Shroud
+        aka: ""
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "A cloth wrap for the body, often used for green burial instead of a casket. A favorite quilt or blanket can work. Ask the cemetery what it allows."
+        link: /resources/caskets/
+        link_text: Where to find one
+  - heading: Ashes
+    items:
+      - term: Cremated remains
+        aka: Ashes, cremains
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "Not soft like fireplace ash. They're bone ground into a coarse, gray-white grit, a bit like sand. An adult's usually weighs a few pounds, heavier than most people expect."
+        link: ""
+        link_text: ""
+      - term: Temporary urn
+        aka: Temporary container
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "The plain black plastic box ashes come home in, with the ashes in a sealed bag inside. It's fine to keep them in it as long as you like. It's also the best container for getting through airport security."
+        link: ""
+        link_text: ""
+      - term: Urn
+        aka: ""
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "Any container you choose for ashes. Funeral homes sell them, but you can buy one anywhere, use a box or jar that meant something to the person, or skip it."
+        link: ""
+        link_text: ""
+      - term: Scattering tube
+        aka: ""
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "A cardboard tube with a pull-off top, made for scattering ashes. Michigan has no state law on where you scatter, but you need the landowner's permission."
+        link: ""
+        link_text: ""
+      - term: Columbarium niche
+        aka: ""
+        image: "https://images.unsplash.com/photo-1786342445156-5c305a51dc79?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
+        alt: A white wall of small burial niches with plaques and flowers
+        credit: Adam Young on Unsplash
+        credit_url: "https://unsplash.com/photos/9upmkwO-pPU"
+        description: "A small space in a wall or building for an urn, usually with a name plate on the front. Many cemeteries sell them."
+        link: /cemeteries/
+        link_text: What cemeteries cost
+  - heading: At the cemetery
+    items:
+      - term: Burial vault
+        aka: Outer burial container
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "A concrete box, sealed with a lid, set in the grave before the casket goes in. No law requires one, but most cemeteries do, so the ground stays level for mowing."
+        link: /cemeteries/
+        link_text: What cemeteries cost
+      - term: Grave liner
+        aka: ""
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "A cheaper concrete box that does the same job as a vault, but isn't sealed. If your cemetery requires an outer container, a liner usually meets the rule."
+        link: ""
+        link_text: ""
+      - term: Lowering device
+        aka: ""
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "The metal frame with straps that sits over the grave and lowers the casket slowly. It's often covered with green cloth or artificial grass."
+        link: ""
+        link_text: ""
+  - heading: Moving someone
+    items:
+      - term: Cot
+        aka: Stretcher, removal cot
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "What the funeral home brings to take someone from a home or hospital. The body is covered, usually with a quilted cover. If someone dies at home, you can ask for a few minutes before they arrive, or to walk out with them."
+        link: /resources/first-week/
+        link_text: The first week
+      - term: Hearse
+        aka: Funeral coach
+        image: "https://images.unsplash.com/photo-1644413816296-9533c9d831bf?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
+        alt: A willow casket with flowers in the back of a hearse
+        credit: The Good Funeral Guide on Unsplash
+        credit_url: "https://unsplash.com/photos/DzLRoqZOYqw"
+        description: "The vehicle that carries the casket to the service or cemetery. It's usually a separate charge, and you can say no to it."
+        link: ""
+        link_text: ""
+      - term: Air tray
+        aka: ""
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "A wood base with a heavy cardboard cover, used to ship a casket on a plane. At Muehlig, it's $195."
+        link: /resources/died-away-from-home/
+        link_text: When someone dies far from home
+      - term: Cremated remains box
+        aka: ""
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "The Postal Service box you have to use to mail ashes. Every side is printed with an orange \"Cremated Remains\" label. The kit is free."
+        link: /resources/died-away-from-home/
+        link_text: How to mail ashes
+behind_heading: Behind the door
+behind_note: "These are part of what happens at a funeral home or crematory. Some people find it helps to know; others would rather not. Open this only if you want to."
+behind:
+  - term: Dressing table
+    aka: Preparation table
+    image: ""
+    alt: ""
+    credit: ""
+    credit_url: ""
+    description: "A steel table where staff wash and dress the person, and do embalming if the family asked for it."
+    link: ""
+    link_text: ""
+  - term: Cooler
+    aka: Refrigeration
+    image: ""
+    alt: ""
+    credit: ""
+    credit_url: ""
+    description: "A walk-in or cabinet refrigerator that keeps a body cool until burial or cremation. It's the normal alternative to embalming."
+    link: /resources/embalming/
+    link_text: Is embalming required?
+  - term: Trocar
+    aka: ""
+    image: ""
+    alt: ""
+    credit: ""
+    credit_url: ""
+    description: "A long, hollow steel tool used during embalming to remove fluid from the chest and belly. It's part of what you're paying for when you approve embalming."
+    link: /resources/embalming/
+    link_text: Is embalming required?
+  - term: Retort
+    aka: Cremation chamber
+    image: ""
+    alt: ""
+    credit: ""
+    credit_url: ""
+    description: "The large brick-lined oven where cremation happens. From the outside it looks like an industrial furnace with a steel door. Some crematories let family members be there when it starts."
+    link: ""
+    link_text: ""

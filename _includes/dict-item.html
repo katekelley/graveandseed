@@ -1,0 +1,17 @@
+{%- assign i = include.i -%}
+<article class="dict-item" id="{{ i.term | slugify }}">
+  <figure>
+    {%- if i.image and i.image != "" %}
+    <img src="{{ i.image }}" alt="{{ i.alt }}" loading="lazy">
+    {%- if i.credit and i.credit != "" %}<figcaption>Photo: {% if i.credit_url and i.credit_url != "" %}<a href="{{ i.credit_url }}" rel="noopener">{{ i.credit }}</a>{% else %}{{ i.credit }}{% endif %}</figcaption>{% endif %}
+    {%- else %}
+    <div class="dict-blank" role="img" aria-label="Photo coming soon"><span>Photo coming soon</span></div>
+    {%- endif %}
+  </figure>
+  <div>
+    <h3>{{ i.term }}</h3>
+    {%- if i.aka and i.aka != "" %}<p class="aka">Also called: {{ i.aka }}</p>{% endif %}
+    <p>{{ i.description }}</p>
+    {%- if i.link and i.link != "" %}<p class="small"><a href="{{ i.link }}">{{ i.link_text }}</a></p>{% endif %}
+  </div>
+</article>

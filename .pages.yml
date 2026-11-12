@@ -273,3 +273,45 @@ content:
           - { name: high, label: High ($), type: number }
           - { name: note, label: Note, type: string }
       - { name: comparison, label: Comparison note, type: text }
+  - name: dictionary
+    label: "What funeral things look like (picture guide)"
+    type: file
+    path: _data/dictionary.yml
+    fields:
+      - { name: intro, label: Intro, type: text }
+      - name: sections
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - { name: heading, label: Section heading, type: string }
+          - name: items
+            label: Items
+            type: object
+            list: true
+            fields:
+              - { name: term, label: Name, type: string }
+              - { name: aka, label: Also called, type: string }
+              - { name: image, label: Photo (upload, or paste a link), type: image }
+              - { name: alt, label: Photo description for screen readers, type: string }
+              - { name: credit, label: Photo credit (leave blank for your own photos), type: string }
+              - { name: credit_url, label: Photo credit link, type: string }
+              - { name: description, label: Description, type: text }
+              - { name: link, label: Link to a page (optional), type: string }
+              - { name: link_text, label: Link text, type: string }
+      - { name: behind_heading, label: "'Behind the door' heading", type: string }
+      - { name: behind_note, label: "'Behind the door' note (click to open)", type: text }
+      - name: behind
+        label: "'Behind the door' items"
+        type: object
+        list: true
+        fields:
+          - { name: term, label: Name, type: string }
+          - { name: aka, label: Also called, type: string }
+          - { name: image, label: Photo (upload, or paste a link), type: image }
+          - { name: alt, label: Photo description for screen readers, type: string }
+          - { name: credit, label: Photo credit (leave blank for your own photos), type: string }
+          - { name: credit_url, label: Photo credit link, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: link, label: Link to a page (optional), type: string }
+          - { name: link_text, label: Link text, type: string }

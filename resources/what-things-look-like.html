@@ -1,0 +1,39 @@
+---
+layout: page
+title: What funeral things look like
+here: resources
+heading: What funeral things look like
+lede: Caskets, containers, vaults and the rest, and what each one is for.
+description: A picture guide to funeral and cremation items - caskets, cremation containers, urns, temporary urns, burial vaults, grave liners, air trays and more - and what each one is for.
+permalink: /resources/what-things-look-like/
+---
+{%- assign d = site.data.dictionary -%}
+<section class="prose">
+  <p>{{ d.intro }}</p>
+  <ol class="toc">
+    {%- for s in d.sections %}
+    <li><a href="#{{ s.heading | slugify }}">{{ s.heading }}</a></li>
+    {%- endfor %}
+    <li><a href="#behind-the-door">{{ d.behind_heading }}</a></li>
+  </ol>
+</section>
+
+{%- for s in d.sections %}
+<section class="prose" id="{{ s.heading | slugify }}">
+  <h2>{{ s.heading }}</h2>
+  <div class="dict">
+    {%- for i in s.items %}{% include dict-item.html i=i %}{%- endfor %}
+  </div>
+</section>
+{%- endfor %}
+
+<section class="prose" id="behind-the-door">
+  <h2>{{ d.behind_heading }}</h2>
+  <details class="behind">
+    <summary>{{ d.behind_note }}</summary>
+    <div class="dict">
+      {%- for i in d.behind %}{% include dict-item.html i=i %}{%- endfor %}
+    </div>
+  </details>
+  <p class="small">Photos without a credit are coming soon. Checked November 2026. Spot an error, or have a photo to share? Email {{ site.data.content.email }}.</p>
+</section>

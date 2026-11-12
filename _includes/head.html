@@ -100,6 +100,19 @@ section h2 { font-size: 1.9rem; font-weight: 600; }
 .kit figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
 .kit ul { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.3rem; }
 @media (max-width: 700px) { .kit { grid-template-columns: 1fr; gap: 1.2rem; } }
+.dict { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1.75rem 1.5rem; margin-top: 0.5rem; }
+.dict-item { display: grid; gap: 0.6rem; align-content: start; min-width: 0; }
+.dict-item figure { margin: 0; }
+.dict-item img, .dict-blank { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 4px; }
+.dict-blank { display: grid; place-items: center; background: var(--field); border: 1px dashed var(--line); box-sizing: border-box; }
+.dict-blank span { font: 600 0.72rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.dict-item figcaption { margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted); }
+.dict-item h3 { font-size: 1.2rem; font-weight: 500; }
+.dict-item .aka { font-size: 0.9rem; color: var(--muted); font-style: italic; }
+.dict-item p { margin: 0; }
+.behind summary { cursor: pointer; color: var(--muted); max-width: 38rem; }
+.behind summary::marker { color: var(--moss); }
+.behind[open] .dict { margin-top: 1.25rem; }
 .tiers { display: grid; gap: 0; border-top: 1px solid var(--line); }
 .tier { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--line); }
 .tier h3 { font-size: 1.1rem; font-weight: 500; }
