@@ -122,8 +122,8 @@ textarea { min-height: 7rem; resize: vertical; }
 input:focus, textarea:focus, button:focus-visible { outline: 2px solid var(--moss); outline-offset: 2px; }
 a:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 2px; }
 main:focus { outline: none; }
-.skip { position: absolute; left: 0.75rem; top: -3rem; z-index: 100; background: var(--marigold); color: #3B2A20; padding: 0.6rem 0.9rem; border-radius: 4px; font-weight: 600; text-decoration: none; }
-.skip:focus { top: 0.75rem; }
+.skip { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip:focus-visible { width: auto; height: auto; overflow: visible; clip: auto; left: 0.75rem; top: 0.75rem; z-index: 100; background: var(--marigold); color: #3B2A20; padding: 0.6rem 0.9rem; border-radius: 4px; font-weight: 600; text-decoration: none; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .send { justify-self: start; background: var(--marigold); color: #3B2A20; border: 0; padding: 0.8rem 1.2rem; }
 .note { color: var(--muted); font-size: 0.95rem; }
