@@ -1,0 +1,97 @@
+---
+layout: null
+permalink: /cemeteries/
+og_title: What cemeteries cost around Ann Arbor
+og_description: "Posted grave, opening and closing, and niche prices from Ann Arbor, Ypsilanti and Washtenaw County cemeteries, side by side, with what each charge means. Free to share."
+---
+{%- assign c = site.data.content -%}
+{%- assign cm = site.data.cemeteries -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cemetery Prices in Ann Arbor, Ypsilanti and Washtenaw County | Grave and Seed</title>
+<meta name="description" content="What cemeteries charge around Ann Arbor: posted grave, opening and closing, and niche prices from Ann Arbor, Ypsilanti and Washtenaw County cemeteries, side by side, with vault rules and what each charge means.">
+{% include head.html %}
+<style>
+{% include compare_css.html %}
+</style>
+</head>
+<body>
+<header class="soil slim">
+  <div class="wrap">
+    {% include nav.html here="cemeteries" %}
+    <h1>What cemeteries cost around Ann Arbor</h1>
+    <p class="lede">Posted prices, checked {{ cm.updated }}.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section id="cemeteries">
+      <span class="label">Cemeteries</span>
+      <h2>Ann Arbor and Ypsilanti</h2>
+      <p>{{ cm.intro }}</p>
+      <p class="small">Checked {{ cm.updated }}. The lowest posted price in each row is in <strong>bold</strong> and marked &#9660;. A dash means the cemetery doesn't post that price. None of these totals include a vault, a headstone or its foundation.</p>
+      <p class="small">Tap a column heading to put the lowest price first.</p>
+      <p class="small scroll-hint">Scroll sideways for more prices. Cemetery names stay put.</p>
+      {% include cem_table.html list=cm.cemeteries label="Posted prices by cemetery" %}
+      <ol class="notes">
+        {%- for h in cm.cemeteries %}
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}{% if h.phone != "" %}, {{ h.phone }}{% endif %}. {% if h.effective != "" %}Prices effective {{ h.effective }}; checked{% else %}No effective date posted; checked{% endif %} {{ h.checked }}. {{ h.notes }} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.rules != "" %} &middot; <a href="{{ h.rules }}" rel="noopener">Their rules</a>{% endif %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}</li>
+        {%- endfor %}
+      </ol>
+      <h3>Cemeteries without posted prices</h3>
+      <ul class="plain-list">
+        {%- for h in cm.not_posted %}
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}{% if h.phone != "" %}, {{ h.phone }}{% endif %}: {{ h.status }}{% if h.link != "" %} &middot; <a href="{{ h.link }}" rel="noopener">{{ h.link_text | default: "Link" }}</a>{% endif %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <section id="county">
+      <span class="label">Elsewhere in Washtenaw County</span>
+      <h2>Chelsea, Milan and nearby</h2>
+      <p>{{ cm.county_intro }}</p>
+      {% include cem_table.html list=cm.county label="Posted prices, other Washtenaw County cemeteries" natural=true %}
+      <ol class="notes">
+        {%- for h in cm.county %}
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}{% if h.phone != "" %}, {{ h.phone }}{% endif %}. {% if h.effective != "" %}Prices effective {{ h.effective }}; checked{% else %}No effective date posted; checked{% endif %} {{ h.checked }}. {{ h.notes }} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.rules != "" %} &middot; <a href="{{ h.rules }}" rel="noopener">More from them</a>{% endif %}</li>
+        {%- endfor %}
+      </ol>
+      <h3>Without posted prices</h3>
+      <ul class="plain-list">
+        {%- for h in cm.county_not_posted %}
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}{% if h.phone != "" %}, {{ h.phone }}{% endif %}: {{ h.status }}{% if h.link != "" %} &middot; <a href="{{ h.link }}">{{ h.link_text | default: "Link" }}</a>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+      <p class="small">Looking for burial without a vault anywhere in Michigan? See the <a href="/resources/green-burial/">green burial list</a>.</p>
+    </section>
+
+    <section id="cemetery-terms">
+      <span class="label">Cemetery words</span>
+      <h2>What the line items mean</h2>
+      <dl class="terms">
+        {%- for t in cm.terms %}
+        <dt>{{ t.term }}</dt>
+        <dd>{{ t.meaning }}</dd>
+        {%- endfor %}
+      </dl>
+      <div class="box">
+        <p>The federal Funeral Rule that makes funeral homes hand you a price list doesn't cover most cemeteries (<a href="https://www.govinfo.gov/content/pkg/GOVPUB-FT-PURL-LPS104925/pdf/GOVPUB-FT-PURL-LPS104925.pdf" rel="noopener">FTC guide</a>). Before you buy a grave, ask for every charge in writing: the grave, opening and closing, Saturday or winter fees, the foundation and marker setting, and whether they'll buy the grave back if you change your mind.</p>
+        <p class="small">Grave and Seed has no financial relationship with any cemetery listed. Spot an error or a newer price? Email {{ c.email }}.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="small">Paying the funeral home too? See <a href="/prices/">what funerals and cremation cost around Ann Arbor</a>.</p>
+    </section>
+<p class="print-source" hidden aria-hidden="true">Printed from graveandseed.com/cemeteries/. Free to copy and share.</p>
+  </div>
+</main>
+
+{% include footer.html %}
+{% include sort_script.html %}
+</body>
+</html>

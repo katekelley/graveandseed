@@ -1,0 +1,71 @@
+header.soil.slim a.home { color: var(--soil-ink); text-decoration: none; font: 500 0.78rem/1 var(--label); letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
+.bars { display: grid; gap: 0.9rem; }
+.bar-row { display: grid; gap: 0.3rem; }
+.bar-label { display: flex; justify-content: space-between; gap: 1rem; font-size: 1rem; }
+.bar-label strong { font-family: var(--label); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar { height: 10px; background: var(--line); border-radius: 2px; }
+.bar span { display: block; height: 100%; background: var(--moss); border-radius: 2px; }
+.homes { display: grid; gap: 1.25rem; }
+.home { border-top: 1px solid var(--line); padding-top: 1.1rem; display: grid; gap: 0.6rem; }
+.home h3 { font-size: 1.3rem; font-weight: 500; }
+.meta { color: var(--muted); font-size: 0.95rem; }
+dl.items dt { color: var(--ink); }
+ul.plain-list { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.5rem; }
+.box { background: var(--field); border: 1px solid var(--line); border-radius: 6px; padding: 1.25rem 1.5rem; display: grid; gap: 0.75rem; }
+.table-wrap { overflow-x: auto; margin-inline: -4px; }
+table.compare { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: 0.98rem; }
+table.compare th, table.compare td { padding: 0.45rem 0.6rem; text-align: right; vertical-align: bottom; }
+table.compare thead th { font: 600 0.9rem/1.25 var(--body); border-bottom: 1px solid var(--ink); }
+table.compare thead th .town { display: block; font: 500 0.68rem/1.4 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+table.compare tbody th, table.compare thead th:first-child { text-align: left; font-weight: 400; color: var(--ink); position: sticky; left: 0; z-index: 1; background: var(--card); box-shadow: 1px 0 0 var(--line); }
+table.compare td.low { font-weight: 700; }
+table.compare .low-mark { font-size: 0.6em; margin-right: 0.3em; vertical-align: 0.15em; }
+table.compare .dated { display: block; font: italic 400 0.75rem/1.3 var(--body); color: #8A3F1A; white-space: nowrap; }
+@media (prefers-color-scheme: dark) { table.compare .dated { color: var(--wheat); } }
+.table-wrap:focus-visible { outline: 2px solid var(--moss); outline-offset: 2px; }
+.scroll-hint { display: none; }
+@media (max-width: 640px) {
+  .scroll-hint { display: block; }
+  table.compare { min-width: 0; font-size: 0.92rem; }
+  table.compare tbody th, table.compare thead th:first-child { min-width: 7.5rem; max-width: 7.5rem; white-space: normal; line-height: 1.3; font-size: 0.88rem; }
+  table.compare td.text { min-width: 7rem; }
+}
+table.compare td { font-family: var(--label); font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.compare tbody tr:last-child th, table.compare tbody tr:last-child td { border-bottom: 1px solid var(--ink); }
+table.compare tbody tr:first-child th, table.compare tbody tr:first-child td { padding-top: 0.7rem; }
+table.compare td.low { color: var(--moss); font-weight: 600; }
+table.compare td.none { color: var(--line); }
+table.compare sup { font-size: 0.65em; color: var(--muted); margin-left: 1px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+ol.notes { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.45rem; font-size: 0.9rem; color: var(--muted); max-width: 44rem; }
+table.compare .from-sm { font: 400 0.75rem var(--body); color: var(--muted); }
+table.compare td.text { font-family: var(--body); white-space: normal; text-align: left; vertical-align: top; font-size: 0.85rem; line-height: 1.35; min-width: 8rem; }
+ol.notes strong { color: var(--ink); font-weight: 600; }
+.picker { display: none; gap: 0.9rem; }
+.pick-panel[hidden] { display: none; }
+.picker-tabs { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.picker-tabs button { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 0.55rem 0.75rem; font: 500 0.88rem/1.2 var(--body); }
+.picker-tabs button[aria-pressed="true"] { background: var(--moss); border-color: var(--moss); color: var(--card); }
+.pick-panel .bar-label .sub { display: block; font: italic 400 0.78rem/1.3 var(--body); color: var(--muted); }
+.pick-panel .bar-label .town { display: block; font: 500 0.66rem/1.4 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.pick-panel .low strong { color: var(--moss); }
+.pick-panel .not-posted { margin-top: 0.4rem; font-size: 0.88rem; color: var(--muted); }
+.picker.ready { display: grid; margin-bottom: 1.5rem; }
+@media (max-width: 640px) { .js-picker .scroll-hint { display: none; } }
+@media print { .picker { display: none !important; } }
+#cemeteries h3, #county h3 { font-size: 1.15rem; font-weight: 500; margin-top: 1.5rem; }
+dl.terms { margin: 0 0 1.25rem; display: grid; gap: 0.35rem; max-width: 44rem; }
+dl.terms dt { font-weight: 600; margin-top: 0.6rem; }
+dl.terms dd { margin: 0; }
+/* flipped tables: one row per place, one column per price */
+table.flip thead th { text-align: right; vertical-align: bottom; white-space: normal; min-width: 6.5rem; }
+table.flip thead th.text-h { text-align: left; min-width: 9rem; }
+table.flip tbody th .town { display: block; font: 500 0.66rem/1.4 var(--label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+table.flip th, table.flip td { vertical-align: top; }
+table.flip td.text { min-width: 9rem; }
+table.flip .dated { white-space: normal; line-height: 1.25; margin-top: 0.15rem; }
+table.flip thead th:first-child { text-align: left; }
+button.sort { background: none; border: 0; padding: 0; color: inherit; font: inherit; text-align: inherit; cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; }
+button.sort::after { content: " \2195"; font-size: 0.8em; color: var(--muted); }
+th[aria-sort="ascending"] button.sort::after { content: " \25B2"; color: var(--moss); }
+@media (max-width: 640px) { table.flip thead th { min-width: 5.5rem; font-size: 0.82rem; } }

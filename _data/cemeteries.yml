@@ -157,3 +157,77 @@ terms:
     meaning: "Whether the cemetery will refund a grave you no longer need. Many won't. If you're buying ahead, ask before you pay."
   - term: "Disinterment"
     meaning: "Moving someone who is already buried. It usually costs more than the first burial."
+county_intro: "Farther out, but some families drive here on purpose, often for a natural section where you can skip the vault. Town and township cemeteries sometimes charge more for non-residents or only sell to residents, so ask before you fall for a spot."
+county:
+  - name: "Marble Park Cemetery"
+    short: "Marble Park"
+    town: "Milan"
+    yelp: ""
+    phone: "(734) 439-5660"
+    website: "https://marbleparkcemetery.com/burial-pricing-table/"
+    rules: "https://marbleparkcemetery.com/natural-burial-information/"
+    effective: ""
+    checked: "Nov 11, 2026"
+    run_by: "Marble Park Cemetery Association (nonprofit)"
+    vault: "Not stated. Ask."
+    buyback: "Not stated. Ask."
+    sunday: "Not stated. Ask."
+    natural: "Yes, about $2,975 with opening"
+    grave: 1245
+    open_weekday: 1140
+    open_saturday: 1305
+    burial_total: 2385
+    ashes_ground: ""
+    niche: 685
+    dated:
+      open_saturday: "adds $165"
+      niche: "niche tower + copper urn"
+    notes: "Natural section: same $1,245 plot plus a $1,730 natural opening; biodegradable coffin, casket or shroud; no markers. Burying ashes is $705 (or $490 without a service), including an urn vault, plus a space; they don't post a separate price for an ashes-only space. Burials not finished by 4 p.m. add $165. The lowest niche total is a $300 niche-tower unit plus $275 placement and the $110 copper urn it requires; columbarium units start at $950."
+  - name: "Oak Grove Cemetery"
+    short: "Oak Grove"
+    town: "Chelsea"
+    yelp: ""
+    phone: "(734) 475-3322"
+    website: "https://oakgrovechelsea.com/available-sites"
+    rules: "https://oakgrovechelsea.com/opening-and-closing-costs"
+    effective: "May 1, 2026 (opening fees)"
+    checked: "Nov 11, 2026"
+    run_by: "Oak Grove Cemetery Corporation (private, not for profit)"
+    vault: "Yes in traditional sections; no in the natural section"
+    buyback: "Not stated. Ask."
+    sunday: "Yes, $1,800"
+    natural: "Yes, $2,000 plot; ask the opening fee"
+    grave: 1200
+    open_weekday: 1500
+    open_saturday: 1600
+    burial_total: 2700
+    ashes_ground: 1300
+    niche: 2000
+    dated:
+      grave: "includes perpetual care"
+      ashes_ground: "$600 lot + $700 burial"
+      niche: "holds 2; includes first placement"
+    notes: "Natural section: $2,000 plot with perpetual care, no casket or vault required, one flat marker; they don't post its opening fee. Arrivals after 2:30 p.m. add $100 to $300. No burials on holidays. Headstone bases are $1 per square inch and are poured May through October."
+county_not_posted:
+  - name: "Forest Lawn Cemetery"
+    town: "Dexter"
+    phone: "(734) 395-5449"
+    status: "No prices online that I could find. Listed as supporting natural burial."
+    link: "/resources/green-burial/"
+    link_text: "Green burial list"
+  - name: "St. Joseph Catholic Cemetery"
+    town: "Dexter"
+    phone: "(734) 426-8483"
+    status: "No prices online that I could find. Shroud burial without a vault reported for Catholics."
+    link: "/resources/green-burial/"
+    link_text: "Green burial list"
+  - name: "Oakwood Cemetery"
+    town: "Saline"
+    phone: ""
+    status: "City of Saline cemetery. No prices online that I could find."
+    link: ""
+  - name: "Oak Grove Cemetery"
+    town: "Manchester"
+    phone: ""
+    status: "Owned by Manchester Township since 2021. No prices online that I could find."
+    link: ""

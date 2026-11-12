@@ -1,0 +1,46 @@
+{%- comment -%}Cemetery comparison table, one row per cemetery. Pass list= (cemeteries) and label= (aria label). Optional natural=true adds the natural-section column.{%- endcomment -%}
+{%- assign cm = site.data.cemeteries -%}
+{%- assign rows = include.list -%}
+<div class="table-wrap" role="region" aria-label="{{ include.label }}" tabindex="0">
+  <table class="compare cem flip sortable">
+    <thead>
+      <tr>
+        <th scope="col">Cemetery</th>
+        {%- for it in cm.items %}
+        <th scope="col" aria-sort="none"><button type="button" class="sort" data-col="{{ forloop.index }}">{{ it.button | default: it.label }}</button></th>
+        {%- endfor %}
+        {%- if include.natural %}
+        <th scope="col" class="text-h">Natural section</th>
+        {%- endif %}
+        <th scope="col" class="text-h">Reviews</th>
+        {%- for it in cm.text_items %}
+        <th scope="col" class="text-h">{{ it.label }}</th>
+        {%- endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {%- for h in rows %}
+      <tr>
+        <th scope="row">{{ h.short }}<sup>{{ forloop.index }}</sup><span class="town">{{ h.town }}</span></th>
+        {%- for it in cm.items %}
+        {%- assign low = 0 -%}
+        {%- for o in rows -%}{%- assign ov = o[it.key] -%}{%- if ov != "" and ov != nil -%}{%- assign on = ov | plus: 0 -%}{%- if low == 0 or on < low -%}{%- assign low = on -%}{%- endif -%}{%- endif -%}{%- endfor -%}
+        {%- assign v = h[it.key] -%}
+        {%- if v != "" and v != nil -%}{%- assign vn = v | plus: 0 -%}{%- assign dn = h.dated[it.key] %}
+        <td data-v="{{ vn }}"{% if vn == low %} class="low"{% endif %}>{% if vn == low %}<span class="low-mark" aria-hidden="true">&#9660;</span>{% endif %}{% include money.html n=vn %}{% if vn == low %}<span class="sr"> (lowest)</span>{% endif %}{% if dn %}<span class="dated">{{ dn }}</span>{% endif %}</td>
+        {%- else %}
+        <td class="none" data-v="">&mdash;</td>
+        {%- endif %}
+        {%- endfor %}
+        {%- if include.natural %}
+        <td class="text">{{ h.natural | default: "&mdash;" }}</td>
+        {%- endif %}
+        <td class="text">{% if h.yelp and h.yelp != "" %}<a href="{{ h.yelp }}" rel="noopener">Yelp</a>{% else %}None on Yelp{% endif %}</td>
+        {%- for it in cm.text_items %}
+        <td class="text">{{ h[it.key] | default: "&mdash;" }}</td>
+        {%- endfor %}
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</div>

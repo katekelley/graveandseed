@@ -1,0 +1,22 @@
+<script>
+(function () {
+  document.querySelectorAll('table.sortable').forEach(function (t) {
+    var body = t.tBodies[0];
+    t.querySelectorAll('button.sort').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var col = +b.dataset.col;
+        var rows = Array.prototype.slice.call(body.rows);
+        rows.sort(function (x, y) {
+          var a = x.cells[col].dataset.v, c = y.cells[col].dataset.v;
+          if (a === '' && c === '') return 0; if (a === '') return 1; if (c === '') return -1;
+          return a - c;
+        });
+        rows.forEach(function (r) { body.appendChild(r); });
+        t.querySelectorAll('thead th[aria-sort]').forEach(function (th) { th.setAttribute('aria-sort', 'none'); });
+        b.parentNode.setAttribute('aria-sort', 'ascending');
+        if (window.gsCount) window.gsCount('sort: ' + b.textContent.trim());
+      });
+    });
+  });
+})();
+</script>

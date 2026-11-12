@@ -150,7 +150,7 @@ content:
           - { name: owner, label: Owner and home base, type: string }
           - { name: yelp, label: Yelp page link, type: string }
   - name: cemeteries
-    label: Cemetery prices (on the prices page)
+    label: Cemetery prices page
     type: file
     path: _data/cemeteries.yml
     fields:
@@ -190,6 +190,44 @@ content:
           - { name: town, label: Town, type: string }
           - { name: phone, label: Phone, type: string }
           - { name: yelp, label: Yelp page link, type: string }
+          - { name: status, label: Status, type: string }
+          - { name: link, label: Link, type: string }
+          - { name: link_text, label: Link text, type: string }
+      - { name: county_intro, label: "Elsewhere in Washtenaw County: intro", type: text }
+      - name: county
+        label: "Elsewhere in Washtenaw County: cemeteries with posted prices"
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: short, label: Short name for table, type: string }
+          - { name: town, label: Town, type: string }
+          - { name: phone, label: Phone, type: string }
+          - { name: website, label: Link to their prices, type: string }
+          - { name: rules, label: Second link, type: string }
+          - { name: effective, label: Prices effective (blank if not posted), type: string }
+          - { name: checked, label: Date checked, type: string }
+          - { name: run_by, label: Run by, type: string }
+          - { name: natural, label: Natural section, type: string }
+          - { name: vault, label: "Vault or liner required?", type: string }
+          - { name: buyback, label: "Buys back unused graves?", type: string }
+          - { name: sunday, label: "Sunday burials?", type: string }
+          - { name: grave, label: Lowest-priced grave ($), type: string }
+          - { name: open_weekday, label: Opening and closing weekday ($), type: string }
+          - { name: open_saturday, label: Opening and closing Saturday ($), type: string }
+          - { name: burial_total, label: Grave plus weekday opening ($), type: string }
+          - { name: ashes_ground, label: Ashes in the ground lowest total ($), type: string }
+          - { name: niche, label: Niche for ashes lowest total ($), type: string }
+          - { name: notes, label: Notes, type: text }
+          - { name: yelp, label: Yelp page link, type: string }
+      - name: county_not_posted
+        label: "Elsewhere in Washtenaw County: without posted prices"
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: town, label: Town, type: string }
+          - { name: phone, label: Phone, type: string }
           - { name: status, label: Status, type: string }
           - { name: link, label: Link, type: string }
           - { name: link_text, label: Link text, type: string }
