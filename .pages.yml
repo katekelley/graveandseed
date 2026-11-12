@@ -170,9 +170,9 @@ content:
           - { name: effective, label: Prices effective, type: string }
           - { name: checked, label: Date checked, type: string }
           - { name: run_by, label: Run by, type: string }
-          - { name: vault, label: Vault or liner required?, type: string }
-          - { name: buyback, label: Buys back unused graves?, type: string }
-          - { name: sunday, label: Sunday burials?, type: string }
+          - { name: vault, label: "Vault or liner required?", type: string }
+          - { name: buyback, label: "Buys back unused graves?", type: string }
+          - { name: sunday, label: "Sunday burials?", type: string }
           - { name: grave, label: Lowest-priced grave ($), type: string }
           - { name: open_weekday, label: Opening and closing weekday ($), type: string }
           - { name: open_saturday, label: Opening and closing Saturday ($), type: string }
