@@ -1,0 +1,24 @@
+---
+layout: page
+title: Opinions
+here: opinions
+heading: Opinions
+lede: What I think about how we care for the dead, and why. The rest of the site sticks to facts; this is where I say what I think.
+description: Kate Kelley's opinions on funerals, embalming and deathcare in Michigan, from her work planning celebrations of life in Ann Arbor.
+permalink: /opinions/
+---
+<section class="prose">
+  {%- if site.posts.size > 0 %}
+  <div class="cards">
+    {%- for post in site.posts %}
+    <article class="card">
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p class="meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </article>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <p>The first piece is coming soon. In the meantime, the <a href="/resources/">free guides</a> have the facts.</p>
+  {%- endif %}
+</section>

@@ -6,3 +6,11 @@ url: "https://graveandseed.com"
 plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: opinion
+      here: opinions
+      permalink: /opinions/:title/

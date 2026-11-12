@@ -1,0 +1,10 @@
+---
+layout: page
+---
+<section class="prose opinion">
+  <p class="label">My view &middot; Kate Kelley &middot; {{ page.date | date: "%B %-d, %Y" }}</p>
+{{ content }}
+  <div class="box">
+    <p class="small">This is my opinion, from my own work around funerals. For the facts and the rules, see <a href="/resources/">Resources</a>.{% if page.related and page.related != "" %} Related: <a href="{{ page.related }}">{{ page.related_text }}</a>.{% endif %} <a href="/opinions/">More of my opinions</a></p>
+  </div>
+</section>
