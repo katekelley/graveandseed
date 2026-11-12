@@ -3,14 +3,23 @@ sections:
   - heading: Caskets and containers
     items:
       - term: Casket
-        aka: Coffin (a coffin is six-sided; a casket is a rectangle)
-        image: "https://images.unsplash.com/photo-1718801666793-ed47601f8270?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
-        alt: A white casket on a wood floor
-        credit: Ivo Santos on Unsplash
-        credit_url: "https://unsplash.com/photos/3IVT9G1IaUI"
+        aka: ""
+        image: "/assets/dictionary/casket.jpg"
+        alt: White roses on the lid of a polished wooden casket at a cemetery
+        credit: Getty Images on Unsplash+
+        credit_url: "https://unsplash.com/photos/gw91MHgbkt8"
         description: "A box for burial or viewing, usually metal or wood with a cloth lining. It's often the most marked-up thing a funeral home sells. You can buy one elsewhere, and the funeral home has to accept it."
         link: /resources/caskets/
         link_text: Caskets and lower-cost options
+      - term: Coffin
+        aka: ""
+        image: "/assets/dictionary/coffin.jpg"
+        alt: A polished wooden coffin, wider at the shoulders and narrow at the feet
+        credit: Ivo Santos on Unsplash
+        credit_url: "https://unsplash.com/photos/Scij5JjDstA"
+        description: "People often use the words for the same thing, but a coffin has six sides: wider at the shoulders and narrower at the head and feet. They're common in Europe. Most funeral homes here sell rectangular caskets."
+        link: ""
+        link_text: ""
       - term: Rental casket
         aka: Ceremonial casket
         image: ""
@@ -31,7 +40,7 @@ sections:
         link_text: Compare cremation prices
       - term: Cardboard coffin
         aka: ""
-        image: "https://images.unsplash.com/photo-1644669144234-cda5e5153033?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
+        image: "/assets/dictionary/cardboard-coffin.jpg"
         alt: A cardboard coffin covered in handwritten messages and flowers
         credit: The Good Funeral Guide on Unsplash
         credit_url: "https://unsplash.com/photos/n01GmOCropI"
@@ -40,10 +49,10 @@ sections:
         link_text: ""
       - term: Willow casket
         aka: Woven casket
-        image: "https://images.unsplash.com/photo-1780400358053-ba41f35eb2b7?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
-        alt: A woven willow casket covered in bright flowers
+        image: "/assets/dictionary/willow-casket.jpg"
+        alt: A woven willow casket on wooden stands outdoors, with flowers on top
         credit: Dead Good Legacies on Unsplash
-        credit_url: "https://unsplash.com/photos/H6xs9oRcWUs"
+        credit_url: "https://unsplash.com/photos/LLfq1aIcMBg"
         description: "Woven from willow or other plants. It breaks down in the soil, so it's a common choice for green burial. One is made near Dexter."
         link: /resources/green-burial/
         link_text: Green burial in Michigan
@@ -96,10 +105,10 @@ sections:
         link_text: ""
       - term: Columbarium niche
         aka: ""
-        image: "https://images.unsplash.com/photo-1786342445156-5c305a51dc79?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
-        alt: A white wall of small burial niches with plaques and flowers
-        credit: Adam Young on Unsplash
-        credit_url: "https://unsplash.com/photos/9upmkwO-pPU"
+        image: "/assets/dictionary/columbarium.jpg"
+        alt: A wood-paneled room with rows of small niches with name plates, lit by a window
+        credit: Brunxs on Unsplash
+        credit_url: "https://unsplash.com/photos/zCjNb6_AAQc"
         description: "A small space in a wall or building for an urn, usually with a name plate on the front. Many cemeteries sell them."
         link: /cemeteries/
         link_text: What cemeteries cost
@@ -145,7 +154,7 @@ sections:
         link_text: The first week
       - term: Hearse
         aka: Funeral coach
-        image: "https://images.unsplash.com/photo-1644413816296-9533c9d831bf?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=900"
+        image: "/assets/dictionary/hearse.jpg"
         alt: A willow casket with flowers in the back of a hearse
         credit: The Good Funeral Guide on Unsplash
         credit_url: "https://unsplash.com/photos/DzLRoqZOYqw"
