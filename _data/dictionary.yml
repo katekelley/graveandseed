@@ -152,6 +152,15 @@ sections:
         description: "What the funeral home brings to take someone from a home or hospital. The body is covered, usually with a quilted cover. If someone dies at home, you can ask for a few minutes before they arrive, or to walk out with them."
         link: /resources/first-week/
         link_text: The first week
+      - term: Pouch
+        aka: Body bag, first call pouch
+        image: ""
+        alt: ""
+        credit: ""
+        credit_url: ""
+        description: "A heavy zippered bag used to move someone. Hospitals and the medical examiner often use one. For deaths at home, many funeral homes use only the cot cover. If you're there, you can ask that they not zip your person into a bag in front of you, or that they use a family quilt instead."
+        link: /resources/first-week/
+        link_text: The first week
       - term: Hearse
         aka: Funeral coach
         image: "/assets/dictionary/hearse.jpg"
