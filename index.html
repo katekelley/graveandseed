@@ -25,7 +25,7 @@ og_description: "Celebration of life planning in Ann Arbor. What things cost, wh
     <p class="lede">{{ c.tagline_start }}{% if c.tagline_emphasis != "" %} <em>{{ c.tagline_emphasis }}</em>{% endif %}.</p>
     <div class="hero-actions">
       <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
-      <a class="hero-cta quiet" href="{{ c.booking_url }}" rel="noopener">Book a free call</a>
+      <a class="hero-cta quiet" href="{{ c.booking_url }}" rel="noopener">Book a free 20-minute call</a>
     </div>
     <p class="crisis">{{ c.crisis_note }} <a href="/resources/first-week/">{{ c.crisis_link_text }}</a>.</p>
   </div>
@@ -74,6 +74,9 @@ og_description: "Celebration of life planning in Ann Arbor. What things cost, wh
 
     <section class="next">
       <h2>{{ c.contact_heading }}</h2>
+      {%- if c.contact_intro and c.contact_intro != "" %}
+      <p>{{ c.contact_intro }}</p>
+      {%- endif %}
       <div class="actions">
         {%- if c.booking_url != "" %}<a class="button" href="{{ c.booking_url }}" rel="noopener">Book a free 20-minute call</a>{% endif %}
         <a class="button quiet" href="/contact/">Send a message</a>

@@ -40,6 +40,7 @@ content:
           - { name: price_from, label: Starting price ($), type: number }
       - { name: pricing_note, label: Pricing note, type: text }
       - { name: contact_heading, label: "Contact: heading", type: string }
+      - { name: contact_intro, label: "Home: text under the contact heading", type: text }
       - { name: email, label: Email, type: string }
       - { name: phone, label: Phone (leave blank to hide), type: string }
       - { name: phone_note, label: Phone note, type: string }

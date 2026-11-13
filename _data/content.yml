@@ -48,7 +48,7 @@ tiers:
     timing: "Best with 2+ weeks"
     price_from: 1250
   - name: "Day-of coordination"
-    description: "You have the plan. I make it happen so you don't have to."
+    description: "You have the plan. I make it happen so you don't have to. I'm the point person the caterer and venue call that day, so no one in the family has to be."
     timing: "Can come together in about a week"
     price_from: 850
 pricing_note: "These are starting prices for a two-hour celebration. Larger or more complex days cost more, and I'll give you a clear written quote after a short conversation."
@@ -64,6 +64,7 @@ scatter_price_from: 200
 scatter: "A short ceremony at a lake, a garden or a graveside, for ashes that have been waiting at home."
 
 contact_heading: "Tell me who you're remembering"
+contact_intro: "Book a free 20-minute call, send a text, or write me a message. Share as much or as little as you want. There's nothing to decide yet."
 email: "kate@graveandseed.com"
 phone: "(734) 489-9915"
 phone_note: "Texts welcome"

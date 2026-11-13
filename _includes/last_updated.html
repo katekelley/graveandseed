@@ -1,0 +1,36 @@
+{%- comment -%}
+Shows "Last updated [date]" using the date of the most recent GitHub commit to this page
+(and any data files listed in the page's updated_from front matter). Nothing to maintain by hand.
+If GitHub can't be reached, the line stays hidden.
+{%- endcomment -%}
+<p class="small" id="last-updated" hidden>Last updated <time></time>.</p>
+<script>
+(function () {
+  var paths = [{{ page.path | jsonify }}{% for f in page.updated_from %}, {{ f | jsonify }}{% endfor %}];
+  var key = 'gs-updated:' + paths.join('|');
+  var el = document.getElementById('last-updated');
+  function show(iso) {
+    var d = new Date(iso);
+    if (isNaN(d)) return;
+    var t = el.querySelector('time');
+    t.setAttribute('datetime', iso.slice(0, 10));
+    t.textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/Detroit' });
+    el.hidden = false;
+  }
+  try {
+    var cached = JSON.parse(localStorage.getItem(key) || 'null');
+    if (cached && Date.now() - cached.at < 6 * 3600 * 1000) { show(cached.iso); return; }
+  } catch (e) {}
+  Promise.all(paths.map(function (p) {
+    return fetch('https://api.github.com/repos/katekelley/graveandseed/commits?per_page=1&path=' + encodeURIComponent(p))
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (j) { return j[0] ? j[0].commit.committer.date : ''; })
+      .catch(function () { return ''; });
+  })).then(function (dates) {
+    var iso = dates.filter(Boolean).sort().pop();
+    if (!iso) return;
+    try { localStorage.setItem(key, JSON.stringify({ iso: iso, at: Date.now() })); } catch (e) {}
+    show(iso);
+  });
+})();
+</script>
