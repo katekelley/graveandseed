@@ -2,12 +2,18 @@
 <article class="dict-item" id="{{ i.term | slugify }}">
   <figure>
     {%- if i.image and i.image != "" %}
-    <img src="{{ i.image }}" alt="{{ i.alt }}" loading="lazy">
-    {%- if i.credit and i.credit != "" %}<figcaption>Photo: {% if i.credit_url and i.credit_url != "" %}<a href="{{ i.credit_url }}" rel="noopener">{{ i.credit }}</a>{% else %}{{ i.credit }}{% endif %}</figcaption>{% endif %}
+    <img src="{{ i.image }}" alt="{{ i.alt }}" loading="lazy"{% if i.fit == "contain" %} class="contain"{% if i.bg and i.bg != "" %} style="background: {{ i.bg }}"{% endif %}{% endif %}>
+    {%- if i.credit and i.credit != "" %}<figcaption>{% if i.label and i.label != "" %}{{ i.label }} {% endif %}Photo: {% if i.credit_url and i.credit_url != "" %}<a href="{{ i.credit_url }}" rel="noopener">{{ i.credit }}</a>{% else %}{{ i.credit }}{% endif %}</figcaption>{% endif %}
     {%- else %}
     <div class="dict-blank" role="img" aria-label="Photo coming soon"><span>Photo coming soon</span></div>
     {%- endif %}
   </figure>
+  {%- if i.image2 and i.image2 != "" %}
+  <figure>
+    <img src="{{ i.image2 }}" alt="{{ i.alt2 }}" loading="lazy"{% if i.fit2 == "contain" %} class="contain"{% if i.bg2 and i.bg2 != "" %} style="background: {{ i.bg2 }}"{% endif %}{% endif %}>
+    {%- if i.credit2 and i.credit2 != "" %}<figcaption>{% if i.label2 and i.label2 != "" %}{{ i.label2 }} {% endif %}Photo: {% if i.credit_url2 and i.credit_url2 != "" %}<a href="{{ i.credit_url2 }}" rel="noopener">{{ i.credit2 }}</a>{% else %}{{ i.credit2 }}{% endif %}</figcaption>{% endif %}
+  </figure>
+  {%- endif %}
   <div>
     <h3>{{ i.term }}</h3>
     {%- if i.aka and i.aka != "" %}<p class="aka">Also called: {{ i.aka }}</p>{% endif %}

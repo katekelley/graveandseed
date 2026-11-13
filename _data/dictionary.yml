@@ -67,19 +67,32 @@ sections:
         link_text: Where to find one
       - term: Church truck
         aka: Casket carriage, bier
-        image: "/assets/dictionary/church-truck.jpg"
-        alt: "A wheeled cart with a black fabric skirt and a steel frame on top, in a chapel"
-        credit: "Cherubino, CC BY-SA 3.0"
-        credit_url: "https://commons.wikimedia.org/wiki/File:Friedhofskapelle_Butzbach_19.JPG"
+        image: "/assets/dictionary/church-truck-ferno.jpg"
+        alt: "A bronze-colored folding metal frame on four large rubber wheels, with handles at each end"
+        fit: contain
+        label: "A church truck for the cemetery, with big wheels for grass."
+        credit: FERNO Group
+        credit_url: "https://www.ferno.com/product/cemetery-church-truck"
+        image2: "/assets/dictionary/church-truck.jpg"
+        alt2: "A wheeled cart with a black fabric skirt and a steel frame on top, in a chapel"
+        label2: "One in a chapel, with its skirt on."
+        credit2: "Cherubino, CC BY-SA 3.0"
+        credit_url2: "https://commons.wikimedia.org/wiki/File:Friedhofskapelle_Butzbach_19.JPG"
         description: "A folding stand on wheels that holds the casket at a funeral, visitation or graveside service. It's often hidden under a skirt of fabric. It lets staff move the casket without carrying it."
         link: ""
         link_text: ""
       - term: Showroom truck
         aka: Casket display stand
-        image: "/assets/dictionary/showroom.jpg"
-        alt: "A carpeted funeral home room with open caskets displayed on low stands"
-        credit: "Wolfdog406, CC BY-SA 4.0"
-        credit_url: "https://commons.wikimedia.org/wiki/File:A_casket_showroom_in_Billings,_Montana.jpg"
+        image: "/assets/dictionary/showroom-truck-ferno.jpg"
+        alt: "A low, open frame of polished metal tubes on four wheels"
+        fit: contain
+        credit: FERNO Group
+        credit_url: "https://www.ferno.com/product/model-112-showroom-truck"
+        image2: "/assets/dictionary/showroom.jpg"
+        alt2: "A carpeted funeral home room with open caskets displayed on low stands"
+        label2: "Caskets on stands in a selection room."
+        credit2: "Wolfdog406, CC BY-SA 4.0"
+        credit_url2: "https://commons.wikimedia.org/wiki/File:A_casket_showroom_in_Billings,_Montana.jpg"
         description: "A low stand that holds a casket in the funeral home's selection room so you can see it at full size. You don't have to buy a casket you see on display, and you can bring in one from somewhere else."
         link: ""
         link_text: ""
@@ -163,19 +176,29 @@ sections:
     items:
       - term: Cot
         aka: Stretcher, removal cot
-        image: ""
-        alt: ""
-        credit: ""
-        credit_url: ""
+        image: "/assets/dictionary/cot-ferno.jpg"
+        alt: "A metal stretcher on wheels with a thin burgundy mattress and two black straps"
+        fit: contain
+        credit: FERNO Group
+        credit_url: "https://www.ferno.com/product/model-23-mortuary-cot"
         description: "What the funeral home brings to take someone from a home or hospital. The body is covered, usually with a quilted cover. If someone dies at home, you can ask for a few minutes before they arrive, or to walk out with them."
         link: /resources/first-week/
         link_text: The first week
       - term: Pouch
         aka: Body bag, first call pouch
-        image: "/assets/dictionary/pouch.jpg"
-        alt: "Three men hold up an empty white body bag with a long black zipper"
-        credit: "US Navy, public domain"
-        credit_url: "https://commons.wikimedia.org/wiki/File:Body_bag.jpg"
+        image: "/assets/dictionary/body-bag-ferno.jpg"
+        alt: "An empty white plastic body bag laid flat, with a long black zipper curving around the top"
+        fit: contain
+        bg: "#000"
+        label: "A plastic body bag."
+        credit: FERNO Group
+        credit_url: "https://www.ferno.com/us/product/heavy-duty-body-bag-in-blue"
+        image2: "/assets/dictionary/first-call-pouch-ferno.jpg"
+        alt2: "A burgundy cloth cover zipped over the top of a cot, shaped like a long box"
+        fit2: contain
+        label2: "A cloth cot cover, sometimes called a first call pouch."
+        credit2: FERNO Group
+        credit_url2: "https://www.ferno.com/product/first-call-pouch"
         description: "A heavy zippered bag used to move someone. Hospitals and the medical examiner often use one. For deaths at home, many funeral homes use only the cot cover. If you're there, you can ask that they not zip your person into a bag in front of you, or that they use a family quilt instead."
         link: /resources/first-week/
         link_text: The first week
@@ -211,11 +234,19 @@ behind_note: "These are part of what happens at a funeral home or crematory. Mos
 behind:
   - term: Dressing table
     aka: Preparation table, embalming table, operating table
-    image: "/assets/dictionary/dressing-table.jpg"
-    alt: "A long stainless steel table in a clean, tiled preparation room"
-    credit: "Davidrase, CC BY-SA 3.0"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Plancha_embalsamamiento.jpg"
-    description: "A steel table where staff wash and dress the person, and do embalming if the family asked for it."
+    image: "/assets/dictionary/dressing-table-ferno.jpg"
+    alt: "A long, narrow gray table on folding metal legs with four wheels"
+    fit: contain
+    label: "A folding dressing table."
+    credit: FERNO Group
+    credit_url: "https://www.ferno.com/product/model-34-folding-dressing-table"
+    image2: "/assets/dictionary/operating-table-ferno.jpg"
+    alt2: "A stainless steel table with raised edges and side panels, on a pedestal base with foot pedals"
+    fit2: contain
+    label2: "A steel operating table, used for embalming."
+    credit2: FERNO Group
+    credit_url2: "https://www.ferno.com/product/model-101-h-hydraulic-table"
+    description: "A table where staff wash and dress the person. Embalming, if the family asked for it, is done on a steel table that tilts so fluids drain away."
     link: ""
     link_text: ""
   - term: Cooler
