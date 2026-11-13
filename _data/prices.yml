@@ -21,6 +21,10 @@ homes:
     town: "Farmington Hills (serves Washtenaw County)"
     phone: "(734) 434-6500"
     website: "https://generationsfuneralservice.com"
+    saved:
+      - { label: "Direct cremation (screenshot, Nov 8, 2026)", file: "generations-direct-cremation-2026-11-08.jpg" }
+      - { label: "Simple burial (screenshot, Nov 8, 2026)", file: "generations-simple-burial-2026-11-08.jpg" }
+      - { label: "Prices by county (screenshot, Nov 8, 2026)", file: "generations-county-map-2026-11-08.jpg" }
     posted: "Cremation and burial prices posted"
     checked: "Nov 3, 2026"
     direct_cremation: 895
@@ -43,6 +47,8 @@ homes:
     town: "Chelsea"
     phone: "(734) 475-1551"
     website: "https://www.colefuneralchapel.com/images/PDF/Cremation_Packages_January_2026.pdf"
+    saved:
+      - { label: "Cremation packages (PDF, effective Jan 13, 2026)", file: "cole-cremation-2026-01-13.pdf" }
     posted: "Cremation prices posted (effective Jan 13, 2026)"
     checked: "Nov 8, 2026"
     direct_cremation: 2036
@@ -67,6 +73,8 @@ homes:
     town: "Ann Arbor and Ypsilanti (three chapels)"
     phone: "(734) 971-2345"
     website: "https://www.niefuneralhomes.com/resources/prices"
+    saved:
+      - { label: "Full price list (PDF, dated May 1, 2023)", file: "nie-2023-05-01.pdf" }
     posted: "Starting prices posted"
     checked: "Nov 3, 2026"
     direct_cremation: 2500
@@ -91,6 +99,8 @@ homes:
     town: "Dexter"
     phone: "(734) 426-4661"
     website: "https://www.dignitymemorial.com/funeral-homes/michigan/dexter/hosmer-muehlig-funeral-chapel/4118/funeral-price-list"
+    saved:
+      - { label: "General price list (PDF, effective Oct 1, 2026)", file: "hosmer-muehlig-2026-10-01.pdf" }
     posted: "Full price list posted (effective Oct 1, 2026)"
     checked: "Nov 3, 2026"
     direct_cremation: 4085
@@ -113,6 +123,8 @@ homes:
     town: "Ann Arbor"
     phone: "(734) 663-3375"
     website: "https://www.dignitymemorial.com/funeral-homes/michigan/ann-arbor/muehlig-funeral-chapel/4117/funeral-price-list"
+    saved:
+      - { label: "General price list (PDF, effective Oct 1, 2026)", file: "muehlig-2026-10-01.pdf" }
     posted: "Full price list posted (effective Oct 1, 2026)"
     checked: "Nov 3, 2026"
     direct_cremation: 4160

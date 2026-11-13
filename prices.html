@@ -127,9 +127,10 @@ og_description: "Published cremation, burial and service prices from every funer
       <p class="small">Before you choose, check who owns a funeral home, whether its license is current, and whether the state has disciplined it: <a href="/resources/check-a-funeral-home/">How to check a funeral home in Michigan</a>.</p>
       <ol class="notes">
         {%- for h in p.homes %}
-        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.owner and h.owner != "" %} Owned by {{ h.owner }}.{% endif %}{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}{% if h.yelp_more and h.yelp_more != "" %} &middot; <a href="{{ h.yelp_more }}" rel="noopener">Yelp (second location)</a>{% endif %}</li>
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.owner and h.owner != "" %} Owned by {{ h.owner }}.{% endif %}{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% for f in h.saved %} &middot; <a href="/assets/price-lists/{{ f.file }}">Saved copy: {{ f.label }}</a>{% endfor %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}{% if h.yelp_more and h.yelp_more != "" %} &middot; <a href="{{ h.yelp_more }}" rel="noopener">Yelp (second location)</a>{% endif %}</li>
         {%- endfor %}
       </ol>
+      <p class="small">"Saved copy" links go to the price list as it was when I checked, in case the funeral home changes or takes down its own.</p>
     </section>
 
     <section>
