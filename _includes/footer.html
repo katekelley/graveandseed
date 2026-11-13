@@ -1,10 +1,14 @@
 <footer>
   <div class="wrap">
     <div class="foot-card">
-      <span class="label"><a href="/" style="color: inherit">Grave and Seed LLC</a> &middot; {{ site.data.content.location }}</span>
-      <span class="label"><a href="tel:+17344899915" style="color: inherit">{{ site.data.content.phone }}</a> &middot; {{ site.data.content.phone_note | downcase }}</span>
-      <span class="label"><a href="/faq/" style="color: inherit">FAQ</a>{% if site.data.content.facebook_url and site.data.content.facebook_url != "" %} &middot; <a href="{{ site.data.content.facebook_url }}" rel="noopener" style="color: inherit">Facebook</a>{% endif %} &middot; <a href="/privacy/" style="color: inherit">Privacy</a></span>
-      <span class="label"><a href="/professionals/" style="color: inherit">For professionals</a> &middot; <a href="/press/" style="color: inherit">Press</a></span>
+      <div class="foot-col">
+        <span class="label"><a href="/" style="color: inherit">Grave and Seed LLC</a> &middot; {{ site.data.content.location }}</span>
+        <span class="label"><a href="tel:+17344899915" style="color: inherit">{{ site.data.content.phone }}</a> &middot; {{ site.data.content.phone_note | downcase }}</span>
+      </div>
+      <div class="foot-col foot-links">
+        <span class="label"><a href="/faq/" style="color: inherit">FAQ</a>{% if site.data.content.facebook_url and site.data.content.facebook_url != "" %} &middot; <a href="{{ site.data.content.facebook_url }}" rel="noopener" style="color: inherit">Facebook</a>{% endif %} &middot; <a href="/privacy/" style="color: inherit">Privacy</a></span>
+        <span class="label"><a href="/professionals/" style="color: inherit">For professionals</a> &middot; <a href="/press/" style="color: inherit">Press</a></span>
+      </div>
     </div>
   </div>
 </footer>
