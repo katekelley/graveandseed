@@ -90,6 +90,7 @@ content:
           - { name: featured, label: "Show in full (off = short list at the bottom)", type: boolean }
           - { name: description, label: Description, type: text }
       - { name: about_heading, label: "About: opening line", type: string }
+      - { name: about_pronouns, label: "About: your pronouns (leave blank to hide)", type: string }
       - { name: about, label: "About: paragraphs", type: text, list: true }
   - name: resources
     label: Resources page guides

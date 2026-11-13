@@ -33,6 +33,9 @@ og_description: "Kate plans celebrations of life in Ann Arbor: direct about what
       <img src="/assets/kate.jpg" alt="Kate, smiling, sitting by a bright window" width="800" height="1200">
       <div class="plain">
         <h2>{{ c.about_heading }}</h2>
+        {%- if c.about_pronouns and c.about_pronouns != "" %}
+        <p class="note">Kate Kelley ({{ c.about_pronouns }})</p>
+        {%- endif %}
         {%- for p in c.about %}
         <p>{{ p }}</p>
         {%- endfor %}
