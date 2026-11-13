@@ -2,7 +2,7 @@
 layout: null
 permalink: /prices/
 og_title: What funerals and cremation cost around Ann Arbor
-og_description: "Published cremation, burial and service prices from every funeral home serving Washtenaw County that posts them, side by side, with the date each was checked. Free to share."
+og_description: "Cremation, burial and service prices from Washtenaw County funeral homes' price lists, side by side, with the date each was checked. Free to share."
 ---
 {%- assign p = site.data.prices -%}
 {%- assign c = site.data.content -%}
@@ -12,7 +12,7 @@ og_description: "Published cremation, burial and service prices from every funer
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Funeral and Cremation Prices in Ann Arbor and Washtenaw County | Grave and Seed</title>
-<meta name="description" content="Funeral and cremation prices around Ann Arbor: published costs from every funeral home serving Washtenaw County that posts them, side by side, with the date each was checked.">
+<meta name="description" content="Funeral and cremation prices around Ann Arbor: costs from Washtenaw County funeral homes' price lists, side by side, with the date each was checked.">
 {% include head.html %}
 <style>
 {% include compare_css.html %}
@@ -23,7 +23,7 @@ og_description: "Published cremation, burial and service prices from every funer
   <div class="wrap">
     {% include nav.html here="prices" %}
     <h1>What funerals and cremation cost around Ann Arbor</h1>
-    <p class="lede">Published prices, checked {{ p.updated }}.</p>
+    <p class="lede">Prices from each funeral home's price list, checked {{ p.updated }}.</p>
   </div>
 </header>
 
@@ -52,8 +52,8 @@ og_description: "Published cremation, burial and service prices from every funer
 
     <section>
       <span class="label">Funeral home by funeral home</span>
-      <h2>Posted prices, side by side</h2>
-      <p class="small">The lowest posted price in each row is in <strong>bold</strong> and marked &#9660;. A dash means the funeral home doesn't post that price online.</p>
+      <h2>Prices, side by side</h2>
+      <p class="small">The lowest posted price in each row is in <strong>bold</strong> and marked &#9660;. A dash means the funeral home doesn't list that price, or I don't have it yet.</p>
       <p class="small">Tap a column heading to put the lowest price first.</p>
       <p class="small scroll-hint">Scroll sideways for more prices. Funeral home names stay put.</p>
       <div class="picker" id="picker" role="region" aria-label="Compare one price">
@@ -84,14 +84,14 @@ og_description: "Published cremation, burial and service prices from every funer
           </div>
           {%- endfor %}
           {%- if missing.size > 0 %}
-          <p class="not-posted">Not posted online: {{ missing | join: ", " }}.</p>
+          <p class="not-posted">No price listed: {{ missing | join: ", " }}.</p>
           {%- endif %}
         </div>
         {%- endif %}
         {%- endfor %}
         <p class="small">Or see everything side by side in the full table below.</p>
       </div>
-      <div class="table-wrap" role="region" aria-label="Posted prices by funeral home" tabindex="0">
+      <div class="table-wrap" role="region" aria-label="Prices by funeral home" tabindex="0">
         <table class="compare flip sortable">
           <thead>
             <tr>
@@ -127,10 +127,9 @@ og_description: "Published cremation, burial and service prices from every funer
       <p class="small">Before you choose, check who owns a funeral home, whether its license is current, and whether the state has disciplined it: <a href="/resources/check-a-funeral-home/">How to check a funeral home in Michigan</a>.</p>
       <ol class="notes">
         {%- for h in p.homes %}
-        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.owner and h.owner != "" %} Owned by {{ h.owner }}.{% endif %}{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %} <a href="{{ h.website }}" rel="noopener">Their prices</a>{% for f in h.saved %} &middot; <a href="/assets/price-lists/{{ f.file }}">Saved copy: {{ f.label }}</a>{% endfor %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}{% if h.yelp_more and h.yelp_more != "" %} &middot; <a href="{{ h.yelp_more }}" rel="noopener">Yelp (second location)</a>{% endif %}</li>
+        <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}. {{ h.posted }}; checked {{ h.checked }}.{% if h.owner and h.owner != "" %} Owned by {{ h.owner }}.{% endif %}{% if h.direct_cremation_note != "" %} Direct cremation: {{ h.direct_cremation_note }}{% endif %}{% if h.notes != "" %} {{ h.notes }}{% endif %}{% if h.website and h.website != "" %} <a href="{{ h.website }}" rel="noopener">Their prices</a> &middot;{% endif %}{% if h.yelp and h.yelp != "" %} <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}{% if h.yelp_more and h.yelp_more != "" %} &middot; <a href="{{ h.yelp_more }}" rel="noopener">Yelp (second location)</a>{% endif %}</li>
         {%- endfor %}
       </ol>
-      <p class="small">"Saved copy" links go to the price list as it was when I checked, in case the funeral home changes or takes down its own.</p>
     </section>
 
     <section>
@@ -139,8 +138,8 @@ og_description: "Published cremation, burial and service prices from every funer
     </section>
 
     <section>
-      <span class="label">Not online yet</span>
-      <h2>Funeral homes without posted prices</h2>
+      <span class="label">Still to get</span>
+      <h2>Funeral homes I don't have prices for yet</h2>
       <ul class="plain-list">
         {%- for h in p.not_posted %}
         <li><strong>{{ h.name }}</strong>, {{ h.town }}, {{ h.phone }}: {{ h.status }}{% if h.owner and h.owner != "" %}. Owned by {{ h.owner }}{% endif %}{% if h.yelp and h.yelp != "" %} &middot; <a href="{{ h.yelp }}" rel="noopener">Reviews on Yelp</a>{% endif %}</li>

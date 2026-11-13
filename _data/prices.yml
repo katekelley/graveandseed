@@ -1,6 +1,6 @@
-updated: "November 3–8, 2026"
+updated: "November 3–13, 2026"
 owners_note: "Owners are from each funeral home's Michigan license record, checked November 6, 2026."
-intro: "Funeral prices in Washtenaw County vary a lot, and half the funeral homes here don't post them online. These are the prices each funeral home publishes, with the date I checked. Always confirm with the funeral home before deciding."
+intro: "Funeral prices in Washtenaw County vary a lot, and half the funeral homes here don't post them online. These come from each funeral home's price list, with the date I checked. Some post their lists online; for the others, I asked for a copy. Always confirm with the funeral home before deciding."
 items:
   - { key: direct_cremation, label: "Direct cremation" }
   - { key: immediate_burial, label: "Immediate burial" }
@@ -21,10 +21,6 @@ homes:
     town: "Farmington Hills (serves Washtenaw County)"
     phone: "(734) 434-6500"
     website: "https://generationsfuneralservice.com"
-    saved:
-      - { label: "Direct cremation (screenshot, Nov 8, 2026)", file: "generations-direct-cremation-2026-11-08.jpg" }
-      - { label: "Simple burial (screenshot, Nov 8, 2026)", file: "generations-simple-burial-2026-11-08.jpg" }
-      - { label: "Prices by county (screenshot, Nov 8, 2026)", file: "generations-county-map-2026-11-08.jpg" }
     posted: "Cremation and burial prices posted"
     checked: "Nov 3, 2026"
     direct_cremation: 895
@@ -47,8 +43,6 @@ homes:
     town: "Chelsea"
     phone: "(734) 475-1551"
     website: "https://www.colefuneralchapel.com/images/PDF/Cremation_Packages_January_2026.pdf"
-    saved:
-      - { label: "Cremation packages (PDF, effective Jan 13, 2026)", file: "cole-cremation-2026-01-13.pdf" }
     posted: "Cremation prices posted (effective Jan 13, 2026)"
     checked: "Nov 8, 2026"
     direct_cremation: 2036
@@ -63,34 +57,73 @@ homes:
     memorial: ""
     hearse: ""
     notes: "Only cremation prices are posted. Their standard cremation, with a free family viewing, is $2,350, and a public viewing and funeral followed by cremation is $6,351, both plus the same outside fees."
+  - name: "Stark Funeral Professionals"
+    owner_short: "Stark Funeral Professionals Inc., Ypsilanti"
+    owner: "Stark Funeral Professionals Inc. (Ypsilanti, MI)"
+    yelp: "https://www.yelp.com/biz/stark-funeral-professionals-ypsilanti"
+    short: "Stark"
+    town: "Ypsilanti"
+    phone: "(734) 482-4900"
+    website: ""
+    posted: "No prices online; full price list (effective Nov 4, 2026) from the funeral home"
+    checked: "Nov 13, 2026"
+    direct_cremation: 2093
+    direct_cremation_note: "With their fiberboard container. $1,718 if you provide your own container. The crematory's charge is added on top."
+    immediate_burial: 3350
+    burial_casket: 4525
+    basic_services: 2795
+    transfer: 450
+    embalming: 955
+    visitation: 550
+    ceremony: 550
+    memorial: 550
+    hearse: 525
+    notes: "Immediate burial assumes you provide the casket; burial with their cloth-covered wood casket is $4,525. Green burial with a willow casket is $6,345. A private family moment (up to 5 people, 20 minutes) is $235. Transfer adds $100 over 250 lbs."
+  - name: "C & H Community for Funerals"
+    owner_short: "Curries & Herron Funeral Home LLC, Ypsilanti"
+    owner: "Curries & Herron Funeral Home LLC (Ypsilanti, MI)"
+    yelp: "https://www.yelp.com/biz/c-and-h-community-home-for-funerals-ypsilanti"
+    short: "C & H"
+    town: "Ypsilanti"
+    phone: "(734) 482-9889"
+    website: ""
+    posted: "No prices online; full price list (effective Jan 1, 2026) from the funeral home"
+    checked: "Nov 13, 2026"
+    direct_cremation: 2155
+    direct_cremation_note: "With their cremation container. $1,845 if you provide your own container. The same list also gives $2,400 as the direct cremation charge, so ask which applies."
+    immediate_burial: 3650
+    burial_casket: 4545
+    basic_services: 2500
+    transfer: 385
+    embalming: 945
+    visitation: 495
+    ceremony: 495
+    memorial: 500
+    hearse: 475
+    notes: "Immediate burial ($3,650) is with a casket you provide. Burial with their simplest casket is their $3,500 service charge plus their lowest-priced casket ($1,045), not counting a grave liner ($1,170 and up). Also called Lucille's Memorial Chapel on the price list."
   - name: "Nie Family Funeral Home"
     owner_short: "Nie Funeral Home Inc., Ann Arbor"
     owner: "Nie Funeral Home Inc. (Ann Arbor, MI)"
     yelp: "https://www.yelp.com/biz/nie-family-funeral-home-and-cremation-service-ann-arbor"
     yelp_more: "https://www.yelp.com/biz/nie-funeral-home-ann-arbor-2"
     short: "Nie Family"
-    starting: true
     town: "Ann Arbor and Ypsilanti (three chapels)"
     phone: "(734) 971-2345"
     website: "https://www.niefuneralhomes.com/resources/prices"
-    saved:
-      - { label: "Full price list (PDF, dated May 1, 2023)", file: "nie-2023-05-01.pdf" }
-    posted: "Starting prices posted"
-    checked: "Nov 3, 2026"
-    direct_cremation: 2500
-    direct_cremation_note: "Starting price. Includes basic services, refrigeration up to 48 hours, transfers and return of ashes."
-    immediate_burial: 3700
-    burial_casket: 4795
-    dated:
-      burial_casket: "May 2023 price list"
-    basic_services: ""
-    transfer: ""
-    embalming: ""
-    visitation: ""
-    ceremony: ""
-    memorial: ""
-    hearse: ""
-    notes: "Burial with their simplest casket is a cloth-covered casket, from their full price list dated May 1, 2023. Green burial with a willow casket is $5,845. A grave liner or vault, if the cemetery requires one, is $1,095 to $3,895 more."
+    posted: "Starting prices posted online; full price list (effective Apr 1, 2026) from the funeral home"
+    checked: "Nov 13, 2026"
+    direct_cremation: 2995
+    direct_cremation_note: "With their cardboard container. $2,745 if you provide your own container. The crematory's charge is added on top. Includes refrigeration up to 48 hours, transfers and return of ashes."
+    immediate_burial: 3995
+    burial_casket: 5290
+    basic_services: 3095
+    transfer: 795
+    embalming: 795
+    visitation: 750
+    ceremony: 750
+    memorial: 750
+    hearse: 550
+    notes: "Viewing, funeral and memorial service prices are for the Carpenter Road and Janowiak chapels; the Liberty Road chapel is $1,000 each. Services on a Saturday, Sunday or holiday add $400 to each item. Their simplest casket is cloth-covered. Green burial with a willow casket is $6,090. A grave liner or vault, if the cemetery requires one, is $1,205 to $4,105 more. Their website lists direct cremation from $2,500 and immediate burial from $3,700, lower than the price list."
   - name: "Hosmer-Muehlig Funeral Chapel"
     owner_short: "SCI, a national public company, Houston, TX"
     owner: "SCI Michigan Funeral Services Inc., part of Service Corporation International, a publicly traded company (Houston, TX)"
@@ -99,8 +132,6 @@ homes:
     town: "Dexter"
     phone: "(734) 426-4661"
     website: "https://www.dignitymemorial.com/funeral-homes/michigan/dexter/hosmer-muehlig-funeral-chapel/4118/funeral-price-list"
-    saved:
-      - { label: "General price list (PDF, effective Oct 1, 2026)", file: "hosmer-muehlig-2026-10-01.pdf" }
     posted: "Full price list posted (effective Oct 1, 2026)"
     checked: "Nov 3, 2026"
     direct_cremation: 4085
@@ -123,8 +154,6 @@ homes:
     town: "Ann Arbor"
     phone: "(734) 663-3375"
     website: "https://www.dignitymemorial.com/funeral-homes/michigan/ann-arbor/muehlig-funeral-chapel/4117/funeral-price-list"
-    saved:
-      - { label: "General price list (PDF, effective Oct 1, 2026)", file: "muehlig-2026-10-01.pdf" }
     posted: "Full price list posted (effective Oct 1, 2026)"
     checked: "Nov 3, 2026"
     direct_cremation: 4160
@@ -145,18 +174,6 @@ not_posted:
     yelp: "https://www.yelp.com/biz/staffan-mitchell-funeral-home-chelsea"
     town: "Chelsea"
     phone: "(734) 475-1444"
-    status: "No prices online; call for their price list"
-  - name: "Stark Funeral Professionals"
-    owner: "Stark Funeral Professionals Inc. (Ypsilanti, MI)"
-    yelp: "https://www.yelp.com/biz/stark-funeral-professionals-ypsilanti"
-    town: "Ypsilanti"
-    phone: "(734) 482-4900"
-    status: "No prices online; call for their price list"
-  - name: "C & H Community for Funerals"
-    owner: "Curries & Herron Funeral Home LLC (Ypsilanti, MI)"
-    yelp: "https://www.yelp.com/biz/c-and-h-community-home-for-funerals-ypsilanti"
-    town: "Ypsilanti"
-    phone: "(734) 482-9889"
     status: "No prices online; call for their price list"
   - name: "Robison-Bahnmiller Funeral Home"
     owner: "Robison-Bahnmiller Funeral Home Inc. (Saline, MI)"
