@@ -264,7 +264,9 @@ footer .label a, footer .label { color: var(--muted); }
 .hero-cta.quiet { font-weight: 500; }
 .hero-title { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .hero-title h1 { flex: 1 1 auto; }
-.hero-title img { flex: none; width: clamp(6.5rem, 26vw, 9.5rem); height: auto; aspect-ratio: 48 / 47; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); transform: rotate(1.5deg); box-shadow: 0 2px 6px rgba(0,0,0,0.18); }
+.hero-title img { flex: none; width: clamp(6.5rem, 26vw, 9.5rem); height: auto; aspect-ratio: 48 / 47; object-fit: cover; border-radius: 3px; border: 5px solid #F6EFE2; background: #F6EFE2; transform: rotate(1.5deg); box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero-title img { filter: brightness(1.12) saturate(1.08); box-shadow: 0 3px 12px rgba(0,0,0,0.5); } }
+:root[data-theme="dark"] .hero-title img { filter: brightness(1.12) saturate(1.08); box-shadow: 0 3px 12px rgba(0,0,0,0.5); }
 header .lede.hero-who { color: var(--ink); }
 @media print { .hero-title img { display: none; } }
 .print-source { display: none; }
