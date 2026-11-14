@@ -262,11 +262,11 @@ footer .label a, footer .label { color: var(--muted); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
 .hero-actions .hero-cta { margin-top: 0; }
 .hero-cta.quiet { font-weight: 500; }
-.hero-who { display: flex; gap: 1rem; align-items: center; margin-block: 0.25rem 0.5rem; }
-.hero-who img { width: 5.5rem; height: 5.5rem; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--line); }
-.hero-who p { margin: 0; font-size: 1.15rem; line-height: 1.45; color: var(--ink); }
-@media (max-width: 560px) { .hero-who img { width: 4.5rem; height: 4.5rem; } .hero-who p { font-size: 1.05rem; } }
-@media print { .hero-who img { display: none; } }
+.hero-title { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.hero-title h1 { flex: 1 1 auto; }
+.hero-title img { flex: none; width: clamp(6.5rem, 26vw, 9.5rem); height: auto; aspect-ratio: 48 / 47; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); transform: rotate(1.5deg); box-shadow: 0 2px 6px rgba(0,0,0,0.18); }
+header .lede.hero-who { color: var(--ink); }
+@media print { .hero-title img { display: none; } }
 .print-source { display: none; }
 /* Print: plain black on white, no collage, menu or buttons, and the address of every link written out, since links don't work on paper. */
 @media print {

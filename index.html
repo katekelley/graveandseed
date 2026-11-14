@@ -21,11 +21,13 @@ og_description: "Help in Ann Arbor through goodbye. What things cost, what you n
 <header class="soil hero">
   <div class="wrap">
     {% include nav.html here="home" %}
-    <h1>{{ c.hero_heading }}</h1>
+    <div class="hero-title">
+      <h1>{{ c.hero_heading }}</h1>
+      <img src="/assets/kate-hero.jpg" alt="Kate, in glasses with pink and purple hair, sitting in a wood-paneled booth" width="480" height="470">
+    </div>
     {%- if c.hero_who and c.hero_who != "" %}
-    <div class="hero-who"><img src="/assets/kate-face.jpg" alt="Kate, smiling, in glasses and a black tank top" width="120" height="120"><p>{{ c.hero_who }}</p></div>
+    <p class="lede hero-who">{{ c.hero_who }}</p>
     {%- endif %}
-    <p class="lede">{{ c.tagline_start }}{% if c.tagline_emphasis != "" %} <em>{{ c.tagline_emphasis }}</em>{% endif %}.</p>
     <div class="hero-actions">
       <a class="hero-cta" href="/prices/">See what funerals cost in Washtenaw County &rarr;</a>
       <a class="hero-cta quiet" href="{{ c.booking_url }}" rel="noopener">Book a free 20-minute call</a>
