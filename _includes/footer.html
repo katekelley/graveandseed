@@ -12,3 +12,21 @@
     </div>
   </div>
 </footer>
+<script>
+/* Keep the tilted black backing from drifting sideways on tall cards (long pages on phones). */
+(function () {
+  var sel = "header.soil .wrap, main .wrap > *, footer .wrap > *";
+  function fit() {
+    document.querySelectorAll(sel).forEach(function (el) {
+      el.style.removeProperty("--tilt");
+      var base = parseFloat(getComputedStyle(el).getPropertyValue("--tilt")) || -0.25;
+      var h = el.offsetHeight || 1;
+      var max = Math.atan(8 / h) * 180 / Math.PI;
+      if (Math.abs(base) > max) el.style.setProperty("--tilt", (base < 0 ? -max : max).toFixed(3) + "deg");
+    });
+  }
+  fit();
+  window.addEventListener("load", fit);
+  var t; window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(fit, 150); });
+})();
+</script>
