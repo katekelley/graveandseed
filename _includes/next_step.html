@@ -1,0 +1,21 @@
+{%- comment -%}
+A gentle next step at the end of a guide: a free call, a text, or a message.
+Pass label, heading and text (no double quotes inside them). Clicks on the call
+and text buttons are counted by track.html as "contact:" events, titled with
+the page they happened on. Hidden when printed.
+{%- endcomment -%}
+{%- assign c = site.data.content -%}
+<section class="next no-print" id="next-step">
+  <span class="label">{{ include.label | default: "When you're ready" }}</span>
+  <h2>{{ include.heading }}</h2>
+  <p>{{ include.text }}</p>
+  <div class="actions">
+    {%- if c.booking_url != "" %}
+    <a class="button" href="{{ c.booking_url }}" rel="noopener">Book a free 20-minute call</a>
+    {%- endif %}
+    {%- if c.phone != "" %}
+    <a class="button quiet" href="sms:+17344899915">Text {{ c.phone }}</a>
+    {%- endif %}
+  </div>
+  <p class="small">Or <a href="/contact/">send a message</a>. Share as much or as little as you want.</p>
+</section>

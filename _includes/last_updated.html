@@ -9,9 +9,9 @@ If GitHub can't be reached, the line stays hidden.
   var paths = [{{ page.path | jsonify }}{% for f in page.updated_from %}, {{ f | jsonify }}{% endfor %}];
   var key = 'gs-updated:' + paths.join('|');
   var el = document.getElementById('last-updated');
-  // Sit inside the last card instead of making a tiny card of its own.
+  // Sit inside the last card instead of making a tiny card of its own (but not the next-step card).
   var prev = el.previousElementSibling;
-  while (prev && prev.hidden) prev = prev.previousElementSibling;
+  while (prev && (prev.hidden || prev.id === 'next-step')) prev = prev.previousElementSibling;
   if (prev && prev.tagName === 'SECTION') prev.appendChild(el);
   function show(iso) {
     var d = new Date(iso);
