@@ -1,4 +1,4 @@
-updated: "November 3–13, 2026"
+updated: "November 3–16, 2026"
 owners_note: "Owners are from each funeral home's Michigan license record, checked November 6, 2026."
 intro: "Funeral prices in Washtenaw County vary a lot, and half the funeral homes here don't post them online. These come from each funeral home's price list, with the date I checked. Some post their lists online; for the others, I asked for a copy. Always confirm with the funeral home before deciding."
 items:
@@ -43,20 +43,20 @@ homes:
     town: "Chelsea"
     phone: "(734) 475-1551"
     website: "https://www.colefuneralchapel.com/images/PDF/Cremation_Packages_January_2026.pdf"
-    posted: "Cremation prices posted (effective Jan 13, 2026)"
-    checked: "Nov 8, 2026"
-    direct_cremation: 2036
-    direct_cremation_note: "Their $1,730 package plus the crematory fee ($225), medical examiner ($75) and tax, which they total as $2,036. Includes pickup, paperwork, cremation and ashes returned in a simple urn. A private family viewing is $100 more, when possible. Death certificates are extra ($15 for the first, $5 each after). Deaths at night add $120; deaths at home add $60."
-    immediate_burial: ""
-    burial_casket: ""
-    basic_services: ""
-    transfer: ""
-    embalming: ""
-    visitation: ""
-    ceremony: ""
-    memorial: ""
-    hearse: ""
-    notes: "Only cremation prices are posted. Their standard cremation, with a free family viewing, is $2,350, and a public viewing and funeral followed by cremation is $6,351, both plus the same outside fees."
+    posted: "Cremation prices posted online; full price list (effective Jan 13, 2026) from the funeral home"
+    checked: "Nov 16, 2026"
+    direct_cremation: 1730
+    direct_cremation_note: "Their direct cremation package, which includes a cremation container. The crematory fee ($225) and medical examiner's permit ($75) are added on top; with tax, they give the total in Washtenaw County as $2,036. Includes pickup, paperwork, cremation and ashes returned in a simple urn. A private family viewing is $100 more, when possible. Death certificates are extra ($15 for the first, $5 each after). Deaths at night add $120; deaths at home add $60."
+    immediate_burial: 2935
+    burial_casket: 3885
+    basic_services: 2090
+    transfer: 410
+    embalming: 920
+    visitation: 615
+    ceremony: 770
+    memorial: 435
+    hearse: 435
+    notes: "Immediate burial ($2,935) is with a casket you provide. Burial with their simplest casket is that plus their cloth-covered casket ($950), not counting a grave liner ($1,150 and up). A two-hour visitation is $400. Services add $50 on a Saturday and $100 on a Sunday. Their standard cremation, with a free family viewing, is $2,350, and a public viewing and funeral followed by cremation is $6,351, both plus the same outside fees."
   - name: "Stark Funeral Professionals"
     owner_short: "Stark Funeral Professionals Inc., Ypsilanti"
     owner: "Stark Funeral Professionals Inc. (Ypsilanti, MI)"
@@ -101,6 +101,50 @@ homes:
     memorial: 500
     hearse: 475
     notes: "Immediate burial ($3,650) is with a casket you provide. Burial with their simplest casket is their $3,500 service charge plus their lowest-priced casket ($1,045), not counting a grave liner ($1,170 and up). Also called Lucille's Memorial Chapel on the price list."
+  - name: "Staffan-Mitchell Funeral Home"
+    owner_short: "Staffan-Mitchell Funeral Home Inc., Chelsea"
+    owner: "Staffan-Mitchell Funeral Home Inc. (Chelsea, MI)"
+    yelp: "https://www.yelp.com/biz/staffan-mitchell-funeral-home-chelsea"
+    short: "Staffan-Mitchell"
+    town: "Chelsea"
+    phone: "(734) 475-1444"
+    website: ""
+    posted: "No prices online; price list from the funeral home, which is dated Jan 11, 2023"
+    checked: "Nov 16, 2026"
+    direct_cremation: 2195
+    direct_cremation_note: "Includes their cardboard container, and costs the same if you provide your own. The crematory fee and medical examiner's permit are added on top."
+    immediate_burial: 3645
+    burial_casket: 4845
+    basic_services: 2475
+    transfer: 425
+    embalming: 785
+    visitation: 450
+    ceremony: 450
+    memorial: 450
+    hearse: 500
+    notes: "The price list they gave out in November 2026 is dated January 2023, so ask whether prices have changed. Immediate burial ($3,645) is with a casket you provide. Burial with their simplest casket is that plus their lowest-priced casket ($1,200), not counting a vault ($1,120 and up). Their sample green burial, with no embalming, is $3,925 plus a shroud or casket. They also run Caskey-Mitchell Funeral Home in Stockbridge."
+  - name: "Robison-Bahnmiller Funeral Home"
+    owner_short: "Robison-Bahnmiller Funeral Home Inc., Saline"
+    owner: "Robison-Bahnmiller Funeral Home Inc. (Saline, MI)"
+    yelp: "https://www.yelp.com/biz/robison-bahnmiller-funeral-home-saline-4"
+    short: "Robison-Bahnmiller"
+    town: "Saline"
+    phone: "(734) 429-9760"
+    website: ""
+    posted: "No prices online; full price list (effective Jan 1, 2026) from the funeral home"
+    checked: "Nov 16, 2026"
+    direct_cremation: 2220
+    direct_cremation_note: "With their cardboard container. $2,095 if you provide your own container. The crematory's charge ($325) and medical examiner's permit ($75) are added on top. A family viewing before cremation, up to an hour, is $295."
+    immediate_burial: 3715
+    burial_casket: 4860
+    basic_services: 2440
+    transfer: 500
+    embalming: 750
+    visitation: 640
+    ceremony: 640
+    memorial: 640
+    hearse: 450
+    notes: "Services on a Saturday, Sunday or holiday add $195 to each item. Immediate burial ($3,715) is with a casket you provide; with their simplest casket it's $4,860, not counting a vault ($1,495 and up). If the cremation or burial was handled somewhere else, they host a memorial service with up to 3 hours of visitation for $1,195. Paying by credit card adds 3%, and payment is due within 30 days."
   - name: "Nie Family Funeral Home"
     owner_short: "Nie Funeral Home Inc., Ann Arbor"
     owner: "Nie Funeral Home Inc. (Ann Arbor, MI)"
@@ -169,18 +213,6 @@ homes:
     hearse: 595
     notes: "Part of the Dignity Memorial network. Immediate burial assumes you provide the casket; burial with their simplest casket is $6,940, not counting a grave liner. Packages run from $5,845 (cremation) to $21,027 (full funeral with vault)."
 not_posted:
-  - name: "Staffan-Mitchell Funeral Home"
-    owner: "Staffan-Mitchell Funeral Home Inc. (Chelsea, MI)"
-    yelp: "https://www.yelp.com/biz/staffan-mitchell-funeral-home-chelsea"
-    town: "Chelsea"
-    phone: "(734) 475-1444"
-    status: "No prices online; call for their price list"
-  - name: "Robison-Bahnmiller Funeral Home"
-    owner: "Robison-Bahnmiller Funeral Home Inc. (Saline, MI)"
-    yelp: "https://www.yelp.com/biz/robison-bahnmiller-funeral-home-saline-4"
-    town: "Saline"
-    phone: "(734) 429-9760"
-    status: "No prices online; call for their price list"
   - name: "Ochalek Funeral and Cremation Service"
     owner: "Ochalek Funeral and Cremation Service (Milan, MI)"
     yelp: "https://www.yelp.com/biz/ochalek-stark-funeral-services-milan"
