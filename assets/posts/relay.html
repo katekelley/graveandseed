@@ -1,0 +1,15 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>relay</title>
+<script>
+// Sends one of the site's own post images to the page that embeds this frame,
+// so a social post composer can attach it. Only images in /assets/posts/ are sent.
+(async () => {
+  const name = new URLSearchParams(location.search).get('img') || '';
+  if (!/^[a-z0-9-]+\.jpg$/.test(name)) return;
+  const b = await (await fetch('/assets/posts/' + name)).blob();
+  const d = await new Promise(r => { const f = new FileReader(); f.onload = () => r(f.result); f.readAsDataURL(b); });
+  parent.postMessage({ gsimg: name, data: d }, '*');
+})();
+</script>
